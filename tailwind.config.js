@@ -11,9 +11,6 @@ module.exports = {
     error: '#f03f40',
     accent: '#A80000',
   },
-  fontFamily: {
-    sans: ['Noto Sans KR', 'sans-serif'],
-  },
   fontSize: {
     xs: '0.625rem',
     sm: '0.75rem',
