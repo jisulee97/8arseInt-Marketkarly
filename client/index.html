@@ -23,19 +23,16 @@
 
   <body>
     <div class="headerAllWrapper">
-      <div class="promotion bg-primary">
-        <div class="promotion__wrapper mx-auto max-w-mw">
-          <a
-            href="/"
-            class="120promotion__link inline-block bg-cyan-500 text-white"
-          >
+      <div class="promotion h-[50px] bg-primary">
+        <div class="promotion__wrapper relative mx-auto max-w-mw text-center">
+          <a href="/" class="promotion__link text-white">
             지금 가입하고 인기상품 <strong>100원</strong>에 받아 가세요!
           </a>
           <button class="promotion__button">
             <img
               src="/assets/images/cart/ic-cancel.svg"
               alt="광고 닫기"
-              class="promotion__button__img inline-block"
+              class="promotion__button__img absolute right-0 top-3 inline-block"
             />
           </button>
         </div>
@@ -43,7 +40,9 @@
       <div class="headerWrapper relative mx-auto max-w-mw">
         <header>
           <h1 class="a11y sr-only">칼리</h1>
-          <div class="logo flex gap-3 pt-[2.75rem] align-middle text-lg">
+          <div
+            class="logo flex gap-2 bg-yellow-200 pb-5 pt-[2.75rem] align-middle text-lg"
+          >
             <img
               src="/assets/images/header/logo-kurly.svg"
               alt=""
@@ -54,40 +53,100 @@
               class="logo__link__market primary-color font-bold text-primary"
               >마켓칼리</a
             >
-            <span class="divider" aria-hidden="true">ㅣ</span>
+            <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
             <a href="/" class="logo__link__beauty font-medium text-gray-400"
               >뷰티칼리</a
             >
             <img
               src="/assets/images/header/new.svg"
               alt=""
-              class="logo__img__new absolute left-[316px] top-[38px] inline-block"
+              class="logo__img__new absolute left-[304px] top-[38px] inline-block"
             />
           </div>
+
           <div class="memberOnly mx-auto max-w-mw text-sm">
             <ul
               class="memberOnly__wrapper absolute right-0 top-[12px] flex justify-end"
             >
               <li>
-                <a href="/" class="primary-color">회원가입</a>
+                <a href="/" class="text-primary">회원가입</a>
               </li>
               <li>
-                <span class="divider" aria-hidden="true">ㅣ</span>
+                <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
                 <a href="/">로그인</a>
               </li>
               <li>
-                <span class="divider" aria-hidden="true">ㅣ</span>
+                <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
                 <a href="/"
                   >고객센터
                   <img
                     src="/assets/images/header/down.svg"
                     alt=""
-                    class="memberOnly__down"
+                    class="memberOnly__down inline-block w-2"
                   />
                 </a>
               </li>
             </ul>
           </div>
+          <form action="/" method="get" class="searchForm">
+            <fieldset>
+              <legend class="sr-only">검색</legend>
+              <div class="searchForm__group absolute left-[345px] top-8">
+                <div class="formInput">
+                  <label for="search" class="formInput__label sr-only"
+                    >검색어</label
+                  >
+                  <input
+                    id="search"
+                    class="formInput__input relative w-[360px] rounded border-[1px] border-primary pb-3 pl-5 pr-5 pt-3"
+                    type="search"
+                    required
+                    placeholder="검색어를 입력해주세요."
+                    name="search"
+                  />
+                  <button
+                    type="submit"
+                    class="searchButton absolute right-0 top-2"
+                  >
+                    <img src="/assets/images/header/Search.svg" alt="검색" />
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <div class="buttons">
+            <a
+              href="/"
+              class="buttons__address"
+              title="배송지"
+              aria-label="배송지 등록"
+            >
+              <img
+                src="/assets/images/header/Location.svg"
+                alt=""
+                class="buttons__address__img"
+              />
+            </a>
+            <a href="/" class="buttons__heart" aria-label="찜하기">
+              <img
+                src="/assets/images/header/Heart.svg"
+                alt=""
+                class="buttons__heart__img"
+              />
+            </a>
+            <a
+              href="/views/cart.html"
+              class="buttons__cart"
+              aria-label="장바구니"
+            >
+              <img
+                src="/assets/images/header/Cart.svg"
+                alt=""
+                class="buttons__cart__img"
+              />
+            </a>
+          </div>
+
           <nav class="navi">
             <div class="menu">
               <div class="menu__button">
@@ -238,61 +297,6 @@
                   ><span class="gray-500"> 배송안내</span></a
                 >
               </div>
-            </div>
-            <form action="/" method="get" class="searchForm">
-              <fieldset>
-                <legend>검색</legend>
-                <div class="searchForm__group">
-                  <div class="formInput">
-                    <label for="search" class="a11y formInput__label"
-                      >검색어</label
-                    >
-                    <input
-                      id="search"
-                      class="formInput__input"
-                      type="search"
-                      required
-                      placeholder="검색어를 입력해주세요."
-                      name="search"
-                    />
-                  </div>
-                  <button type="submit" class="searchButton">
-                    <img src="/assets/header/Search.svg" alt="검색" />
-                  </button>
-                </div>
-              </fieldset>
-            </form>
-            <div class="buttons">
-              <a
-                href="/"
-                class="buttons__address"
-                title="배송지"
-                aria-label="배송지 등록"
-              >
-                <img
-                  src="/assets/header/Location.svg"
-                  alt=""
-                  class="buttons__address__img"
-                />
-              </a>
-              <a href="/" class="buttons__heart" aria-label="찜하기">
-                <img
-                  src="/assets/header/Heart.svg"
-                  alt=""
-                  class="buttons__heart__img"
-                />
-              </a>
-              <a
-                href="/views/cart.html"
-                class="buttons__cart"
-                aria-label="장바구니"
-              >
-                <img
-                  src="/assets/header/Cart.svg"
-                  alt=""
-                  class="buttons__cart__img"
-                />
-              </a>
             </div>
           </nav>
         </header>

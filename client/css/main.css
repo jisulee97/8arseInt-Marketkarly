@@ -558,60 +558,36 @@ html {
   position: relative;
 }
 
+.left-\[304px\] {
+  left: 304px;
+}
+
+.left-\[345px\] {
+  left: 345px;
+}
+
 .right-0 {
   right: 0px;
+}
+
+.top-2 {
+  top: 0.5rem;
 }
 
 .top-3 {
   top: 0.75rem;
 }
 
-.top-\[62px\] {
-  top: 62px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.bottom-1 {
-  bottom: 0.25rem;
-}
-
-.top-\[64px\] {
-  top: 64px;
-}
-
-.top-\[32px\] {
-  top: 32px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.left-\[316px\] {
-  left: 316px;
-}
-
-.top-\[40px\] {
-  top: 40px;
-}
-
-.top-\[38px\] {
-  top: 38px;
-}
-
-.top-\[33px\] {
-  top: 33px;
-}
-
-.top-\[34px\] {
-  top: 34px;
+.top-8 {
+  top: 2rem;
 }
 
 .top-\[12px\] {
   top: 12px;
+}
+
+.top-\[38px\] {
+  top: 38px;
 }
 
 .mx-auto {
@@ -619,20 +595,24 @@ html {
   margin-right: auto;
 }
 
-.block {
-  display: block;
-}
-
 .inline-block {
   display: inline-block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-\[360px\] {
+  width: 360px;
 }
 
 .max-w-mw {
@@ -643,8 +623,21 @@ html {
   justify-content: flex-end;
 }
 
-.gap-3 {
-  gap: 0.75rem;
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border-\[1px\] {
+  border-width: 1px;
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(95 0 128 / var(--tw-border-opacity));
 }
 
 .bg-primary {
@@ -652,9 +645,29 @@ html {
   background-color: rgb(95 0 128 / var(--tw-bg-opacity));
 }
 
-.bg-cyan-500 {
+.bg-yellow-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .pt-\[2\.75rem\] {
@@ -685,8 +698,9 @@ html {
   font-weight: 500;
 }
 
-.font-semibold {
-  font-weight: 600;
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-indigo-500 {
@@ -694,19 +708,14 @@ html {
   color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(95 0 128 / var(--tw-text-opacity));
 }
 
-.text-gray-400 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .filter {
