@@ -17,8 +17,8 @@ module.exports = {
         lg: '1.375rem',
         xl: '2.375rem',
       },
-      maxWidth: {
-        mw: '1050px',
+      width: {
+        container: '1050px',
       },
     },
   },
