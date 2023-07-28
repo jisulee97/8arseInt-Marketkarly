@@ -570,8 +570,8 @@ html {
   right: 0px;
 }
 
-.top-2 {
-  top: 0.5rem;
+.right-2 {
+  right: 0.5rem;
 }
 
 .top-3 {
@@ -582,12 +582,20 @@ html {
   top: 2rem;
 }
 
+.top-9 {
+  top: 2.25rem;
+}
+
 .top-\[12px\] {
   top: 12px;
 }
 
-.top-\[38px\] {
-  top: 38px;
+.top-\[63px\] {
+  top: 63px;
+}
+
+.top-\[70px\] {
+  top: 70px;
 }
 
 .mx-auto {
@@ -611,12 +619,12 @@ html {
   width: 0.5rem;
 }
 
-.w-\[360px\] {
-  width: 360px;
+.w-\[400px\] {
+  width: 400px;
 }
 
-.max-w-mw {
-  max-width: 1050px;
+.w-container {
+  width: 1050px;
 }
 
 .justify-end {
@@ -625,6 +633,10 @@ html {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .rounded {
@@ -643,11 +655,6 @@ html {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(95 0 128 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
 .pb-3 {
@@ -670,8 +677,12 @@ html {
   padding-top: 0.75rem;
 }
 
-.pt-\[2\.75rem\] {
-  padding-top: 2.75rem;
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pt-\[70px\] {
+  padding-top: 70px;
 }
 
 .text-center {
@@ -694,8 +705,13 @@ html {
   font-weight: 700;
 }
 
-.font-medium {
-  font-weight: 500;
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .text-gray-400 {

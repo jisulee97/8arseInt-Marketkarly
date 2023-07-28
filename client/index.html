@@ -24,7 +24,9 @@
   <body>
     <div class="headerAllWrapper">
       <div class="promotion h-[50px] bg-primary">
-        <div class="promotion__wrapper relative mx-auto max-w-mw text-center">
+        <div
+          class="promotion__wrapper relative mx-auto w-container text-center"
+        >
           <a href="/" class="promotion__link text-white">
             지금 가입하고 인기상품 <strong>100원</strong>에 받아 가세요!
           </a>
@@ -37,12 +39,10 @@
           </button>
         </div>
       </div>
-      <div class="headerWrapper relative mx-auto max-w-mw">
-        <header>
+      <div class="headerWrapper relative mx-auto w-container">
+        <header class="relative">
           <h1 class="a11y sr-only">칼리</h1>
-          <div
-            class="logo flex gap-2 bg-yellow-200 pb-5 pt-[2.75rem] align-middle text-lg"
-          >
+          <div class="logo flex gap-2 pb-5 pt-[70px] align-middle text-lg">
             <img
               src="/assets/images/header/logo-kurly.svg"
               alt=""
@@ -53,18 +53,18 @@
               class="logo__link__market primary-color font-bold text-primary"
               >마켓칼리</a
             >
-            <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
-            <a href="/" class="logo__link__beauty font-medium text-gray-400"
+            <span class="divider text-gray-200" aria-hidden="true">ㅣ</span>
+            <a href="/" class="logo__link__beauty font-semibold text-gray-400"
               >뷰티칼리</a
             >
             <img
               src="/assets/images/header/new.svg"
               alt=""
-              class="logo__img__new absolute left-[304px] top-[38px] inline-block"
+              class="logo__img__new absolute left-[304px] top-[63px] inline-block"
             />
           </div>
 
-          <div class="memberOnly mx-auto max-w-mw text-sm">
+          <div class="memberOnly mx-auto w-container text-sm">
             <ul
               class="memberOnly__wrapper absolute right-0 top-[12px] flex justify-end"
             >
@@ -92,13 +92,13 @@
             <fieldset>
               <legend class="sr-only">검색</legend>
               <div class="searchForm__group absolute left-[345px] top-8">
-                <div class="formInput">
+                <div class="formInput pt-6">
                   <label for="search" class="formInput__label sr-only"
                     >검색어</label
                   >
                   <input
                     id="search"
-                    class="formInput__input relative w-[360px] rounded border-[1px] border-primary pb-3 pl-5 pr-5 pt-3"
+                    class="formInput__input relative w-[400px] rounded border-[1px] border-primary pb-3 pl-5 pr-5 pt-3 text-lg text-gray-400"
                     type="search"
                     required
                     placeholder="검색어를 입력해주세요."
@@ -106,7 +106,7 @@
                   />
                   <button
                     type="submit"
-                    class="searchButton absolute right-0 top-2"
+                    class="searchButton absolute right-2 top-9"
                   >
                     <img src="/assets/images/header/Search.svg" alt="검색" />
                   </button>
@@ -114,7 +114,7 @@
               </div>
             </fieldset>
           </form>
-          <ul class="buttons flex">
+          <ul class="buttons absolute right-0 top-[70px] flex gap-5">
             <li class="buttons__list">
               <a
                 href="/"
