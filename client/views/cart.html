@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ko-KR">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="아쉬워 벌써 12시" />
-    <meta name="keywords" content="칼리,마켓칼리,뷰티칼리,샛별배송,알뜰쇼핑" />
-    <meta name="description" content="마켓칼리 메인 페이지입니다." />
-    <title>칼리 - 마켓칼리</title>
+    <meta name="keywords" content="칼리,베스트,탱탱쫄면,선쿠션,세탁세제" />
+    <meta name="description" content="칼리 베스트 상품입니다." />
+    <title>칼리 - 베스트</title>
     <link
       rel="shortcut icon"
       href="https://res.kurly.com/favicon.ico"
@@ -119,7 +119,7 @@
                   <li class="category__list">
                     <span class="sprite sprite__noodles"></span
                     ><a
-                      href="./views/product-detail.html"
+                      href="./../views/product-detail.html"
                       class="category__link"
                       >면&bull;양념&bull;오일</a
                     >
@@ -279,317 +279,123 @@
         </header>
       </div>
     </div>
-    <main>
-      <div class="banner">
-        <ul class="banner__wrapper">
-          <li class="banner__list">
-            <button type="button" class="left__btn">
+    <h2 class="cart">장바구니</h2>
+    <main class="cartWrapper">
+      <section class="cart__accordion">
+        <input type="checkbox" class="cart__check" name="chk" id="chk_1" />
+        <label for="chk_1" class="cart__label">
+          <span class="selectAll"
+            >전체선택 (3/3)
+            <span aria-hidden="true">|</span>
+            선택삭제</span
+          >
+        </label>
+        <ul class="foodCategory">
+          <li class="food__categorylist">
+            <img
+              src="/assets/cart/ic-cold.svg"
+              alt=""
+              aria-labelledby="food__cold"
+            />
+            <span id="food__cold" class="food__text">냉장 식품</span>
+            <button type="button" class="arrow__down">
               <img
-                src="assets/main/ic-banner-button.svg"
-                alt="왼쪽 배너로 이동"
+                src="/assets/product-list/ic-arrow-down.svg"
+                alt="아래로 펼치기"
               />
             </button>
-            <a href="/">
-              <img src="/assets/main/banner05.svg" alt="이 주의 특가" />
-            </a>
-            <button type="button" class="right__btn">
+          </li>
+          <li class="food__categorylist">
+            <img
+              src="/assets/cart/ic-frozen.svg"
+              alt=""
+              aria-labelledby="food__frozen"
+            />
+            <span id="food__frozen" class="food__text">냉동 식품</span>
+            <button type="button" class="arrow__down">
               <img
-                src="assets/main/ic-banner-button.svg"
-                alt="오른쪽 배너로 이동"
+                src="/assets/product-list/ic-arrow-down.svg"
+                alt="아래로 펼치기"
+              />
+            </button>
+          </li>
+          <li class="food__categorylist">
+            <img
+              src="/assets/cart/ic-temperature.svg"
+              alt=""
+              aria-labelledby="food__temperature"
+            />
+            <span id="food__temperature" class="food__text">상온 식품</span>
+            <button type="button" class="arrow__down">
+              <img
+                src="/assets/product-list/ic-arrow-down.svg"
+                alt="아래로 펼치기"
               />
             </button>
           </li>
         </ul>
-      </div>
-      <article class="sideBar">
-        <button type="button" class="up__btn">
-          <img src="/assets/product-list/ic-arrow-down.svg" alt="위로 가기" />
-        </button>
-        <strong class="resently">최근 본 상품</strong>
-        <div class="myView">
-          <ul class="myView__wrapper">
-            <li class="myView__list">
-              <a href="/"
-                ><img
-                  src="/assets/product/tangtang/thumbnail.svg"
-                  alt="탱탱쫄면"
-              /></a>
-            </li>
-            <li class="myView__list">
-              <a href="/"
-                ><img
-                  src="/assets/product/detergent/thumbnail.svg"
-                  alt="세탁세제"
-              /></a>
-            </li>
-            <li class="myView__list">
-              <a href="/"
-                ><img
-                  src="/assets/product/suncushion/thumbnail.svg"
-                  alt="선쿠션"
-              /></a>
-            </li>
-          </ul>
-        </div>
-        <button type="button" class="down__btn">
-          <img src="/assets/product-list/ic-arrow-down.svg" alt="아래로 가기" />
-        </button>
-      </article>
-      <h2 class="productTitle">이 상품 어때요?</h2>
-      <section class="product">
-        <div class="product__wrapper">
-          <a href="./views/product-detail.html">
-            <figure class="product__item">
-              <img
-                src="/assets/product/tangtang/thumbnail.svg"
-                alt=""
-                aria-labelledby="productTangtang"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">[풀무원] 탱탱쫄면(4개입)</h3>
-                <dl>
-                  <dt class="a11y">상품명</dt>
-                  <dd id="productTangtang" class="product__name">
-                    [풀무원] 탱탱쫄면(4개입)
-                  </dd>
-                  <dt class="a11y">가격</dt>
-                  <dd class="product__price">4,980원</dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
-        </div>
-        <div class="product__wrapper">
-          <a href="#">
-            <figure class="product__item">
-              <img
-                src="/assets/product/suncushion/thumbnail.svg"
-                alt=""
-                aria-labelledby="productSuncushion"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">[온더바디] 죠르디 시카 자석 선쿠션</h3>
-                <dl>
-                  <dt class="a11y">상품명</dt>
-                  <dd id="productSuncushion" class="product__name">
-                    [온더바디] 죠르디 시카 자석 선쿠션
-                  </dd>
-                  <dt class="a11y">가격</dt>
-                  <dd class="product__price">32,500원</dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
-        </div>
-        <div class="product__wrapper">
-          <a href="#">
-            <figure class="product__item">
-              <img
-                src="/assets/product/brownrice/thumbnail.svg"
-                alt=""
-                aria-labelledby="productBrownrice"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">유기농 밀키퀸 현미 4kg</h3>
-                <dl>
-                  <dt class="a11y">상품명</dt>
-                  <dd id="productBrownrice" class="product__name">
-                    유기농 밀키퀸 현미 4kg
-                  </dd>
-                  <dt class="a11y">가격</dt>
-                  <dd class="product__price">25,000원</dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
-        </div>
-        <div class="product__wrapper">
-          <a href="#">
-            <figure class="product__item">
-              <img
-                src="/assets/product/detergent/thumbnail.svg"
-                alt=""
-                aria-labelledby="productDetergent"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">[프로쉬] 베이비 세탁세제</h3>
-                <dl class="product__sale">
-                  <dt class="a11y">상품명</dt>
-                  <dd id="productDetergent" class="product__name">
-                    [프로쉬] 베이비 세탁세제
-                  </dd>
-                  <dt class="a11y">정상가격</dt>
-                  <dd class="product__regularPrice"><del>24,000원</del></dd>
-                  <dt class="a11y">할인율</dt>
-                  <dd class="product__discountPercent">24%</dd>
-                  <dt class="a11y">할인가격</dt>
-                  <dd class="product__price">
-                    <ins class="product__discountPrice">18,900원</ins>
-                  </dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
-          <button
-            type="button"
-            title="상품 더보기"
-            class="product__more"
-          ></button>
-        </div>
+        <input type="checkbox" class="cart__check" name="chk" id="chk_2" />
+        <label for="chk_2" class="cart__label">
+          <span class="selectAll"
+            >전체선택 (3/3)
+            <span aria-hidden="true">|</span>
+            선택삭제</span
+          >
+        </label>
       </section>
-      <a href="#" class="middleBanner"
-        ><img
-          src="/assets/main/line-banner.svg"
-          alt="칼리 10월의 퍼플 위크 광고"
-      /></a>
-      <h2 class="productTitle">놓치면 후회할 가격</h2>
-      <section class="product">
-        <div class="product__wrapper">
-          <a href="./views/product-detail.html">
-            <figure class="product__item">
-              <img
-                src="/assets/product/tangtang/thumbnail.svg"
-                alt=""
-                aria-labelledby="tangtang"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">[풀무원] 탱탱쫄면(4개입)</h3>
-                <dl>
-                  <dt class="a11y">상품명</dt>
-                  <dd id="tangtang" class="product__name">
-                    [풀무원] 탱탱쫄면(4개입)
-                  </dd>
-                  <dt class="a11y">가격</dt>
-                  <dd class="product__price">4,980원</dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+      <section class="craditWrapper">
+        <div class="cradit">
+          <div class="delivery__info">
+            <p class="delivery__location">배송지</p>
+            <p class="delivery__address">
+              서울 중랑구 면목로 42길 11 (행운빌딩) 603호
+            </p>
+            <p class="delivery__type">샛별배송</p>
+            <button type="button" class="delivery__chage">배송지 변경</button>
+          </div>
+          <div class="payment__info">
+            <dl>
+              <dt class="pay__list">상품금액</dt>
+              <dd class="pay__info">40,680</dd>
+            </dl>
+            <dl>
+              <dt class="pay__list">상품할인금액</dt>
+              <dd class="pay__info">-4,651</dd>
+            </dl>
+            <dl>
+              <dt class="pay__list">배송비</dt>
+              <dd class="pay__info">+3,000</dd>
+            </dl>
+            <div class="payment">
+              <div class="payment__total">
+                <p class="payment__price">결제예정금액</p>
+                <span>40,680</span>
+              </div>
+              <p class="membership__point">
+                <span>적립</span>최대 36원 적립 일반 0.1%
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="product__wrapper">
-          <a href="#">
-            <figure class="product__item">
-              <img
-                src="/assets/product/suncushion/thumbnail.svg"
-                alt=""
-                aria-labelledby="suncushion"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">[온더바디] 죠르디 시카 자석 선쿠션</h3>
-                <dl>
-                  <dt class="a11y">상품명</dt>
-                  <dd id="suncushion" class="product__name">
-                    [온더바디] 죠르디 시카 자석 선쿠션
-                  </dd>
-                  <dt class="a11y">가격</dt>
-                  <dd class="product__price">32,500원</dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
-        </div>
-        <div class="product__wrapper">
-          <a href="#">
-            <figure class="product__item">
-              <img
-                src="/assets/product/brownrice/thumbnail.svg"
-                alt=""
-                aria-labelledby="brownrice"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">유기농 밀키퀸 현미 4kg</h3>
-                <dl>
-                  <dt class="a11y">상품명</dt>
-                  <dd id="brownrice" class="product__name">
-                    유기농 밀키퀸 현미 4kg
-                  </dd>
-                  <dt class="a11y">가격</dt>
-                  <dd class="product__price">25,000원</dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
-        </div>
-        <div class="product__wrapper">
-          <a href="#">
-            <figure class="product__item">
-              <img
-                src="/assets/product/detergent/thumbnail.svg"
-                alt=""
-                aria-labelledby="detergent"
-                class="product__img"
-              />
-              <figcaption class="product__caption">
-                <h3 class="a11y">[프로쉬] 베이비 세탁세제</h3>
-                <dl class="product__sale">
-                  <dt class="a11y">상품명</dt>
-                  <dd id="detergent" class="product__name">
-                    [프로쉬] 베이비 세탁세제
-                  </dd>
-                  <dt class="a11y">정상가격</dt>
-                  <dd class="product__regularPrice"><del>24,000원</del></dd>
-                  <dt class="a11y">할인율</dt>
-                  <dd class="product__discountPercent">24%</dd>
-                  <dt class="a11y">할인가격</dt>
-                  <dd class="product__price">
-                    <ins class="product__discountPrice">18,900원</ins>
-                  </dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button
-            type="button"
-            title="장바구니에 담기"
-            class="accentCart"
-          ></button>
-          <button
-            type="button"
-            title="상품 더보기"
-            class="product__more"
-          ></button>
+        <button type="button" class="order-button">주문하기</button>
+        <div class="couponInfo">
+          <p class="couponInfo__list">
+            쿠폰/적립금은 주문서에서 사용 가능합니다
+          </p>
+          <p class="couponInfo__list">
+            [주문완료] 상태일 경우에만 주문 취소 가능합니다.
+          </p>
+          <p class="couponInfo__list">
+            [마이컬리 > 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
+          </p>
+          <p class="couponInfo__list">
+            쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종
+            산정됩니다.
+          </p>
+          <p class="couponInfo__list">
+            상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서
+            확인 가능합니다)
+          </p>
         </div>
       </section>
     </main>
