@@ -9,8 +9,8 @@
     font-family: Pretendard, system-ui, sans-serif;
   }
 }
-.container {
-  width: 65.625rem;
+.container__width {
+  width: 1050px;
   margin: auto;
 }
 
