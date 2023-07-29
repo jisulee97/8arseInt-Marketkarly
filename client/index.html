@@ -10,14 +10,12 @@
     <link
       rel="shortcut icon"
       href="https://res.kurly.com/favicon.ico"
-      type="res/ico"
-    />
+      type="res/ico" />
     <link
       rel="preload"
       as="style"
       crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css"
-    />
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="/css/main.css" />
   </head>
 
@@ -25,17 +23,17 @@
     <div class="headerAllWrapper">
       <div class="promotion h-[3.125rem] bg-primary">
         <div
-          class="promotion__wrapper relative mx-auto flex h-full w-container items-center justify-center"
-        >
+          class="promotion__wrapper relative mx-auto flex h-full w-container items-center justify-center">
           <a href="/" class="promotion__link text-white">
-            지금 가입하고 인기상품 <strong>100원</strong>에 받아 가세요!
+            지금 가입하고 인기상품
+            <strong>100원</strong>
+            에 받아 가세요!
           </a>
           <button class="promotion__button absolute right-0">
             <img
               src="/assets/images/cart/ic-cancel.svg"
               alt="광고 닫기"
-              class="promotion__button__img"
-            />
+              class="promotion__button__img" />
           </button>
         </div>
       </div>
@@ -43,33 +41,29 @@
         <header class="relative">
           <h1 class="a11y sr-only">칼리</h1>
           <div
-            class="logo gap-[6.75rem] pb-5 pt-[4.375rem] align-middle text-lg"
-          >
+            class="logo gap-[6.75rem] pb-5 pt-[4.375rem] align-middle text-lg">
             <img
               src="/assets/images/header/logo-kurly.svg"
               alt=""
-              class="logo__img inline-block"
-            />
+              class="logo__img inline-block" />
             <a
               href="/"
-              class="logo__link__market primary-color font-bold text-primary"
-              >마켓칼리</a
-            >
+              class="logo__link__market primary-color font-bold text-primary">
+              마켓칼리
+            </a>
             <span class="divider text-gray-200" aria-hidden="true">ㅣ</span>
-            <a href="/" class="logo__link__beauty font-semibold text-gray-400"
-              >뷰티칼리</a
-            >
+            <a href="/" class="logo__link__beauty font-semibold text-gray-400">
+              뷰티칼리
+            </a>
             <img
               src="/assets/images/header/new.svg"
               alt=""
-              class="logo__img__new absolute left-[19rem] top-[3.9375rem] inline-block"
-            />
+              class="logo__img__new absolute left-[19rem] top-[3.9375rem] inline-block" />
           </div>
 
           <div class="memberOnly mx-auto w-container text-sm">
             <ul
-              class="memberOnly__wrapper absolute right-0 top-[0.75rem] flex justify-end"
-            >
+              class="memberOnly__wrapper absolute right-0 top-[0.75rem] flex justify-end">
               <li>
                 <a href="/" class="text-primary">회원가입</a>
               </li>
@@ -79,13 +73,12 @@
               </li>
               <li>
                 <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
-                <a href="/"
-                  >고객센터
+                <a href="/">
+                  고객센터
                   <img
                     src="/assets/images/header/down.svg"
                     alt=""
-                    class="memberOnly__down inline-block w-2"
-                  />
+                    class="memberOnly__down inline-block w-2" />
                 </a>
               </li>
             </ul>
@@ -95,21 +88,19 @@
               <legend class="sr-only">검색</legend>
               <div class="searchForm__group absolute left-[21.5625rem] top-8">
                 <div class="formInput pt-6">
-                  <label for="search" class="formInput__label sr-only"
-                    >검색어</label
-                  >
+                  <label for="search" class="formInput__label sr-only">
+                    검색어
+                  </label>
                   <input
                     id="search"
                     class="formInput__input relative w-[25rem] rounded border-[0.0625rem] border-primary pb-3 pl-5 pr-5 pt-3 text-lg text-gray-400"
                     type="search"
                     required
                     placeholder="검색어를 입력해주세요."
-                    name="search"
-                  />
+                    name="search" />
                   <button
                     type="submit"
-                    class="searchButton absolute right-2 top-9"
-                  >
+                    class="searchButton absolute right-2 top-9">
                     <img src="/assets/images/header/Search.svg" alt="검색" />
                   </button>
                 </div>
@@ -122,13 +113,11 @@
                 href="/"
                 class="buttons__address"
                 title="배송지"
-                aria-label="배송지 등록"
-              >
+                aria-label="배송지 등록">
                 <img
                   src="/assets/images/header/Location.svg"
                   alt=""
-                  class="buttons__address__img"
-                />
+                  class="buttons__address__img" />
               </a>
             </li>
             <li class="buttons__list">
@@ -136,21 +125,18 @@
                 <img
                   src="/assets/images/header/Heart.svg"
                   alt=""
-                  class="buttons__heart__img"
-                />
+                  class="buttons__heart__img" />
               </a>
             </li>
             <li class="buttons__list">
               <a
                 href="/views/cart.html"
                 class="buttons__cart"
-                aria-label="장바구니"
-              >
+                aria-label="장바구니">
                 <img
                   src="/assets/images/header/Cart.svg"
                   alt=""
-                  class="buttons__cart__img"
-                />
+                  class="buttons__cart__img" />
               </a>
             </li>
           </ul>
@@ -161,304 +147,290 @@
                 <h2>
                   <a
                     href="/"
-                    class="menu__button__category text-base font-semibold"
-                  >
+                    class="menu__button__category text-base font-semibold">
                     <img
                       src="/assets/images/header/Hamburger.svg"
                       alt=""
-                      class="menu__button__img mr-3 inline-block w-4 pb-1"
-                    />카테고리</a
-                  >
+                      class="menu__button__img mr-3 inline-block w-4 pb-1" />
+                    카테고리
+                  </a>
                 </h2>
                 <ul class="category absolute hidden border border-[#E1E1E1]">
-                  <li class="category__list">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
                     <div
-                      class="category__img Class Properties inline-block w-6 text-center"
-                    >
+                      class="category__img Class Properties ml-1 inline-block w-6 text-center">
                       <img src="/assets/images/header/navGift.png" alt="선물" />
                     </div>
-                    <span class="sprite sprite__gift"></span
-                    ><a href="#" class="category__link">선물하기</a>
+                    <span class="sprite sprite__gift"></span>
+                    <a href="#" class="category__link text-base text-base"
+                      >선물하기</a
+                    >
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img0 inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navVegetable.png"
-                        alt="채소"
-                      />
+                        alt="채소" />
                     </div>
-                    <span class="sprite sprite__vegetable"></span
-                    ><a href="#" class="category__link">채소</a>
+                    <span class="sprite sprite__vegetable"></span>
+                    <a href="#" class="category__link text-base">채소</a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navFruit.png"
-                        alt="과일, 견과, 쌀"
-                      />
+                        alt="과일, 견과, 쌀" />
                     </div>
 
-                    <span class="sprite sprite__friut"></span
-                    ><a href="#" class="category__link"
-                      >과일&bull;견과&bull;쌀</a
-                    >
+                    <span class="sprite sprite__friut"></span>
+                    <a href="#" class="category__link text-base">
+                      과일&bull;견과&bull;쌀
+                    </a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navFish.png"
-                        alt="수산, 해산, 건어물"
-                      />
+                        alt="수산, 해산, 건어물" />
                     </div>
-                    <span class="sprite sprite__fish"></span
-                    ><a href="#" class="category__link"
-                      >수산&bull;해산&bull;건어물</a
-                    >
+                    <span class="sprite sprite__fish"></span>
+                    <a href="#" class="category__link text-base">
+                      수산&bull;해산&bull;건어물
+                    </a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navMeat.png"
-                        alt="정육, 계란"
-                      />
+                        alt="정육, 계란" />
                     </div>
-                    <span class="sprite sprite__meat"></span
-                    ><a href="#" class="category__link">정육&bull;계란</a>
+                    <span class="sprite sprite__meat"></span>
+                    <a href="#" class="category__link text-base"
+                      >정육&bull;계란</a
+                    >
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navMaindish.png"
-                        alt="국, 반찬, 메인요리"
-                      />
+                        alt="국, 반찬, 메인요리" />
                     </div>
-                    <span class="sprite sprite__soup"></span
-                    ><a href="#" class="category__link"
-                      >국&bull;반찬&bull;메인요리</a
-                    >
+                    <span class="sprite sprite__soup"></span>
+                    <a href="#" class="category__link text-base">
+                      국&bull;반찬&bull;메인요리
+                    </a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navSalad.png"
-                        alt="샐러드, 간편식"
-                      />
+                        alt="샐러드, 간편식" />
                     </div>
-                    <span class="sprite sprite__salad"></span
-                    ><a href="#" class="category__link">샐러드&bull;간편식</a>
+                    <span class="sprite sprite__salad"></span>
+                    <a href="#" class="category__link text-base"
+                      >샐러드&bull;간편식</a
+                    >
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navSpice.png"
-                        alt="면, 양념, 오일"
-                      />
+                        alt="면, 양념, 오일" />
                     </div>
-                    <span class="sprite sprite__noodles"></span
-                    ><a
+                    <span class="sprite sprite__noodles"></span>
+                    <a
                       href="./../views/product-detail.html"
-                      class="category__link"
-                      >면&bull;양념&bull;오일</a
-                    >
+                      class="category__link text-base">
+                      면&bull;양념&bull;오일
+                    </a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navDrink.png"
-                        alt="생수, 음료, 우유, 커피"
-                      />
+                        alt="생수, 음료, 우유, 커피" />
                     </div>
-                    <span class="sprite sprite__water"></span
-                    ><a href="#" class="category__link"
-                      >생수&bull;음료&bull;우유&bull;커피</a
-                    >
+                    <span class="sprite sprite__water"></span>
+                    <a href="#" class="category__link text-base">
+                      생수&bull;음료&bull;우유&bull;커피
+                    </a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navDessert.png"
-                        alt="간식, 과자, 떡"
-                      />
+                        alt="간식, 과자, 떡" />
                     </div>
-                    <span class="sprite sprite__snack"></span
-                    ><a href="#" class="category__link"
-                      >간식&bull;과자&bull;떡</a
-                    >
+                    <span class="sprite sprite__snack"></span>
+                    <a href="#" class="category__link text-base">
+                      간식&bull;과자&bull;떡
+                    </a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navBread.png"
-                        alt="베이커리, 치즈, 델리"
-                      />
+                        alt="베이커리, 치즈, 델리" />
                     </div>
-                    <span class="sprite sprite__bakery"></span
-                    ><a href="#" class="category__link"
-                      >베이커리&bull;치즈&bull;델리</a
-                    >
+                    <span class="sprite sprite__bakery"></span>
+                    <a href="#" class="category__link text-base">
+                      베이커리&bull;치즈&bull;델리
+                    </a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navHealth.png"
-                        alt="건강 식품"
-                      />
+                        alt="건강 식품" />
                     </div>
-                    <span class="sprite sprite__health"></span
-                    ><a href="#" class="category__link">건강식품</a>
+                    <span class="sprite sprite__health"></span>
+                    <a href="#" class="category__link text-base">건강식품</a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img src="/assets/images/header/navWine.png" alt="와인" />
                     </div>
-                    <span class="sprite sprite__wine"></span
-                    ><a href="#" class="category__link">와인</a>
+                    <span class="sprite sprite__wine"></span>
+                    <a href="#" class="category__link text-base">와인</a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navTraditionalDrink.png"
-                        alt="전통주"
-                      />
+                        alt="전통주" />
                     </div>
-                    <span class="sprite sprite__tradition"></span
-                    ><a href="#" class="category__link">전통주</a>
+                    <span class="sprite sprite__tradition"></span>
+                    <a href="#" class="category__link text-base">전통주</a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navLiving.png"
-                        alt="생활용품, 리빙, 캠핑"
-                      />
+                        alt="생활용품, 리빙, 캠핑" />
                     </div>
-                    <span class="sprite sprite__living"></span
-                    ><a href="#" class="category__link"
-                      >생활용품&bull;리빙&bull;캠핑</a
-                    >
+                    <span class="sprite sprite__living"></span>
+                    <a href="#" class="category__link text-base">
+                      생활용품&bull;리빙&bull;캠핑
+                    </a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navBeauty.png"
-                        alt="스킨케어, 메이크업"
-                      />
+                        alt="스킨케어, 메이크업" />
                     </div>
-                    <span class="sprite sprite__skin"></span
-                    ><a href="#" class="category__link"
-                      >스킨케어&bull;메이크업</a
-                    >
+                    <span class="sprite sprite__skin"></span>
+                    <a href="#" class="category__link text-base">
+                      스킨케어&bull;메이크업
+                    </a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navBody.png"
-                        alt="헤어, 바디, 구강"
-                      />
+                        alt="헤어, 바디, 구강" />
                     </div>
-                    <span class="sprite sprite__hair"></span
-                    ><a href="#" class="category__link"
-                      >헤어&bull;바디&bull;구강</a
-                    >
+                    <span class="sprite sprite__hair"></span>
+                    <a href="#" class="category__link text-base">
+                      헤어&bull;바디&bull;구강
+                    </a>
                   </li>
 
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navKitchen.png"
-                        alt="주방용품"
-                      />
+                        alt="주방용품" />
                     </div>
-                    <span class="sprite sprite__kitchen"></span
-                    ><a href="#" class="category__link">주방용품</a>
+                    <span class="sprite sprite__kitchen"></span>
+                    <a href="#" class="category__link text-base">주방용품</a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navHomeAppliances.png"
-                        alt="가전제품"
-                      />
+                        alt="가전제품" />
                     </div>
-                    <span class="sprite sprite__appliances"></span
-                    ><a href="#" class="category__link">가전제품</a>
+                    <span class="sprite sprite__appliances"></span>
+                    <a href="#" class="category__link text-base">가전제품</a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navPet.png"
-                        alt="반려동물"
-                      />
+                        alt="반려동물" />
                     </div>
-                    <span class="sprite sprite__pet"></span
-                    ><a href="#" class="category__link">반려동물</a>
+                    <span class="sprite sprite__pet"></span>
+                    <a href="#" class="category__link text-base">반려동물</a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navBaby.png"
-                        alt="베이비, 키즈, 완구"
-                      />
+                        alt="베이비, 키즈, 완구" />
                     </div>
-                    <span class="sprite sprite__baby"></span
-                    ><a href="#" class="category__link"
-                      >베이비&bull;키즈&bull;완구</a
-                    >
+                    <span class="sprite sprite__baby"></span>
+                    <a href="#" class="category__link text-base">
+                      베이비&bull;키즈&bull;완구
+                    </a>
                   </li>
-                  <li class="category__list">
-                    <div class="category__img inline-block w-6">
+                  <li class="category__list flex gap-1 pb-2 pt-2">
+                    <div class="category__img ml-1 inline-block w-6">
                       <img
                         src="/assets/images/header/navTrip.png"
-                        alt="여행, 티켓"
-                      />
+                        alt="여행, 티켓" />
                     </div>
-                    <span class="sprite sprite__travel"></span
-                    ><a href="#" class="category__link">여행&bull;티켓</a>
+                    <span class="sprite sprite__travel"></span>
+                    <a href="#" class="category__link text-base"
+                      >여행&bull;티켓</a
+                    >
                   </li>
                 </ul>
               </div>
               <h2 class="a11y sr-only">메뉴</h2>
               <ul class="menu__list flex gap-[6.75rem] pt-2">
                 <li class="menu__item">
-                  <a href="/" class="menu__link text-base font-semibold"
-                    >신상품</a
-                  >
+                  <a href="/" class="menu__link text-base font-semibold">
+                    신상품
+                  </a>
                 </li>
                 <li class="menu__item">
                   <a
                     href="/views/product-list.html"
-                    class="menu__link text-base font-semibold"
-                    >베스트</a
-                  >
+                    class="menu__link text-base font-semibold">
+                    베스트
+                  </a>
                 </li>
                 <li class="menu__item">
-                  <a href="/" class="menu__link text-base font-semibold"
-                    >알뜰쇼핑</a
-                  >
+                  <a href="/" class="menu__link text-base font-semibold">
+                    알뜰쇼핑
+                  </a>
                 </li>
                 <li class="menu__item">
-                  <a href="/" class="menu__link text-base font-semibold"
-                    >특가/혜택</a
-                  >
+                  <a href="/" class="menu__link text-base font-semibold">
+                    특가/혜택
+                  </a>
                 </li>
               </ul>
               <div
-                class="menu__delivery rounded-2xl border-[0.125rem] border-gray-300 pb-1 pl-2 pr-2 pt-1"
-              >
-                <a href="/"
-                  ><span class="primary-color text-sm text-primary"
-                    >샛별&nbsp;&bull;&nbsp;낮</span
-                  ><span class="gray-500 text-sm"> 배송안내</span></a
-                >
+                class="menu__delivery rounded-2xl border-[0.125rem] border-gray-300 pb-1 pl-2 pr-2 pt-1">
+                <a href="/">
+                  <span class="primary-color text-sm text-primary">
+                    샛별&nbsp;&bull;&nbsp;낮
+                  </span>
+                  <span class="gray-500 text-sm">배송안내</span>
+                </a>
               </div>
             </div>
           </nav>
@@ -472,8 +444,7 @@
             <button type="button" class="left__btn">
               <img
                 src="assets/main/ic-banner-button.svg"
-                alt="왼쪽 배너로 이동"
-              />
+                alt="왼쪽 배너로 이동" />
             </button>
             <a href="/">
               <img src="/assets/main/banner05.svg" alt="이 주의 특가" />
@@ -481,8 +452,7 @@
             <button type="button" class="right__btn">
               <img
                 src="assets/main/ic-banner-button.svg"
-                alt="오른쪽 배너로 이동"
-              />
+                alt="오른쪽 배너로 이동" />
             </button>
           </li>
         </ul>
@@ -495,25 +465,25 @@
         <div class="myView">
           <ul class="myView__wrapper">
             <li class="myView__list">
-              <a href="/"
-                ><img
+              <a href="/">
+                <img
                   src="/assets/product/tangtang/thumbnail.svg"
-                  alt="탱탱쫄면"
-              /></a>
+                  alt="탱탱쫄면" />
+              </a>
             </li>
             <li class="myView__list">
-              <a href="/"
-                ><img
+              <a href="/">
+                <img
                   src="/assets/product/detergent/thumbnail.svg"
-                  alt="세탁세제"
-              /></a>
+                  alt="세탁세제" />
+              </a>
             </li>
             <li class="myView__list">
-              <a href="/"
-                ><img
+              <a href="/">
+                <img
                   src="/assets/product/suncushion/thumbnail.svg"
-                  alt="선쿠션"
-              /></a>
+                  alt="선쿠션" />
+              </a>
             </li>
           </ul>
         </div>
@@ -530,8 +500,7 @@
                 src="/assets/product/tangtang/thumbnail.svg"
                 alt=""
                 aria-labelledby="productTangtang"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">[풀무원] 탱탱쫄면(4개입)</h3>
                 <dl>
@@ -548,8 +517,7 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
         </div>
         <div class="product__wrapper">
           <a href="#">
@@ -558,8 +526,7 @@
                 src="/assets/product/suncushion/thumbnail.svg"
                 alt=""
                 aria-labelledby="productSuncushion"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">[온더바디] 죠르디 시카 자석 선쿠션</h3>
                 <dl>
@@ -576,8 +543,7 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
         </div>
         <div class="product__wrapper">
           <a href="#">
@@ -586,8 +552,7 @@
                 src="/assets/product/brownrice/thumbnail.svg"
                 alt=""
                 aria-labelledby="productBrownrice"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">유기농 밀키퀸 현미 4kg</h3>
                 <dl>
@@ -604,8 +569,7 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
         </div>
         <div class="product__wrapper">
           <a href="#">
@@ -614,8 +578,7 @@
                 src="/assets/product/detergent/thumbnail.svg"
                 alt=""
                 aria-labelledby="productDetergent"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">[프로쉬] 베이비 세탁세제</h3>
                 <dl class="product__sale">
@@ -638,20 +601,18 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
           <button
             type="button"
             title="상품 더보기"
-            class="product__more"
-          ></button>
+            class="product__more"></button>
         </div>
       </section>
-      <a href="#" class="middleBanner"
-        ><img
+      <a href="#" class="middleBanner">
+        <img
           src="/assets/main/line-banner.svg"
-          alt="칼리 10월의 퍼플 위크 광고"
-      /></a>
+          alt="칼리 10월의 퍼플 위크 광고" />
+      </a>
       <h2 class="productTitle">놓치면 후회할 가격</h2>
       <section class="product">
         <div class="product__wrapper">
@@ -661,8 +622,7 @@
                 src="/assets/product/tangtang/thumbnail.svg"
                 alt=""
                 aria-labelledby="tangtang"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">[풀무원] 탱탱쫄면(4개입)</h3>
                 <dl>
@@ -679,8 +639,7 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
         </div>
         <div class="product__wrapper">
           <a href="#">
@@ -689,8 +648,7 @@
                 src="/assets/product/suncushion/thumbnail.svg"
                 alt=""
                 aria-labelledby="suncushion"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">[온더바디] 죠르디 시카 자석 선쿠션</h3>
                 <dl>
@@ -707,8 +665,7 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
         </div>
         <div class="product__wrapper">
           <a href="#">
@@ -717,8 +674,7 @@
                 src="/assets/product/brownrice/thumbnail.svg"
                 alt=""
                 aria-labelledby="brownrice"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">유기농 밀키퀸 현미 4kg</h3>
                 <dl>
@@ -735,8 +691,7 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
         </div>
         <div class="product__wrapper">
           <a href="#">
@@ -745,8 +700,7 @@
                 src="/assets/product/detergent/thumbnail.svg"
                 alt=""
                 aria-labelledby="detergent"
-                class="product__img"
-              />
+                class="product__img" />
               <figcaption class="product__caption">
                 <h3 class="a11y">[프로쉬] 베이비 세탁세제</h3>
                 <dl class="product__sale">
@@ -769,13 +723,11 @@
           <button
             type="button"
             title="장바구니에 담기"
-            class="accentCart"
-          ></button>
+            class="accentCart"></button>
           <button
             type="button"
             title="상품 더보기"
-            class="product__more"
-          ></button>
+            class="product__more"></button>
         </div>
       </section>
     </main>
@@ -809,9 +761,9 @@
                 <div>
                   <p><span>365일</span></p>
                   <p>
-                    <span
-                      >고객센터 운영시간에 순차적으로 답변드리겠습니다.</span
-                    >
+                    <span>
+                      고객센터 운영시간에 순차적으로 답변드리겠습니다.
+                    </span>
                   </p>
                 </div>
               </li>
@@ -868,63 +820,63 @@
               <br />
               <span>입점문의 : 입점문의하기</span>
               <span class="divider" aria-hidden="true">|</span>
-              <span
-                >제휴문의 :
-                <a class="primaryColor" href="mailto:business@karlycorp.com"
-                  >business@karlycorp.com</a
-                ></span
-              >
+              <span>
+                제휴문의 :
+                <a class="primaryColor" href="mailto:business@karlycorp.com">
+                  business@karlycorp.com
+                </a>
+              </span>
               <br />
-              <span
-                >채용 문의 :
-                <a class="primaryColor" href="mailto:recruit@karlycorp.com"
-                  >recruit@karlycorp.com</a
-                ></span
-              >
+              <span>
+                채용 문의 :
+                <a class="primaryColor" href="mailto:recruit@karlycorp.com">
+                  recruit@karlycorp.com
+                </a>
+              </span>
               <br />
               <span>팩스 : 070 - 7500 - 6098</span>
             </div>
             <div>
               <ul class="footer__snsList">
                 <li class="footer__snsItem">
-                  <a target="_blank" href="/"
-                    ><img
+                  <a target="_blank" href="/">
+                    <img
                       class="footer__snsImg"
                       src="/assets/footer/ic-blog.svg"
-                      alt="컬리 네이버블로그 바로가기"
-                  /></a>
+                      alt="컬리 네이버블로그 바로가기" />
+                  </a>
                 </li>
                 <li class="footer__snsItem">
-                  <a target="_blank" href="/"
-                    ><img
+                  <a target="_blank" href="/">
+                    <img
                       class="footer__snsImg"
                       src="/assets/footer/ic-face-book.svg"
-                      alt="컬리 페이스북 바로가기"
-                  /></a>
+                      alt="컬리 페이스북 바로가기" />
+                  </a>
                 </li>
                 <li class="footer__snsItem">
-                  <a target="_blank" href="/"
-                    ><img
+                  <a target="_blank" href="/">
+                    <img
                       class="footer__snsImg"
                       src="/assets/footer/ic-instagram.svg"
-                      alt="컬리 인스타그램 바로가기"
-                  /></a>
+                      alt="컬리 인스타그램 바로가기" />
+                  </a>
                 </li>
                 <li class="footer__snsItem">
-                  <a target="_blank" href="/"
-                    ><img
+                  <a target="_blank" href="/">
+                    <img
                       class="footer__snsImg"
                       src="/assets/footer/ic-naver-post.svg"
-                      alt="컬리 네이버 바로가기"
-                  /></a>
+                      alt="컬리 네이버 바로가기" />
+                  </a>
                 </li>
                 <li class="footer__snsItem">
-                  <a target="_blank" href="/"
-                    ><img
+                  <a target="_blank" href="/">
+                    <img
                       class="footer__snsImg"
                       src="/assets/footer/ic-youtube.svg"
-                      alt="컬리 유튜브 바로가기"
-                  /></a>
+                      alt="컬리 유튜브 바로가기" />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -937,8 +889,7 @@
                 <img
                   class="footer__logoImg"
                   src="/assets/footer/logo-isms.svg"
-                  alt="ISMS 로고"
-                />
+                  alt="ISMS 로고" />
                 <p class="footer__logoInfo">
                   [인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영
                   <br />
@@ -953,10 +904,10 @@
                 <img
                   class="footer__logoImg"
                   src="/assets/footer/logo-privacy.svg"
-                  alt="개인정보보호 인증 로고"
-                />
+                  alt="개인정보보호 인증 로고" />
                 <p class="footer__logoInfo">
-                  개인정보보호 우수 웹사이트<br />
+                  개인정보보호 우수 웹사이트
+                  <br />
                   개인정보처리시스템 인증(ePRIVACY PLUS)
                 </p>
               </a>
@@ -966,10 +917,10 @@
                 <img
                   class="footer__logoImg"
                   src="/assets/footer/logo-tosspayments.svg"
-                  alt="payments 로고"
-                />
+                  alt="payments 로고" />
                 <p class="footer__logoInfo">
-                  토스페이먼츠 구매안전(에스크로) 서비스<br />
+                  토스페이먼츠 구매안전(에스크로) 서비스
+                  <br />
                   를 이용하실 수 있습니다.
                 </p>
               </a>
@@ -979,12 +930,13 @@
                 <img
                   class="footer__logoImg"
                   src="/assets/footer/logo-woori-bank.svg"
-                  alt="우리은행 로고"
-                />
+                  alt="우리은행 로고" />
                 <p class="footer__logoInfo">
                   고객님이 현금으로 결제한 금액에 대해 우리은행과
-                  <br />채무지급보증 계약을 체결하여 안전거래를 보장하고
-                  <br />있습니다.
+                  <br />
+                  채무지급보증 계약을 체결하여 안전거래를 보장하고
+                  <br />
+                  있습니다.
                 </p>
               </a>
             </li>
