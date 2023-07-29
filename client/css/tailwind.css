@@ -47,6 +47,7 @@
 .footer__logoFlex {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: nowrap;
 }
 .footer__bottomFont {
   font-size: 0.625rem;
@@ -54,6 +55,20 @@
 }
 .footer__lineHeight {
   line-height: 100%;
+}
+.footer__btnContent {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  font-size: 0.875rem;
+  align-items: center;
+}
+.footer__itemBtnStyle {
+  width: 8rem;
+  border: 2px solid #c4c4c4;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 3rem;
 }
 .footer__wrapperStyle {
   background-color: #f9f9f9;
