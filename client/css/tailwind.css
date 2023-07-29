@@ -9,3 +9,54 @@
     font-family: Pretendard, system-ui, sans-serif;
   }
 }
+.container {
+  width: 65.625rem;
+  margin: auto;
+}
+
+.category__listTitle {
+  display: flex;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.category__imgStyle {
+  width: 1.5rem;
+  margin-left: 0.25rem;
+}
+.menu__listStyle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.footer__Img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.footer__font {
+  font-size: 0.625rem;
+  color: #333333;
+}
+.flex__between {
+  display: flex;
+  justify-content: space-between;
+}
+.border__top {
+  border-top-width: 1px;
+  border-color: #e1e1e1;
+}
+.footer__logoFlex {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer__bottomFont {
+  font-size: 0.625rem;
+  color: #898989;
+}
+.footer__lineHeight {
+  line-height: 100%;
+}
+.footer__wrapperStyle {
+  background-color: #f9f9f9;
+  padding-top: 2rem;
+  padding-bottom: 1.25rem;
+}
