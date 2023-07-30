@@ -359,152 +359,150 @@
           </div>
           <button
             type="button"
-            class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
+            class="flex w-full items-center border-b border-[#E1E1E1] py-[14px] text-left filter">
             <span
-              class="filter__title filter__mark font-semibold after:ml-1 after:text-sm after:text-[#A6A6A6] after:content-['1']"
+              class="filter__title filter__mark w-full bg-[url('/assets/images/product-list/ic-arrow-down.svg')] bg-right bg-no-repeat font-semibold after:ml-1 after:text-sm after:text-[#A6A6A6] after:content-['1']"
               >카테고리</span
             >
-            <img
-              src="/assets/images/product-list/ic-arrow-down.svg"
-              alt="카테고리 펼쳐보기"
-              class="filter__fold" />
           </button>
           <div class="border-b border-[#E1E1E1]">
             <button
               type="button"
-              class="flex w-full justify-between py-[14px] filter"
+              class="group peer flex w-full items-center py-[14px] text-left filter"
               id="buttonBrand">
-              <span class="filter__title font-semibold">브랜드</span>
-              <img src="/assets/images/product-list/ic-arrow-up.svg" alt="카테고리 펼쳐보기" />
+              <span
+                class="filter__title w-full bg-[url('/assets/images/product-list/ic-arrow-down.svg')] bg-right bg-no-repeat font-semibold group-[.is--clicked]:bg-[url('/assets/images/product-list/ic-arrow-up.svg')]"
+                >브랜드</span
+              >
             </button>
-            <ul class="filter__list">
-              <li class="filter__item relative flex pb-4 pt-2">
+            <ul class="filter__list block peer-[.is--clicked]:hidden" id="filterList">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="gamzabatt"
                   id="gamzabatt"
                   aria-checked="false" />
                 <label
                   for="gamzabatt"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   감자밭
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="gangnamnoodle"
                   id="gangnamnoodle"
                   aria-checked="false" />
                 <label
                   for="gangnamnoodle"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   강남면옥
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer peer absolute opacity-0"
+                  class="filter__checkbox opacity-0ity-0 peer w-[1px]"
                   name="kyungnampharm"
                   id="kyungnampharm"
                   aria-checked="false" />
                 <label
                   for="kyungnampharm"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   경남제약
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="gyeongbokgung"
                   id="gyeongbokgung"
                   aria-checked="false" />
                 <label
                   for="gyeongbokgung"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   경복궁
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="goraesa"
                   id="goraesa"
                   aria-checked="false" />
                 <label
                   for="goraesa"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   고래사
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="mandugongbang"
                   id="mandugongbang"
                   aria-checked="false" />
                 <label
                   for="mandugongbang"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   고메공방
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="goonadiet"
                   id="goonadiet"
                   aria-checked="false" />
                 <label
                   for="goonadiet"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   고온어다이어트
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="kyotomarble"
                   id="kyotomarble"
                   aria-checked="false" />
                 <label
                   for="kyotomarble"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   교토마블
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="granolaHouse"
                   id="granolaHouse"
                   aria-checked="false" />
                 <label
                   for="granolaHouse"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   그래놀라 하우스
                 </label>
               </li>
-              <li class="filter__item relative flex pb-4 pt-2">
+              <li class="filter__item flex pb-4 pt-2">
                 <input
                   type="checkbox"
-                  class="filter__checkbox peer absolute opacity-0"
+                  class="filter__checkbox peer w-[1px] opacity-0"
                   name="greetsSignatureLamb"
                   id="greetsSignatureLamb"
                   aria-checked="false" />
                 <label
                   for="greetsSignatureLamb"
-                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] after:content-['1'] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                  class="filter__label flex items-center gap-1 bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-no-repeat pl-8 after:text-sm after:text-[#A6A6A6] peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')] peer-checked:after:content-['1']">
                   그리츠 시그니처 램
                 </label>
               </li>
@@ -515,27 +513,35 @@
           </div>
           <button
             type="button"
-            class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
-            <span class="filter__title font-semibold">가격</span>
-            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
+            class="flex w-full items-center border-b border-[#E1E1E1] py-[14px] text-left filter">
+            <span
+              class="filter__title w-full bg-[url('/assets/images/product-list/ic-arrow-down.svg')] bg-right bg-no-repeat font-semibold"
+              >가격</span
+            >
           </button>
           <button
             type="button"
-            class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
-            <span class="filter__title font-semibold">혜택</span>
-            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
+            class="flex w-full items-center border-b border-[#E1E1E1] py-[14px] text-left filter">
+            <span
+              class="filter__title w-full bg-[url('/assets/images/product-list/ic-arrow-down.svg')] bg-right bg-no-repeat font-semibold"
+              >혜택</span
+            >
           </button>
           <button
             type="button"
-            class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
-            <span class="filter__title font-semibold">유형</span>
-            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
+            class="flex w-full items-center border-b border-[#E1E1E1] py-[14px] text-left filter">
+            <span
+              class="filter__title w-full bg-[url('/assets/images/product-list/ic-arrow-down.svg')] bg-right bg-no-repeat font-semibold"
+              >유형</span
+            >
           </button>
           <button
             type="button"
-            class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
-            <span class="filter__title font-semibold">특정상품 제외</span>
-            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
+            class="flex w-full items-center border-b border-[#E1E1E1] py-[14px] text-left filter">
+            <span
+              class="filter__title w-full bg-[url('/assets/images/product-list/ic-arrow-down.svg')] bg-right bg-no-repeat font-semibold"
+              >특정상품 제외</span
+            >
           </button>
         </div>
         <div class="product__main">
