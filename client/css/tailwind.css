@@ -23,11 +23,6 @@
   html {
     font-family: Pretendard, system-ui, sans-serif;
   }
-  button {
-    all: unset;
-    text-align: center;
-    cursor: pointer;
-  }
   .prod__price span {
     font-size: 16px;
     font-weight: 700;
