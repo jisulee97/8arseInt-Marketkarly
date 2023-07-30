@@ -5,38 +5,356 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="8arseInt" />
     <meta name="keywords" content="칼리,베스트,탱탱쫄면,선쿠션,세탁세제" />
-    <meta
-      name="description"
-      content="지금 칼리에서 제공하는 다양한 베스트 상품을 확인해보세요." />
+    <meta name="description" content="지금 칼리에서 제공하는 다양한 베스트 상품을 확인해보세요." />
     <title>베스트 - 칼리</title>
-    <link
-      rel="shortcut icon"
-      href="https://res.kurly.com/favicon.ico"
-      type="res/ico" />
+    <link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
     <link
       rel="preload"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="./../css/main.css" />
+    <script type="module" src="./../js/main.js"></script>
   </head>
 
   <body>
-    <header></header>
+    <div class="headerAllWrapper">
+      <div class="promotion h-[3.125rem] bg-primary">
+        <div
+          class="promotion__wrapper container__width relative flex h-full items-center justify-center">
+          <a href="/" class="promotion__link text-white">
+            지금 가입하고 인기상품
+            <strong>100원</strong>
+            에 받아 가세요!
+          </a>
+          <button class="promotion__button absolute right-0">
+            <img
+              src="/assets/images/cart/ic-cancel.svg"
+              alt="광고 닫기"
+              class="promotion__button__img" />
+          </button>
+        </div>
+      </div>
+      <div class="headerWrapper container__width relative">
+        <header class="header">
+          <h1 class="a11y sr-only">칼리</h1>
+          <div class="logo gap-[6.75rem] pb-5 pt-[4.375rem] align-middle text-lg">
+            <img src="/assets/images/header/logo-kurly.svg" alt="" class="logo__img inline-block" />
+            <a href="/" class="logo__link__market primary-color font-bold text-primary">
+              마켓칼리
+            </a>
+            <span class="divider text-gray-200" aria-hidden="true">ㅣ</span>
+            <a href="/" class="logo__link__beauty font-semibold text-gray-400 hover:text-primary">
+              뷰티칼리
+            </a>
+            <img
+              src="/assets/images/header/new.svg"
+              alt=""
+              class="logo__img__new absolute top-[3.9375rem] inline-block" />
+          </div>
+
+          <div class="memberOnly container__width text-sm">
+            <ul class="memberOnly__wrapper absolute right-0 top-[0.75rem] flex justify-end">
+              <li>
+                <a href="/" class="text-primary">회원가입</a>
+              </li>
+              <li>
+                <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
+                <a href="/">로그인</a>
+              </li>
+              <li>
+                <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
+                <a href="/">
+                  고객센터
+                  <img
+                    src="/assets/images/header/down.svg"
+                    alt=""
+                    class="memberOnly__down inline-block w-2" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <form action="/" method="get" class="searchForm">
+            <fieldset>
+              <legend class="sr-only">검색</legend>
+              <div class="searchForm__group absolute left-[21.5625rem] top-8">
+                <div class="formInput pt-6">
+                  <label for="search" class="formInput__label sr-only"> 검색어 </label>
+                  <input
+                    id="search"
+                    class="formInput__input focus: relative w-[25rem] rounded border-[0.0625rem] border-primary pb-3 pl-5 pr-5 pt-3 text-lg text-content outline-none"
+                    type="search"
+                    required
+                    placeholder="검색어를 입력해주세요."
+                    name="search" />
+                  <button type="submit" class="searchButton absolute right-2 top-9">
+                    <img src="/assets/images/header/Search.svg" alt="검색" />
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <ul class="buttons absolute right-0 top-[4.375rem] flex gap-5">
+            <li class="buttons__list">
+              <a href="/" class="buttons__address" title="배송지" aria-label="배송지 등록">
+                <img
+                  src="/assets/images/header/Location.svg"
+                  alt=""
+                  class="buttons__address__img" />
+              </a>
+            </li>
+            <li class="buttons__list">
+              <a href="/" class="buttons__heart" aria-label="찜하기">
+                <img src="/assets/images/header/Heart.svg" alt="" class="buttons__heart__img" />
+              </a>
+            </li>
+            <li class="buttons__list">
+              <a href="/views/cart.html" class="buttons__cart" aria-label="장바구니">
+                <img src="/assets/images/header/Cart.svg" alt="" class="buttons__cart__img" />
+              </a>
+            </li>
+          </ul>
+
+          <nav class="navi pb-4 pt-4">
+            <div class="menu flex__between">
+              <div class="menu__button pt-2">
+                <h2>
+                  <button
+                    class="menu__button__category menu__listStyle hover:underline-offset-2hover:text-primary hover:text-primary hover:underline hover:underline-offset-2">
+                    <img
+                      src="/assets/images/header/Hamburger.svg"
+                      alt=""
+                      class="menu__button__img mr-2 inline-block pb-1 pl-2" />
+                    카테고리
+                  </button>
+                </h2>
+                <ul class="category category__hidden absolute top-48 hidden">
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navGift.png" alt="선물" />
+                    </div>
+                    <span class="sprite sprite__gift"></span>
+                    <a href="#" class="category__link text-base">선물하기</a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navVegetable.png" alt="채소" />
+                    </div>
+                    <span class="sprite sprite__vegetable"></span>
+                    <a href="#" class="category__link text-base">채소</a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navFruit.png" alt="과일, 견과, 쌀" />
+                    </div>
+
+                    <span class="sprite sprite__friut"></span>
+                    <a href="#" class="category__link text-base"> 과일&bull;견과&bull;쌀 </a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navFish.png" alt="수산, 해산, 건어물" />
+                    </div>
+                    <span class="sprite sprite__fish"></span>
+                    <a href="#" class="category__link text-base"> 수산&bull;해산&bull;건어물 </a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navMeat.png" alt="정육, 계란" />
+                    </div>
+                    <span class="sprite sprite__meat"></span>
+                    <a href="#" class="category__link text-base">정육&bull;계란</a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navMaindish.png" alt="국, 반찬, 메인요리" />
+                    </div>
+                    <span class="sprite sprite__soup"></span>
+                    <a href="#" class="category__link text-base"> 국&bull;반찬&bull;메인요리 </a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navSalad.png" alt="샐러드, 간편식" />
+                    </div>
+                    <span class="sprite sprite__salad"></span>
+                    <a href="#" class="category__link text-base">샐러드&bull;간편식</a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navSpice.png" alt="면, 양념, 오일" />
+                    </div>
+                    <span class="sprite sprite__noodles"></span>
+                    <a href="./../views/product-detail.html" class="category__link text-base">
+                      면&bull;양념&bull;오일
+                    </a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navDrink.png" alt="생수, 음료, 우유, 커피" />
+                    </div>
+                    <span class="sprite sprite__water"></span>
+                    <a href="#" class="category__link text-base">
+                      생수&bull;음료&bull;우유&bull;커피
+                    </a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navDessert.png" alt="간식, 과자, 떡" />
+                    </div>
+                    <span class="sprite sprite__snack"></span>
+                    <a href="#" class="category__link text-base"> 간식&bull;과자&bull;떡 </a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navBread.png" alt="베이커리, 치즈, 델리" />
+                    </div>
+                    <span class="sprite sprite__bakery"></span>
+                    <a href="#" class="category__link text-base"> 베이커리&bull;치즈&bull;델리 </a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navHealth.png" alt="건강 식품" />
+                    </div>
+                    <span class="sprite sprite__health"></span>
+                    <a href="#" class="category__link text-base">건강식품</a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navWine.png" alt="와인" />
+                    </div>
+                    <span class="sprite sprite__wine"></span>
+                    <a href="#" class="category__link text-base">와인</a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navTraditionalDrink.png" alt="전통주" />
+                    </div>
+                    <span class="sprite sprite__tradition"></span>
+                    <a href="#" class="category__link text-base">전통주</a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navLiving.png" alt="생활용품, 리빙, 캠핑" />
+                    </div>
+                    <span class="sprite sprite__living"></span>
+                    <a href="#" class="category__link text-base"> 생활용품&bull;리빙&bull;캠핑 </a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navBeauty.png" alt="스킨케어, 메이크업" />
+                    </div>
+                    <span class="sprite sprite__skin"></span>
+                    <a href="#" class="category__link text-base"> 스킨케어&bull;메이크업 </a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navBody.png" alt="헤어, 바디, 구강" />
+                    </div>
+                    <span class="sprite sprite__hair"></span>
+                    <a href="#" class="category__link text-base"> 헤어&bull;바디&bull;구강 </a>
+                  </li>
+
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navKitchen.png" alt="주방용품" />
+                    </div>
+                    <span class="sprite sprite__kitchen"></span>
+                    <a href="#" class="category__link text-base">주방용품</a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navHomeAppliances.png" alt="가전제품" />
+                    </div>
+                    <span class="sprite sprite__appliances"></span>
+                    <a href="#" class="category__link text-base">가전제품</a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navPet.png" alt="반려동물" />
+                    </div>
+                    <span class="sprite sprite__pet"></span>
+                    <a href="#" class="category__link text-base">반려동물</a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navBaby.png" alt="베이비, 키즈, 완구" />
+                    </div>
+                    <span class="sprite sprite__baby"></span>
+                    <a href="#" class="category__link text-base"> 베이비&bull;키즈&bull;완구 </a>
+                  </li>
+                  <li class="category__list category__listTitle">
+                    <div class="category__img category__imgStyle">
+                      <img src="/assets/images/header/navTrip.png" alt="여행, 티켓" />
+                    </div>
+                    <span class="sprite sprite__travel"></span>
+                    <a href="#" class="category__link text-base">여행&bull;티켓</a>
+                  </li>
+                </ul>
+              </div>
+              <h2 class="a11y sr-only">메뉴</h2>
+              <ul class="menu__list flex gap-[6.75rem] pt-2">
+                <li class="menu__item">
+                  <a
+                    href="/"
+                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
+                    신상품
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a
+                    href="/views/product-list.html"
+                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
+                    베스트
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a
+                    href="/"
+                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
+                    알뜰쇼핑
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a
+                    href="/"
+                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
+                    특가/혜택
+                  </a>
+                </li>
+              </ul>
+              <div
+                class="menu__delivery rounded-2xl border-[0.125rem] border-gray-300 pb-1 pl-2 pr-2 pt-1">
+                <a href="/">
+                  <span class="primary-color text-sm text-primary"> 샛별&nbsp;&bull;&nbsp;낮 </span>
+                  <span class="gray-500 text-sm">배송안내</span>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
     <main class="text-content">
       <h2
         class="product__best mx-auto my-12 w-container text-center text-lg font-semibold text-[#000]">
         베스트
       </h2>
-      <section
-        class="productWrapper mx-auto flex w-container justify-between gap-12">
+      <section class="productWrapper mx-auto flex w-container justify-between gap-12">
         <div class="product__filter w-[220px]">
-          <div
-            class="flex justify-between border-b border-[#E1E1E1] py-[14px] filter">
+          <div class="flex justify-between border-b border-[#E1E1E1] py-[14px] filter">
             <span class="filter__title font-semibold">필터</span>
-            <button type="reset" class="filter__reset text-xs text-[#A6A6A6]">
-              초기화
-            </button>
+            <button type="reset" class="filter__reset text-xs text-[#A6A6A6]">초기화</button>
           </div>
           <button
             type="button"
@@ -51,13 +369,9 @@
               class="filter__fold" />
           </button>
           <div class="border-b border-[#E1E1E1]">
-            <button
-              type="button"
-              class="flex w-full justify-between py-[14px] filter">
+            <button type="button" class="flex w-full justify-between py-[14px] filter">
               <span class="filter__title font-semibold">브랜드</span>
-              <img
-                src="/assets/images/product-list/ic-arrow-up.svg"
-                alt="카테고리 펼쳐보기" />
+              <img src="/assets/images/product-list/ic-arrow-up.svg" alt="카테고리 펼쳐보기" />
             </button>
             <ul class="filter__list">
               <li class="filter__item relative flex pb-4 pt-2">
@@ -201,9 +515,7 @@
                 </label>
               </li>
               <li class="pb-3 text-center">
-                <button type="button" class="filter__brandPlus text-sm">
-                  브랜드 더보기 >
-                </button>
+                <button type="button" class="filter__brandPlus text-sm">브랜드 더보기 ></button>
               </li>
             </ul>
           </div>
@@ -211,33 +523,25 @@
             type="button"
             class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
             <span class="filter__title font-semibold">가격</span>
-            <img
-              src="/assets/images/product-list/ic-arrow-down.svg"
-              alt="카테고리 펼쳐보기" />
+            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
           </button>
           <button
             type="button"
             class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
             <span class="filter__title font-semibold">혜택</span>
-            <img
-              src="/assets/images/product-list/ic-arrow-down.svg"
-              alt="카테고리 펼쳐보기" />
+            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
           </button>
           <button
             type="button"
             class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
             <span class="filter__title font-semibold">유형</span>
-            <img
-              src="/assets/images/product-list/ic-arrow-down.svg"
-              alt="카테고리 펼쳐보기" />
+            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
           </button>
           <button
             type="button"
             class="flex w-full items-center justify-between border-b border-[#E1E1E1] py-[14px] filter">
             <span class="filter__title font-semibold">특정상품 제외</span>
-            <img
-              src="/assets/images/product-list/ic-arrow-down.svg"
-              alt="카테고리 펼쳐보기" />
+            <img src="/assets/images/product-list/ic-arrow-down.svg" alt="카테고리 펼쳐보기" />
           </button>
         </div>
         <div class="product__main">
@@ -255,49 +559,24 @@
                   title="소비자 인기도(판매량, 판매금액, 조회수 등), 상품 출시일, 수요 적합성, 상품 운영상 필요 등을 종합적으로 고려한 순서입니다." />
               </li>
               <li class="text-[#A6A6A6]">
-                <span
-                  aria-hidden="true"
-                  class="product__alignDeco cursor-default"
-                  >ㅣ</span
-                ><a href="#" class="product__align product__alignList"
-                  >신상품순</a
-                >
+                <span aria-hidden="true" class="product__alignDeco cursor-default">ㅣ</span
+                ><a href="#" class="product__align product__alignList">신상품순</a>
               </li>
               <li class="text-[#A6A6A6]">
-                <span
-                  aria-hidden="true"
-                  class="product__alignDeco cursor-default"
-                  >ㅣ</span
-                ><a href="#" class="product__align product__alignList"
-                  >판매량순</a
-                >
+                <span aria-hidden="true" class="product__alignDeco cursor-default">ㅣ</span
+                ><a href="#" class="product__align product__alignList">판매량순</a>
               </li>
               <li class="text-[#A6A6A6]">
-                <span
-                  aria-hidden="true"
-                  class="product__alignDeco cursor-default"
-                  >ㅣ</span
-                ><a href="#" class="product__align product__alignList"
-                  >혜택순</a
-                >
+                <span aria-hidden="true" class="product__alignDeco cursor-default">ㅣ</span
+                ><a href="#" class="product__align product__alignList">혜택순</a>
               </li>
               <li class="text-[#A6A6A6]">
-                <span
-                  aria-hidden="true"
-                  class="product__alignDeco cursor-default"
-                  >ㅣ</span
-                ><a href="#" class="product__align product__alignList"
-                  >낮은가격순</a
-                >
+                <span aria-hidden="true" class="product__alignDeco cursor-default">ㅣ</span
+                ><a href="#" class="product__align product__alignList">낮은가격순</a>
               </li>
               <li class="text-[#A6A6A6]">
-                <span
-                  aria-hidden="true"
-                  class="product__alignDeco cursor-default"
-                  >ㅣ</span
-                ><a href="#" class="product__align product__alignList"
-                  >높은가격순</a
-                >
+                <span aria-hidden="true" class="product__alignDeco cursor-default">ㅣ</span
+                ><a href="#" class="product__align product__alignList">높은가격순</a>
               </li>
             </ul>
           </div>
@@ -318,9 +597,7 @@
                         [풀무원] 탱탱쫄면(4개입)
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        4,980원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">4,980원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         튀기지 않아 부담없는 매콤함
@@ -336,8 +613,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -358,20 +634,14 @@
                     aria-labelledby="bestSuncushion_1"
                     class="best__img mb-4" />
                   <figcaption class="best__caption">
-                    <h3 class="a11y sr-only">
-                      [온더바디] 죠르디 시카 자석 선쿠션
-                    </h3>
+                    <h3 class="a11y sr-only">[온더바디] 죠르디 시카 자석 선쿠션</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestSuncushion_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestSuncushion_1" class="best__name mb-2 pt-[26px]">
                         [온더바디] 죠르디 시카 자석 선쿠션
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        32,500원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">32,500원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         끈적임 없이 보송한 무기자차 선쿠션
@@ -402,14 +672,11 @@
                     <h3 class="a11y sr-only">[프로쉬] 베이비 세탁세제</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestDetergent_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestDetergent_1" class="best__name mb-2 pt-[26px]">
                         [프로쉬] 베이비 세탁세제
                       </dd>
                       <dt class="a11y sr-only">정상가격</dt>
-                      <dd
-                        class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
+                      <dd class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
                         <del>24,000원</del>
                       </dd>
                       <dt class="a11y sr-only">할인율</dt>
@@ -419,13 +686,10 @@
                       </dd>
                       <dt class="a11y sr-only">할인가격</dt>
                       <dd class="best__price mb-2 inline text-lg font-semibold">
-                        <ins class="best__discountPrice no-underline"
-                          >18,900원</ins
-                        >
+                        <ins class="best__discountPrice no-underline">18,900원</ins>
                       </dd>
                       <dt class="a11y sr-only">상품설명</dt>
-                      <dd
-                        class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
+                      <dd class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
                         성분을 꼼꼼히 따져 골라 더욱 편안한
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">배송안내</dt>
@@ -439,8 +703,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -468,9 +731,7 @@
                         [풀무원] 탱탱쫄면(4개입)
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        4,980원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">4,980원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         튀기지 않아 부담없는 매콤함
@@ -486,8 +747,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -508,20 +768,14 @@
                     aria-labelledby="bestSuncushion_1"
                     class="best__img mb-4" />
                   <figcaption class="best__caption">
-                    <h3 class="a11y sr-only">
-                      [온더바디] 죠르디 시카 자석 선쿠션
-                    </h3>
+                    <h3 class="a11y sr-only">[온더바디] 죠르디 시카 자석 선쿠션</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestSuncushion_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestSuncushion_1" class="best__name mb-2 pt-[26px]">
                         [온더바디] 죠르디 시카 자석 선쿠션
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        32,500원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">32,500원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         끈적임 없이 보송한 무기자차 선쿠션
@@ -552,14 +806,11 @@
                     <h3 class="a11y sr-only">[프로쉬] 베이비 세탁세제</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestDetergent_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestDetergent_1" class="best__name mb-2 pt-[26px]">
                         [프로쉬] 베이비 세탁세제
                       </dd>
                       <dt class="a11y sr-only">정상가격</dt>
-                      <dd
-                        class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
+                      <dd class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
                         <del>24,000원</del>
                       </dd>
                       <dt class="a11y sr-only">할인율</dt>
@@ -569,13 +820,10 @@
                       </dd>
                       <dt class="a11y sr-only">할인가격</dt>
                       <dd class="best__price mb-2 inline text-lg font-semibold">
-                        <ins class="best__discountPrice no-underline"
-                          >18,900원</ins
-                        >
+                        <ins class="best__discountPrice no-underline">18,900원</ins>
                       </dd>
                       <dt class="a11y sr-only">상품설명</dt>
-                      <dd
-                        class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
+                      <dd class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
                         성분을 꼼꼼히 따져 골라 더욱 편안한
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">배송안내</dt>
@@ -589,8 +837,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -618,9 +865,7 @@
                         [풀무원] 탱탱쫄면(4개입)
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        4,980원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">4,980원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         튀기지 않아 부담없는 매콤함
@@ -636,8 +881,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -658,20 +902,14 @@
                     aria-labelledby="bestSuncushion_1"
                     class="best__img mb-4" />
                   <figcaption class="best__caption">
-                    <h3 class="a11y sr-only">
-                      [온더바디] 죠르디 시카 자석 선쿠션
-                    </h3>
+                    <h3 class="a11y sr-only">[온더바디] 죠르디 시카 자석 선쿠션</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestSuncushion_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestSuncushion_1" class="best__name mb-2 pt-[26px]">
                         [온더바디] 죠르디 시카 자석 선쿠션
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        32,500원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">32,500원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         끈적임 없이 보송한 무기자차 선쿠션
@@ -702,14 +940,11 @@
                     <h3 class="a11y sr-only">[프로쉬] 베이비 세탁세제</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestDetergent_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestDetergent_1" class="best__name mb-2 pt-[26px]">
                         [프로쉬] 베이비 세탁세제
                       </dd>
                       <dt class="a11y sr-only">정상가격</dt>
-                      <dd
-                        class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
+                      <dd class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
                         <del>24,000원</del>
                       </dd>
                       <dt class="a11y sr-only">할인율</dt>
@@ -719,13 +954,10 @@
                       </dd>
                       <dt class="a11y sr-only">할인가격</dt>
                       <dd class="best__price mb-2 inline text-lg font-semibold">
-                        <ins class="best__discountPrice no-underline"
-                          >18,900원</ins
-                        >
+                        <ins class="best__discountPrice no-underline">18,900원</ins>
                       </dd>
                       <dt class="a11y sr-only">상품설명</dt>
-                      <dd
-                        class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
+                      <dd class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
                         성분을 꼼꼼히 따져 골라 더욱 편안한
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">배송안내</dt>
@@ -739,8 +971,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -768,9 +999,7 @@
                         [풀무원] 탱탱쫄면(4개입)
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        4,980원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">4,980원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         튀기지 않아 부담없는 매콤함
@@ -786,8 +1015,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -808,20 +1036,14 @@
                     aria-labelledby="bestSuncushion_1"
                     class="best__img mb-4" />
                   <figcaption class="best__caption">
-                    <h3 class="a11y sr-only">
-                      [온더바디] 죠르디 시카 자석 선쿠션
-                    </h3>
+                    <h3 class="a11y sr-only">[온더바디] 죠르디 시카 자석 선쿠션</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestSuncushion_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestSuncushion_1" class="best__name mb-2 pt-[26px]">
                         [온더바디] 죠르디 시카 자석 선쿠션
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        32,500원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">32,500원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         끈적임 없이 보송한 무기자차 선쿠션
@@ -852,14 +1074,11 @@
                     <h3 class="a11y sr-only">[프로쉬] 베이비 세탁세제</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestDetergent_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestDetergent_1" class="best__name mb-2 pt-[26px]">
                         [프로쉬] 베이비 세탁세제
                       </dd>
                       <dt class="a11y sr-only">정상가격</dt>
-                      <dd
-                        class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
+                      <dd class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
                         <del>24,000원</del>
                       </dd>
                       <dt class="a11y sr-only">할인율</dt>
@@ -869,13 +1088,10 @@
                       </dd>
                       <dt class="a11y sr-only">할인가격</dt>
                       <dd class="best__price mb-2 inline text-lg font-semibold">
-                        <ins class="best__discountPrice no-underline"
-                          >18,900원</ins
-                        >
+                        <ins class="best__discountPrice no-underline">18,900원</ins>
                       </dd>
                       <dt class="a11y sr-only">상품설명</dt>
-                      <dd
-                        class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
+                      <dd class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
                         성분을 꼼꼼히 따져 골라 더욱 편안한
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">배송안내</dt>
@@ -889,8 +1105,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -918,9 +1133,7 @@
                         [풀무원] 탱탱쫄면(4개입)
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        4,980원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">4,980원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         튀기지 않아 부담없는 매콤함
@@ -936,8 +1149,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -958,20 +1170,14 @@
                     aria-labelledby="bestSuncushion_1"
                     class="best__img mb-4" />
                   <figcaption class="best__caption">
-                    <h3 class="a11y sr-only">
-                      [온더바디] 죠르디 시카 자석 선쿠션
-                    </h3>
+                    <h3 class="a11y sr-only">[온더바디] 죠르디 시카 자석 선쿠션</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestSuncushion_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestSuncushion_1" class="best__name mb-2 pt-[26px]">
                         [온더바디] 죠르디 시카 자석 선쿠션
                       </dd>
                       <dt class="a11y sr-only">가격</dt>
-                      <dd class="best__price mb-2 text-lg font-semibold">
-                        32,500원
-                      </dd>
+                      <dd class="best__price mb-2 text-lg font-semibold">32,500원</dd>
                       <dt class="a11y sr-only">상품설명</dt>
                       <dd class="best__info mb-2 text-sm text-[#898989]">
                         끈적임 없이 보송한 무기자차 선쿠션
@@ -1002,14 +1208,11 @@
                     <h3 class="a11y sr-only">[프로쉬] 베이비 세탁세제</h3>
                     <dl class="relative">
                       <dt class="a11y sr-only">상품명</dt>
-                      <dd
-                        id="bestDetergent_1"
-                        class="best__name mb-2 pt-[26px]">
+                      <dd id="bestDetergent_1" class="best__name mb-2 pt-[26px]">
                         [프로쉬] 베이비 세탁세제
                       </dd>
                       <dt class="a11y sr-only">정상가격</dt>
-                      <dd
-                        class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
+                      <dd class="best__regularPrice absolute top-[100px] text-sm text-[#898989]">
                         <del>24,000원</del>
                       </dd>
                       <dt class="a11y sr-only">할인율</dt>
@@ -1019,13 +1222,10 @@
                       </dd>
                       <dt class="a11y sr-only">할인가격</dt>
                       <dd class="best__price mb-2 inline text-lg font-semibold">
-                        <ins class="best__discountPrice no-underline"
-                          >18,900원</ins
-                        >
+                        <ins class="best__discountPrice no-underline">18,900원</ins>
                       </dd>
                       <dt class="a11y sr-only">상품설명</dt>
-                      <dd
-                        class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
+                      <dd class="best__info mb-2 mt-[35px] text-sm text-[#898989]">
                         성분을 꼼꼼히 따져 골라 더욱 편안한
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">배송안내</dt>
@@ -1039,8 +1239,7 @@
                         Karly Only
                       </dd>
                       <dt aria-hidden="true" class="a11y sr-only">수량정보</dt>
-                      <dd
-                        class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
+                      <dd class="best__limit inline rounded bg-[#E1E1E1] p-1 text-sm font-semibold">
                         한정수량
                       </dd>
                     </dl>
@@ -1064,9 +1263,7 @@
             <a
               href="#"
               class="page__number flex h-[34px] w-[34px] items-center justify-center border border-[#E1E1E1] text-sm hover:bg-[#F7F7F7]">
-              <img
-                src="/assets/images/product-list/ic-arrow-left.svg"
-                alt="이전 페이지로 이동" />
+              <img src="/assets/images/product-list/ic-arrow-left.svg" alt="이전 페이지로 이동" />
             </a>
             <a
               href="#"
@@ -1089,9 +1286,7 @@
             <a
               href="#"
               class="page__number flex h-[34px] w-[34px] items-center justify-center border border-[#E1E1E1] text-sm hover:bg-[#F7F7F7]">
-              <img
-                src="/assets/images/product-list/ic-arrow-right.svg"
-                alt="다음 페이지로 이동" />
+              <img src="/assets/images/product-list/ic-arrow-right.svg" alt="다음 페이지로 이동" />
             </a>
             <a
               href="#"
@@ -1104,6 +1299,236 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__inner container__width mx-auto mt-[4.1875rem]">
+        <div class="footer__innerTop mb-8 mt-[2.392857142857143rem] flex justify-between">
+          <div class="footer__service flex-1">
+            <h2 class="footer__serviceTitle text-lg font-bold">고객행복센터</h2>
+            <div class="footer__serviceInfo flex gap-2 py-4">
+              <p class="footer__serviceNumber inline-block pt-2 text-3xl font-bold">1644-1107</p>
+              <p class="footer__serviceTime inline-block py-4 text-base font-bold">
+                월~토요일 오전 7시 - 오후 6시
+              </p>
+            </div>
+            <ul class="footer__list">
+              <li class="footer__item footer__btnContent">
+                <a class="footer__itemButton footer__itemBtnStyle" href="#">카카오톡 문의</a>
+                <div>
+                  <p>
+                    <span>월~토요일</span>
+                    <span class="divider" aria-hidden="true">|</span>
+                    <span>오전 7시 - 오후 6시</span>
+                  </p>
+                  <p>
+                    <span>일/공휴일</span>
+                    <span class="divider" aria-hidden="true">|</span>
+                    <span>오전 7시 - 오후 1시</span>
+                  </p>
+                </div>
+              </li>
+              <li class="footer__item footer__btnContent">
+                <a class="footer__itemButton footer__itemBtnStyle" href="#">1:1 문의</a>
+                <div>
+                  <p><span>365일</span></p>
+                  <p>
+                    <span> 고객센터 운영시간에 순차적으로 답변드리겠습니다. </span>
+                  </p>
+                </div>
+              </li>
+              <li class="footer__item footer__btnContent">
+                <a class="footer__itemButton footer__itemBtnStyle" href="#">대량주문 문의</a>
+                <div>
+                  <p>
+                    <span>월~금요일</span>
+                    <span class="divider" aria-hidden="true">|</span>
+                    <span>오전 9시 - 오후 6시</span>
+                  </p>
+                  <p>
+                    <span>점심시간</span>
+                    <span class="divider" aria-hidden="true">|</span>
+                    <span>낮 12시 - 오후 1시</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="footer__mail mt-4 text-sm">
+              <p>
+                비회원 문의 :
+                <a href="mailto:help@karlycorp.com" class="primaryColor text-primary"
+                  >help@karlycorp.com</a
+                >
+              </p>
+              <p>
+                비회원 대량주문 문의 :
+                <a href="mailto:help@karlycorp.com" class="primaryColor text-primary"
+                  >help@karlycorp.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="footer__about flex-1">
+            <ul class="footer__clause flex gap-4 text-[0.875rem]">
+              <li><a href="/">칼리소개</a></li>
+              <li><a href="/">칼리소개영상</a></li>
+              <li><a href="/">인재채용</a></li>
+              <li><a href="/">이용약관</a></li>
+              <li><a href="/">개인정보처리방침</a></li>
+              <li><a href="/">이용안내</a></li>
+            </ul>
+            <div class="footer__address py-7 text-sm text-[#333333]">
+              <span>법인명(상호) : 주식회사 컬리</span>
+              <span class="divider" aria-hidden="true">|</span>
+              <span>사업자등록번호 : 261-81-23567</span>
+              <span class="divider" aria-hidden="true">|</span>
+              <a class="primaryColor text-primary" href="#">사업자정보확인</a>
+              <br />
+              <span>통신판매업 : 제 2018-서울강남-01646 호</span>
+              <span class="divider" aria-hidden="true">|</span>
+              <span>개인정보보호책임자 : 이원준</span>
+              <br />
+              <span>주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)</span>
+              <span class="divider" aria-hidden="true">|</span>
+              <span>대표이사 : 김슬아</span>
+              <br />
+              <span>입점문의 : 입점문의하기</span>
+              <span class="divider" aria-hidden="true">|</span>
+              <span>
+                제휴문의 :
+                <a class="primaryColor text-primary" href="mailto:business@karlycorp.com">
+                  business@karlycorp.com
+                </a>
+              </span>
+              <br />
+              <span>
+                채용 문의 :
+                <a class="primaryColor text-primary" href="mailto:recruit@karlycorp.com">
+                  recruit@karlycorp.com
+                </a>
+              </span>
+              <br />
+              <span>팩스 : 070 - 7500 - 6098</span>
+            </div>
+            <div>
+              <ul class="footer__snsList flex gap-5">
+                <li class="footer__snsItem">
+                  <a target="_blank" href="/">
+                    <img
+                      class="footer__snsImg footer__Img"
+                      src="/assets/images/footer/ic-blog.svg"
+                      alt="컬리 네이버블로그 바로가기" />
+                  </a>
+                </li>
+                <li class="footer__snsItem">
+                  <a target="_blank" href="/">
+                    <img
+                      class="footer__snsImg footer__Img"
+                      src="/assets/images/footer/ic-face-book.svg"
+                      alt="컬리 페이스북 바로가기" />
+                  </a>
+                </li>
+                <li class="footer__snsItem">
+                  <a target="_blank" href="/">
+                    <img
+                      class="footer__snsImg footer__Img"
+                      src="/assets/images/footer/ic-instagram.svg"
+                      alt="컬리 인스타그램 바로가기" />
+                  </a>
+                </li>
+                <li class="footer__snsItem">
+                  <a target="_blank" href="/">
+                    <img
+                      class="footer__snsImg footer__Img"
+                      src="/assets/images/footer/ic-naver-post.svg"
+                      alt="컬리 네이버 바로가기" />
+                  </a>
+                </li>
+                <li class="footer__snsItem">
+                  <a target="_blank" href="/">
+                    <img
+                      class="footer__snsImg footer__Img"
+                      src="/assets/images/footer/ic-youtube.svg"
+                      alt="컬리 유튜브 바로가기" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__middle border__top mb-8 pt-6">
+          <ul class="footer__logoList flex__between footer__lineHeight">
+            <li>
+              <a href="#" target="_blank" class="footer__logoItem footer__logoFlex">
+                <img
+                  class="footer__logoImg"
+                  src="/assets/images/footer/logo-isms.svg"
+                  alt="ISMS 로고" />
+                <p class="footer__logoInfo footer__font">
+                  [인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영
+                  <br />
+                  (심사받지 않은 물리적 인프라 제외)
+                  <br />
+                  [유효기간] 2022.01.19 ~ 2025.01.18
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="footer__logoItem footer__logoFlex">
+                <img
+                  class="footer__logoImg"
+                  src="/assets/images/footer/logo-privacy.svg"
+                  alt="개인정보보호 인증 로고" />
+                <p class="footer__logoInfo footer__font">
+                  개인정보보호 우수 웹사이트
+                  <br />
+                  개인정보처리시스템 인증(ePRIVACY PLUS)
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="footer__logoItem footer__logoFlex">
+                <img
+                  class="footer__logoImg"
+                  src="/assets/images/footer/logo-tosspayments.svg"
+                  alt="payments 로고" />
+                <p class="footer__logoInfo footer__font">
+                  토스페이먼츠 구매안전(에스크로) 서비스
+                  <br />
+                  를 이용하실 수 있습니다.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="footer__logoItem footer__logoFlex">
+                <img
+                  class="footer__logoImg"
+                  src="/assets/images/footer/logo-woori-bank.svg"
+                  alt="우리은행 로고" />
+                <p class="footer__logoInfo footer__font">
+                  고객님이 현금으로 결제한 금액에 대해 우리은행과
+                  <br />
+                  채무지급보증 계약을 체결하여 안전거래를 보장하고
+                  <br />
+                  있습니다.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottomWrapper footer__lineHeight footer__wrapperStyle">
+        <div class="footer__bottom footer__bottomFont container__width mt-5 text-center">
+          <p>
+            마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가 판매하는
+            마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+          </p>
+          <p>
+            마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가
+            아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+          </p>
+          <br />
+          <p>&copy; KURLY CORP. ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
