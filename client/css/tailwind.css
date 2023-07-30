@@ -112,4 +112,8 @@
   .customer__post li {
     border-bottom: 1px solid #c4c4c4
   }
+  .container__width {
+    width: 1050px;
+    margin: auto;
+  }
 }

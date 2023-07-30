@@ -870,10 +870,6 @@ button {
   height: 54px;
 }
 
-.h-\[56px\] {
-  height: 56px;
-}
-
 .h-\[58px\] {
   height: 58px;
 }
@@ -928,10 +924,6 @@ button {
 
 .w-\[560px\] {
   width: 560px;
-}
-
-.w-\[56px\] {
-  width: 56px;
 }
 
 .w-\[782px\] {
@@ -1040,10 +1032,6 @@ button {
 
 .rounded-\[5px\] {
   border-radius: 5px;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .border-0 {
