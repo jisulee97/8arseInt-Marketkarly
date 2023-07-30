@@ -8,7 +8,7 @@
       "saleRatio": 0,
       "salePrice": 0,
       "image": {
-        "thumbnail": "/client/assets/images/product/tangtang/thumbnail.svg",
+        "thumbnail": "/assets/images/product/tangtang/thumbnail.svg",
         "view": "tangtang/detail_view.jpg",
         "banner": "tangtang/detail_banner.jpg",
         "info": "tangtang/detail_info.jpg",
@@ -24,7 +24,7 @@
       "saleRatio": 0,
       "salePrice": 0,
       "image": {
-        "thumbnail": "/client/assets/images/product/suncushion/thumbnail.svg",
+        "thumbnail": "/assets/images/product/suncushion/thumbnail.svg",
         "view": "ubuho/detail_view.jpg",
         "banner": "ubuho/detail_banner.jpg",
         "info": "ubuho/detail_info.jpg",
@@ -40,7 +40,7 @@
       "saleRatio": 0.24,
       "salePrice": 18900,
       "image": {
-        "thumbnail": "/client/assets/images/product/detergent/thumbnail.svg",
+        "thumbnail": "/assets/images/product/detergent/thumbnail.svg",
         "view": "jukkumi/detail_view.jpg",
         "banner": "jukkumi/detail_banner.jpg",
         "info": "jukkumi/detail_info.jpg",
@@ -56,7 +56,7 @@
       "saleRatio": 0,
       "salePrice": 0,
       "image": {
-        "thumbnail": "/client/assets/images/product/brownrice/thumbnail.svg",
+        "thumbnail": "/assets/images/product/brownrice/thumbnail.svg",
         "view": "kangnam/detail_view.jpg",
         "banner": "kangnam/detail_banner.jpg",
         "info": "kangnam/detail_info.jpg",
