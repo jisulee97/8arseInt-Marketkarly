@@ -4,7 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 배너 스와이퍼 버튼 */
+
 @layer utilities {
+  .swiper-button-next {
+    background: url(/assets/images/main/ic-banner-button.svg) no-repeat;
+
+    right: 10%;
+    background-size: 100% auto;
+    transform: scaleX(-1);
+  }
+
+  .swiper-button-prev {
+    background: url(/assets/images/main/ic-banner-button.svg) no-repeat;
+
+    left: 10%;
+    background-size: 100% auto;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+
   /* 호버시 메뉴 리스트 스타일 변경 */
   .category__hover {
     background-color: #e1e1e1;
