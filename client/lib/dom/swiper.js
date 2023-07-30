@@ -5,7 +5,6 @@ import { addClass } from './css.js';
 
 async function mainBanner() {
   const { data } = await tiger.get('http://localhost:3000/main');
-  console.log('dfsdsd');
   data.banner.forEach((item) => {
     const swipperWrapper = getNode('.swiper-wrapper');
 
