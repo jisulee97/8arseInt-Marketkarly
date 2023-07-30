@@ -29,7 +29,8 @@
   height: 37.5rem;
   border: 1px solid #e1e1e1;
   background-color: #fff;
-  overflow: scroll;
+  overflow-y: scroll;
+  z-index: 1;
 }
 .menu__listStyle {
   font-size: 1rem;
