@@ -2,7 +2,7 @@ module.exports = {
   plugins: ['prettier-plugin-tailwindcss'],
   arrowParens: 'always',
   htmlWhitespaceSensitivity: 'css',
-  bracketSameLine: false,
+  bracketSameLine: true,
   bracketSpacing: true,
   printWidth: 100,
   proseWrap: 'preserve',
