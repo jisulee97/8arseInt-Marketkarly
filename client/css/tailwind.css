@@ -4,9 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 배너 스와이퍼 버튼 */
-
 @layer utilities {
+  /* 배너 스와이퍼 버튼 */
   .swiper-button-next {
     background: url(/assets/images/main/ic-banner-button.svg) no-repeat;
 
@@ -27,6 +26,34 @@
     display: none;
   }
 
+  /* 이 상품 어때요 버튼 */
+  .swiper-button-next.recommend__button__next {
+    background: url(/assets/images/main/arrow.svg) no-repeat;
+    top: 30%;
+    right: -1.3%;
+
+    background-size: 100% auto;
+    transform: scaleX(-1);
+  }
+
+  .swiper-button-prev.recommend__button__prev {
+    top: 30%;
+    left: -1.9%;
+    background: url(/assets/images/main/arrow.svg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  .recommend__button__prev::after,
+  .recommend__button__next ::after {
+    display: none;
+  }
+
+  .recommend__buttonhidden {
+    display: none;
+  }
+  .recommend__buttonblock {
+    display: block;
+  }
   /* 호버시 메뉴 리스트 스타일 변경 */
   .category__hover {
     background-color: #e1e1e1;
