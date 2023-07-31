@@ -1,6 +1,6 @@
-import { attr, clearContents, getNode, getNodes, typeError } from '../lib/index.js';
-import { dataset, renderShoppingList } from './cart/index.js';
-// import { copy } from './../lib/utils/copy';
+import { attr, clearContents, getNode, getNodes, tiger, typeError } from '../lib/index.js';
+import { renderShoppingList } from './cart/index.js';
+
 
 const foodCategoryList = getNode('.food__categorylist');
 const orderButton = getNode('.cart__orderButton');
@@ -8,28 +8,27 @@ const deleteButtonInCart = getNodes('.selectGoods__deleteButton');
 
 const URL = 'http://localhost:3000/main';
 
-function clickEvent(e) {
-  renderShoppingList(foodCategoryList);
-}
+// function clickEvent(e) {
+//   renderShoppingList(foodCategoryList);
+// }
 
 /* goods data */
 export async function getshallowDataList(e) {
   const target = e.target.closest('button');
   console.log(target);
 
-  const response = await dataset.get(URL);
+  const response = await tiger.get(URL);
   const products = response.data.products;
   if (products.forEach((item) => console.log(item.name)) === target) {
     console.log();
   }
 }
 
-// getshallowDataList(1);
 orderButton.addEventListener('click', getshallowDataList);
 
 /* goods Thumbnail */
 export async function getDeepDataList(e, index) {
-  const response = await dataset.get(URL);
+  const response = await tiger.get(URL);
   const products = response.data.products;
   console.log(products);
 
@@ -52,7 +51,7 @@ const getFoodThumbnail = (item) => {
 //   let button = e.target.closest('button');
 //   if (!button) return;
 
-//   dataset.delete(`http://localhost:3000/main/products/${id}`).then(() => {
+//   tiger.delete(`http://localhost:3000/main/products/${id}`).then(() => {
 //     clearContents(foodCategoryList);
 //     renderSelectList();
 //   });
