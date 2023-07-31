@@ -38,14 +38,13 @@ async function Main() {
     itemImage.alt = item.image.alt;
     itemImage.style.objectFit = 'cover';
     itemImage.style.width = '249px';
-    itemImage.style.height = '320px';
 
     swipperItem.append(itemImage);
 
     swipperWrapper.append(swipperItem);
   });
 
-  // 메인 배너 버튼
+  // 메인 배너
 
   const swiper = new Swiper('.banner__slider', {
     speed: 400,
@@ -57,14 +56,14 @@ async function Main() {
     },
   });
 
-  // 이 상품 어때요 버튼
+  // 이 상품 어때요
 
   const recommendSwiper = new Swiper('.recommend__slider', {
     speed: 400,
-    spaceBetween: 100,
+    spaceBetween: 10,
     loop: true,
     slidesPerView: 4,
-    slidesPerGroupSkip: 4,
+    slidesPerGroup: 4,
     navigation: {
       prevEl: '.recommend__slider > .swiper-button-prev',
       nextEl: '.recommend__slider > .swiper-button-next',
