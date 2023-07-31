@@ -4,7 +4,7 @@ import { getNode, getNodes } from './getNode.js';
 import { addClass } from './css.js';
 import { insertLast } from './insert.js';
 
-async function Main() {
+export async function Main() {
   const { data } = await tiger.get('http://localhost:3000/main');
 
   // 메인 배너 스와이퍼
@@ -88,11 +88,9 @@ async function Main() {
   });
 }
 
-Main();
-
 // 이 상품 어때요 버튼 숨김 함수
 
-function clickButton() {
+export function clickButton() {
   const recommendBannerPrevbtn = document.querySelector('.recommend__button__prev');
   const recommendBannerNextbtn = document.querySelector('.recommend__button__next');
 
@@ -106,4 +104,3 @@ function clickButton() {
     recommendBannerPrevbtn.style.display = 'none';
   });
 }
-clickButton();
