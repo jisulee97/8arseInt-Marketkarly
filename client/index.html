@@ -8,11 +8,7 @@
     <meta name="description" content="마켓칼리 메인 페이지입니다." />
     <title>칼리 - 마켓칼리</title>
     <link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
-    <link
-      rel="preload"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+    <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <script src="./js/main.js" type="module"></script>
   </head>
@@ -35,6 +31,19 @@
           </button>
         </div>
       </div>
+
+      <div class="popupWrapper">
+        <div class="popup w-[440px] h-[672px] absolute top-[140px] right-[980px] rounded-[16px] shadow-[0_0_0_0.2] translate-x-[55%] z-[100]" id="confirm">
+          <a href="#">
+            <img src="./assets/images/modal/main-modal.jpg" alt="뷰티컬리 팝업창" class="rounded-[16px_16px_0_0] cursor-pointer"/>
+          </a>
+          <div class="popupButton">
+            <button class="closeOneday w-[220px] h-[86px] bg-white px-[8px] border-none border-r-[1px] border-r-[#e1e1e1] rounded-[0_0_0_16px] absolute bottom-0 left-0" id="close-oneday">오늘 하루 안 보기</button>
+            <button class="popupClose w-[220px] h-[86px] p-0 bg-white border-none rounded-[0_0_16px_0] absolute bottom-0 right-0">닫기</button>
+          </div>
+        </div>
+      </div>
+
       <div class="headerWrapper container__width relative">
         <header class="header">
           <h1 class="a11y sr-only">칼리</h1>
