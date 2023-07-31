@@ -1,6 +1,4 @@
-import { getNode } from './../lib/dom/getNode.js';
-// import { fadeout, } from "./index.js";
-
+import { getNode } from '../../lib/dom/getNode.js';
 
 // 카테고리 리스트 토글 함수
 
@@ -25,5 +23,3 @@ function removePromotion() {
   });
 }
 removePromotion();
-
-
