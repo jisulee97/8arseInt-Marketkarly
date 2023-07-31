@@ -1,7 +1,8 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
 import { tiger } from './../utils/tiger.js';
-import { getNode } from './getNode.js';
+import { getNode, getNodes } from './getNode.js';
 import { addClass } from './css.js';
+import { insertLast } from './insert.js';
 
 async function Main() {
   const { data } = await tiger.get('http://localhost:3000/main');
@@ -42,6 +43,13 @@ async function Main() {
     swipperItem.append(itemImage);
 
     swipperWrapper.append(swipperItem);
+
+    const template = `
+    <button>
+    <img src="./assets/images/main/ic-add-cart.svg" />
+  </button>
+      `;
+    insertLast(swipperItem, template);
   });
 
   // 메인 배너
