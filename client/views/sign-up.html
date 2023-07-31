@@ -474,26 +474,38 @@
               <label for="gender" class="inline-block w-[139px] font-semibold">성별</label>
               <div id="gender" class="flex w-[333px] justify-between text-content">
                 <div class="relative">
-                  <input type="radio" name="gender" id="genderMale" class="absolute opacity-0" />
-                  <label for="genderMale" class="flex items-center gap-2 font-semibold">
-                    <span
-                      class="h-6 w-6 bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')]"></span
-                    >남자</label
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="genderMale"
+                    class="peer absolute opacity-0" />
+                  <label
+                    for="genderMale"
+                    class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]">
+                    남자</label
                   >
                 </div>
                 <div class="relative">
-                  <input type="radio" name="gender" id="genderFemale" class="absolute opacity-0" />
-                  <label for="genderFemale" class="flex items-center gap-2 font-semibold">
-                    <span
-                      class="h-6 w-6 bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')]"></span
-                    >여자</label
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="genderFemale"
+                    class="peer absolute opacity-0" />
+                  <label
+                    for="genderFemale"
+                    class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]">
+                    여자</label
                   >
                 </div>
                 <div class="relative">
-                  <input type="radio" name="gender" id="genderNone" class="absolute opacity-0" />
-                  <label for="genderNone" class="flex items-center gap-2 font-semibold">
-                    <span
-                      class="h-6 w-6 bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')]"></span
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="genderNone"
+                    class="peer absolute opacity-0" />
+                  <label
+                    for="genderNone"
+                    class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]"
                     >선택안함</label
                   >
                 </div>
@@ -539,18 +551,18 @@
               >
               <div id="addInfo" class="flex w-[333px] justify-between text-content">
                 <div class="relative">
-                  <input type="radio" name="special" id="invite" class="absolute opacity-0" />
-                  <label for="invite" class="flex items-center gap-2 font-semibold">
-                    <span
-                      class="h-6 w-6 bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')]"></span
-                    >친구초대 추천인 아이디</label
+                  <input type="radio" name="special" id="invite" class="peer absolute opacity-0" />
+                  <label
+                    for="invite"
+                    class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]">
+                    친구초대 추천인 아이디</label
                   >
                 </div>
                 <div class="relative">
-                  <input type="radio" name="special" id="event" class="absolute opacity-0" />
-                  <label for="event" class="flex items-center gap-2 font-semibold">
-                    <span
-                      class="h-6 w-6 bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')]"></span>
+                  <input type="radio" name="special" id="event" class="peer absolute opacity-0" />
+                  <label
+                    for="event"
+                    class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]">
                     참여 이벤트명</label
                   >
                 </div>
@@ -564,11 +576,11 @@
               >
               <div id="terms">
                 <div class="relative flex items-center">
-                  <input type="checkbox" id="term__agreeAll" class="absolute opacity-0" />
-                  <label for="term__agreeAll" class="flex items-center gap-2 text-lg font-semibold">
-                    <span
-                      class="h-6 w-6 bg-[url('/assets/images/product-list/ic-unchecked.svg')]"></span
-                    >전체 동의합니다.</label
+                  <input type="checkbox" id="term__agreeAll" class="peer absolute opacity-0" />
+                  <label
+                    for="term__agreeAll"
+                    class="flex items-center bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-left bg-no-repeat pl-8 text-lg font-semibold peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                    전체 동의합니다.</label
                   >
                 </div>
                 <em class="pl-8 text-sm not-italic text-[#898989]">
@@ -576,11 +588,15 @@
                 </em>
                 <div class="relative flex items-center justify-between py-3">
                   <div>
-                    <input type="checkbox" id="term__agree" class="absolute opacity-0" />
-                    <label for="term__agree" class="flex items-center gap-2">
-                      <span
-                        class="h-6 w-6 bg-[url('/assets/images/product-list/ic-unchecked.svg')]"></span
-                      >이용약관 동의 (필수)</label
+                    <input
+                      type="checkbox"
+                      id="term__agree"
+                      class="peer absolute opacity-0"
+                      required />
+                    <label
+                      for="term__agree"
+                      class="flex items-center bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-left bg-no-repeat pl-8 peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                      이용약관 동의 (필수)</label
                     >
                   </div>
                   <button type="button" class="flex items-center gap-1">
@@ -590,11 +606,15 @@
                 </div>
                 <div class="relative flex items-center justify-between py-3">
                   <div>
-                    <input type="checkbox" id="term__privacy" class="absolute opacity-0" />
-                    <label for="term__privacy" class="flex items-center gap-2">
-                      <span
-                        class="h-6 w-6 bg-[url('/assets/images/product-list/ic-unchecked.svg')]"></span
-                      >개인정보 수집 · 이용 동의 (필수)</label
+                    <input
+                      type="checkbox"
+                      id="term__privacy"
+                      class="peer absolute opacity-0"
+                      required />
+                    <label
+                      for="term__privacy"
+                      class="flex items-center bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-left bg-no-repeat pl-8 peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                      개인정보 수집 · 이용 동의 (필수)</label
                     >
                   </div>
                   <button type="button" class="flex items-center gap-1">
@@ -604,11 +624,11 @@
                 </div>
                 <div class="relative flex items-center justify-between py-3">
                   <div>
-                    <input type="checkbox" id="term__marketing" class="absolute opacity-0" />
-                    <label for="term__marketing" class="flex items-center gap-2">
-                      <span
-                        class="h-6 w-6 bg-[url('/assets/images/product-list/ic-unchecked.svg')]"></span
-                      >무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</label
+                    <input type="checkbox" id="term__marketing" class="peer absolute opacity-0" />
+                    <label
+                      for="term__marketing"
+                      class="flex items-center bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-left bg-no-repeat pl-8 peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                      무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</label
                     >
                   </div>
                   <button type="button" class="flex items-center gap-1">
@@ -618,11 +638,15 @@
                 </div>
                 <div class="relative flex items-center justify-between py-3">
                   <div>
-                    <input type="checkbox" id="term__over14" class="absolute opacity-0" />
-                    <label for="term__over14" class="flex items-center gap-2">
-                      <span
-                        class="h-6 w-6 bg-[url('/assets/images/product-list/ic-unchecked.svg')]"></span
-                      >본인은 만 14세 이상입니다. (필수)</label
+                    <input
+                      type="checkbox"
+                      id="term__over14"
+                      class="peer absolute opacity-0"
+                      required />
+                    <label
+                      for="term__over14"
+                      class="flex items-center bg-[url('/assets/images/product-list/ic-unchecked.svg')] bg-left bg-no-repeat pl-8 peer-checked:bg-[url('/assets/images/product-list/ic-checked.svg')]">
+                      본인은 만 14세 이상입니다. (필수)</label
                     >
                   </div>
                   <button type="button" class="flex items-center gap-1">
