@@ -753,6 +753,10 @@ html {
   top: 16rem;
 }
 
+.top-7 {
+  top: 1.75rem;
+}
+
 .top-8 {
   top: 2rem;
 }
@@ -777,12 +781,20 @@ html {
   top: 140px;
 }
 
+.top-\[199px\] {
+  top: 199px;
+}
+
 .top-\[3\.9375rem\] {
   top: 3.9375rem;
 }
 
 .top-\[4\.375rem\] {
   top: 4.375rem;
+}
+
+.-z-0 {
+  z-index: 0;
 }
 
 .z-10 {
@@ -1048,10 +1060,6 @@ html {
   display: none;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-\[1000px\] {
   height: 1000px;
 }
@@ -1084,16 +1092,32 @@ html {
   height: 36px;
 }
 
+.h-\[370px\] {
+  height: 370px;
+}
+
 .h-\[45px\] {
   height: 45px;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .h-\[514px\] {
   height: 514px;
 }
 
+.h-\[530px\] {
+  height: 530px;
+}
+
 .h-\[54px\] {
   height: 54px;
+}
+
+.h-\[55px\] {
+  height: 55px;
 }
 
 .h-\[56px\] {
@@ -1124,12 +1148,16 @@ html {
   width: 0.5rem;
 }
 
-.w-6 {
-  width: 1.5rem;
+.w-72 {
+  width: 18rem;
 }
 
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-\[1050px\] {
+  width: 1050px;
 }
 
 .w-\[128px\] {
@@ -1146,6 +1174,14 @@ html {
 
 .w-\[155px\] {
   width: 155px;
+}
+
+.w-\[1920px\] {
+  width: 1920px;
+}
+
+.w-\[1px\] {
+  width: 1px;
 }
 
 .w-\[220px\] {
@@ -1198,6 +1234,10 @@ html {
 
 .w-\[481px\] {
   width: 481px;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .w-\[55px\] {
@@ -1352,6 +1392,10 @@ html {
 
 .gap-y-6 {
   row-gap: 1.5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .whitespace-pre-line {
@@ -1586,6 +1630,10 @@ html {
   background-image: url('/assets/images/main/ic-add-cart.svg');
 }
 
+.bg-\[url\(\'\/assets\/images\/product-list\/ic-arrow-down\.svg\'\)\] {
+  background-image: url('/assets/images/product-list/ic-arrow-down.svg');
+}
+
 .bg-\[url\(\'\/assets\/images\/product-list\/ic-unchecked\.svg\'\)\] {
   background-image: url('/assets/images/product-list/ic-unchecked.svg');
 }
@@ -1594,12 +1642,28 @@ html {
   background-image: url('/assets/images/sign-up/ic-unchecked-radio.svg');
 }
 
+.bg-left {
+  background-position: left;
+}
+
+.bg-right {
+  background-position: right;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
 .p-0 {
   padding: 0px;
 }
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-3 {
@@ -1753,6 +1817,10 @@ html {
   padding-bottom: 20px;
 }
 
+.pb-\[28px\] {
+  padding-bottom: 28px;
+}
+
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -1833,8 +1901,16 @@ html {
   padding-top: 4.375rem;
 }
 
+.pt-\[40px\] {
+  padding-top: 40px;
+}
+
 .pt-\[96px\] {
   padding-top: 96px;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -1892,6 +1968,10 @@ html {
 
 .text-\[24px\] {
   font-size: 24px;
+}
+
+.text-\[26px\] {
+  font-size: 26px;
 }
 
 .text-\[28px\] {
@@ -2083,6 +2163,52 @@ html {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+/* 배너 스와이퍼 버튼 */
+
+.swiper-button-next {
+  background: url(/assets/images/main/ic-banner-button.svg) no-repeat;
+  right: 10%;
+  background-size: 100% auto;
+  transform: scaleX(-1);
+}
+
+.swiper-button-prev {
+  background: url(/assets/images/main/ic-banner-button.svg) no-repeat;
+  left: 10%;
+  background-size: 100% auto;
+}
+
+.swiper-button-next::after,
+  .swiper-button-prev::after {
+  display: none;
+}
+
+/* 이 상품 어때요 버튼 */
+
+.swiper-button-next.recommend__button__next {
+  background: url(/assets/images/main/arrow.svg) no-repeat;
+  top: 30%;
+  right: -1.3%;
+  background-size: 100% auto;
+  transform: scaleX(-1);
+}
+
+.swiper-button-prev.recommend__button__prev {
+  top: 30%;
+  left: -2%;
+  background: url(/assets/images/main/arrow.svg) no-repeat;
+  background-size: 100% auto;
+}
+
+.recommend__button__prev::after,
+  .recommend__button__next ::after {
+  display: none;
+}
+
+.recommend__buttonhidden {
+  display: none;
 }
 
 /* 호버시 메뉴 리스트 스타일 변경 */
@@ -2341,10 +2467,6 @@ html {
   content: var(--tw-content);
 }
 
-.hover\:visible:hover {
-  visibility: visible;
-}
-
 .hover\:bg-\[\#F7F7F7\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(247 247 247 / var(--tw-bg-opacity));
@@ -2378,4 +2500,37 @@ html {
 .focus\:border-content:focus {
   --tw-border-opacity: 1;
   border-color: rgb(51 51 51 / var(--tw-border-opacity));
+}
+
+.group.is--clicked .group-\[\.is--clicked\]\:bg-\[url\(\'\/assets\/images\/product-list\/ic-arrow-up\.svg\'\)\] {
+  background-image: url('/assets/images/product-list/ic-arrow-up.svg');
+}
+
+.peer:checked ~ .peer-checked\:bg-\[url\(\'\/assets\/images\/product-list\/ic-checked\.svg\'\)\] {
+  background-image: url('/assets/images/product-list/ic-checked.svg');
+}
+
+.peer:checked ~ .peer-checked\:bg-\[url\(\'\/assets\/images\/sign-up\/ic-checked-radio\.svg\'\)\] {
+  background-image: url('/assets/images/sign-up/ic-checked-radio.svg');
+}
+
+.peer:checked ~ .peer-checked\:after\:content-\[\'1\'\]::after {
+  --tw-content: '1';
+  content: var(--tw-content);
+}
+
+.peer:hover ~ .peer-hover\:z-10 {
+  z-index: 10;
+}
+
+.peer:hover ~ .peer-hover\:block {
+  display: block;
+}
+
+.peer.is--clicked ~ .peer-\[\.is--clicked\]\:block {
+  display: block;
+}
+
+.peer.is--clicked ~ .peer-\[\.is--clicked\]\:hidden {
+  display: none;
 }
