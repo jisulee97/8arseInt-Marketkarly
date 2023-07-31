@@ -1,5 +1,10 @@
 import { getNode } from './../lib/dom/getNode.js';
-import { loginB,idInput,pwInput } from "./index.js";
+import { fadeout } from "./index.js";
+
+
+
+
+
 
 // 카테고리 리스트 토글 함수
 
@@ -25,6 +30,7 @@ function removePromotion() {
 }
 removePromotion();
 
-idInput()
-loginB()
-pwInput()
+
+fadeout()
+
+
