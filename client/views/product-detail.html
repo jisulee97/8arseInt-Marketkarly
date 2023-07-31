@@ -15,6 +15,7 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/product-detail.js"></script>
   </head>
 
   <body>
@@ -621,20 +622,18 @@
         <div class="review__main relative mx-auto mb-[72px] mt-0 w-container">
           <ul class="notification__container border-t-[1px] border-t-black">
             <li class="id">
-              <div
-                class="notification__summary border-b-[1px] border-b-[#e1e1e1] px-[20px] py-[17px]">
+              <div class="notification__summary border-b-[1px] peer border-b-[#e1e1e1] px-[20px] py-[17px]" id="notificationBtn">
                 <span
                   class="notification mr-[20px] h-[18px] rounded-[1px] bg-[#e1e1e1] px-[8px] text-[12px] font-semibold leading-[18px]"
                   >공지</span
                 >
                 <button
-                  class="notification__title font-semibold"
+                  class="notification__title font-semibold "
                   aria-label="공지 게시글 열기 버튼">
                   금주의 베스트 후기 안내
                 </button>
               </div>
-              <pre
-                class="notification__content whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
+              <pre class="notification__content hidden peer-[.is--clicked]:block whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
                 ■ 베스트 후기 당첨자 안내
 
                 고객님 안녕하세요, 컬리입니다.
@@ -708,8 +707,7 @@
               </pre>
             </li>
             <li class="id">
-              <div
-                class="notification__summary border-b-[1px] border-b-[#e1e1e1] px-[20px] py-[17px]">
+              <div class="notification__summary border-b-[1px] peer border-b-[#e1e1e1] px-[20px] py-[17px]" id="notificationBtn">
                 <span
                   class="notification mr-[20px] h-[18px] rounded-[1px] bg-[#e1e1e1] px-[8px] text-[12px] font-semibold leading-[18px]"
                   >공지</span
@@ -720,8 +718,7 @@
                   상품 후기 적립금 정책 안내
                 </button>
               </div>
-              <pre
-                class="notification__content whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
+              <pre class="notification__content hidden peer-[.is--clicked]:block whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
                 [ 금주의 Best 후기 및 상품 후기 적립금 정책 변경 안내 ] 
 
                 고객님 안녕하세요. 컬리 입니다. 
