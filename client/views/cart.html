@@ -14,7 +14,8 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <script type="module" src="./../js/main.js"></script>
+    <!-- <script type="module" src="./../js/main.js"></script> -->
+    <script type="module" src="./../js/cart.js"></script>
   </head>
 
   <body>
@@ -372,6 +373,41 @@
               <button type="button" class="arrow__down float-right mt-3">
                 <img src="/assets/images/common/ic-vector-bottom.svg" alt="아래로 펼치기" />
               </button>
+              <!-- 선택 상품 리스트 -->
+              <ul class="selectGoods">
+                <li class="selectGoods__leftLi alignCenter">
+                  <div class="selectGoods__checkboxWrapper">
+                    <input
+                      type="checkbox"
+                      class="checkbox__allSelect hidden"
+                      name="checkbox__allSelect"
+                      id=" checkbox_food1" />
+                    <label for=" checkbox_food1" class="checkbox__label selectGoods__label">
+                      <span class="checkbox__img"></span>
+                    </label>
+                  </div>
+                  <figure class="selectGoods__goodsImg alignCenter">
+                    <img src="./../assets/jukkumi/thumbnail.jpg" alt="" width="60px" />
+                    <figcaption>
+                      <h3>[비비고] 쭈꾸미</h3>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="selectGoods__rightLi alignCenter">
+                  <div class="selectGoods__buttons alignCenter">
+                    <button class="selectGoods__button cart__minus"></button>
+                    <button class="selectGoods__button cart__num">1</button>
+                    <button class="selectGoods__button cart__plus"></button>
+                  </div>
+                  <div class="selectGoods__totalPriceWrapper">
+                    <p class="selectGoods__totalPrice">3,000<span>원</span></p>
+                    <p class="selectGoods__discount">4,000<span>원</span></p>
+                  </div>
+                  <button class="selectGoods__deleteButton">
+                    <img src="./../assets/images/cart/ic-cancel.svg" alt="삭제" />
+                  </button>
+                </li>
+              </ul>
             </li>
             <li class="food__categorylist">
               <img
