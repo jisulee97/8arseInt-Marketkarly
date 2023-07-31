@@ -1,4 +1,10 @@
 import { getNode } from './../lib/dom/getNode.js';
+// import { fadeout, } from "./index.js";
+
+
+
+
+
 
 // 카테고리 리스트 토글 함수
 
@@ -23,3 +29,16 @@ function removePromotion() {
   });
 }
 removePromotion();
+
+
+// 팝업창 제거 함수
+export function fadeout() {
+  const close = document.querySelector('.popupButton')
+  const popup = document.querySelector('.popupWrapper')
+  close.addEventListener('click', () => {
+    popup.classList.add('hidden')
+  })
+}
+fadeout()
+
+
