@@ -44,12 +44,13 @@ function createSaleProductList({ name, price, salePrice, image, description, sal
   return /* html */ `
     <li class="product__item relative mb-[26px]">
       <a href="#">
-        <figure class="best__item w-[249px]">
+        <figure class="best__item">
           <img
             src="${image}"
             alt="${name}"
             aria-labelledby="bestDetergent_1"
-            class="best__img mb-4 w-full" />
+            class="best__img mb-4"
+            width="249px" />
           <figcaption class="best__caption">
             <h3 class="a11y sr-only">${name}</h3>
             <dl class="relative">
@@ -110,12 +111,13 @@ function createUnSaleProductList({ name, price, image, description, stock }) {
   return /* html */ `
   <li class="product__item relative mb-[26px] ">
     <a href="./product-detail.html">
-      <figure class="best__item w-[249px]">
+      <figure class="best__item">
         <img
           src="${image}"
           alt="${name}"
           aria-labelledby="bestTangtang_1"
-          class="best__img mb-4 w-full" />
+          class="best__img mb-4"
+          width="249px" />
         <figcaption class="best__caption">
           <h3 class="a11y sr-only">${name}</h3>
           <dl class="relative">

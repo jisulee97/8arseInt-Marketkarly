@@ -72,6 +72,16 @@
   html {
     font-family: Pretendard, system-ui, sans-serif;
   }
+  .error-message {
+    font-size: 12px;
+    line-height: 1;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .is--invalid + .error-message {
+    display: block;
+  }  
   .prod__price span {
     font-size: 16px;
     font-weight: 700;
