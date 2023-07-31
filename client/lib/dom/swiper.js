@@ -37,7 +37,7 @@ async function Main() {
     itemImage.src = item.image.thumbnail;
     itemImage.alt = item.image.alt;
     itemImage.style.objectFit = 'cover';
-    itemImage.style.width = '249px';
+    itemImage.style.width = '240px';
 
     swipperItem.append(itemImage);
 
@@ -50,6 +50,10 @@ async function Main() {
     speed: 400,
     spaceBetween: 100,
     loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -58,16 +62,40 @@ async function Main() {
 
   // 이 상품 어때요
 
+  let loopCounter = 0; // Loop 횟수
+  const maxLoop = 2;
+
   const recommendSwiper = new Swiper('.recommend__slider', {
     speed: 400,
     spaceBetween: 10,
-    loop: true,
+    // loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
+    // slideoffsetBefore: 100,
+    // siideoffsetAfter: 100,
     navigation: {
-      prevEl: '.recommend__slider > .swiper-button-prev',
-      nextEl: '.recommend__slider > .swiper-button-next',
+      prevEl: '.swiper-button-prev.recommend__button__prev',
+      nextEl: '.swiper-button-next.recommend__button__next',
     },
   });
 }
+
 Main();
+
+// 이 상품 어때요 버튼 숨김 함수
+
+function clickButton() {
+  const recommendBannerPrevbtn = document.querySelector('.recommend__button__prev');
+  const recommendBannerNextbtn = document.querySelector('.recommend__button__next');
+
+  recommendBannerNextbtn.addEventListener('click', () => {
+    recommendBannerPrevbtn.style.display = 'block';
+    recommendBannerNextbtn.style.display = 'none';
+  });
+
+  recommendBannerPrevbtn.addEventListener('click', () => {
+    recommendBannerNextbtn.style.display = 'block';
+    recommendBannerPrevbtn.style.display = 'none';
+  });
+}
+clickButton();
