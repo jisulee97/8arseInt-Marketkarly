@@ -1,5 +1,4 @@
 import { getNode } from './../lib/dom/getNode.js';
-// import { fadeout, } from "./index.js";
 
 
 
