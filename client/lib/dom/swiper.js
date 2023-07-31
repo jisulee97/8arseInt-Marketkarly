@@ -6,6 +6,8 @@ import { addClass } from './css.js';
 async function Main() {
   const { data } = await tiger.get('http://localhost:3000/main');
 
+  // 메인 배너 스와이퍼
+
   data.banner.forEach((item) => {
     const swipperWrapper = getNode('.banner__slider > .swiper-wrapper');
 
@@ -22,6 +24,8 @@ async function Main() {
 
     swipperWrapper.append(swipperItem);
   });
+
+  // 이 상품 어때요 스와이퍼
 
   data.products.forEach((item) => {
     const swipperWrapper = getNode('.recommend__slider > .swiper-wrapper');
@@ -41,6 +45,8 @@ async function Main() {
     swipperWrapper.append(swipperItem);
   });
 
+  // 메인 배너 버튼
+
   const swiper = new Swiper('.banner__slider', {
     speed: 400,
     spaceBetween: 100,
@@ -50,6 +56,8 @@ async function Main() {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // 이 상품 어때요 버튼
 
   const recommendSwiper = new Swiper('.recommend__slider', {
     speed: 400,
