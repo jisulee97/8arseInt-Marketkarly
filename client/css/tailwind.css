@@ -314,62 +314,6 @@
 }
 
 /* 선택 상품 리스트 */
-.selectGoods {
-  margin-top: 20px;
-  /* border: 1px solid; */
-  display: flex;
-  justify-content: space-between;
-  font-weight: 400;
-  font-size: 14px;
-}
-.checkbox__label {
-  padding-left: 4px;
-}
-.selectGoods__checkboxWrapper {
-  padding-left: 5px;
-}
-.selectGoods__goodsImg {
-  padding-left: 1.5rem;
-}
-.selectGoods__goodsImg figcaption {
-  padding-left: 14px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.alignCenter {
-  display: flex;
-  align-items: center;
-}
-.selectGoods__buttons {
-  border: 1px solid #dbdbdb;
-  border-radius: 4px;
-}
-.selectGoods__button {
-  width: 28px;
-  height: 28px;
-}
-.selectGoods__totalPriceWrapper {
-  padding-left: 5rem;
-  padding-right: 0.625rem;
-}
-.selectGoods__totalPrice {
-  font-size: 16px;
-  font-weight: 600;
-}
-.selectGoods__discount {
-  text-align: end;
-  text-decoration: line-through;
-  color: #c4c4c4;
-}
-.cart__minus {
-  background: url(../assets/images/main/Minus.svg);
-}
-.cart__minusBlack {
-  background: url(../assets/images/main/Minus-black.svg);
-}
-.cart__plus {
-  background: url(../assets/images/main/Plus.svg);
-}
 
 .visbleHidden {
   visibility: hidden;
@@ -393,12 +337,3 @@
 .signUp--invalid {
   display: block;
 }
-
-/* .signUp__outOfCondition {
-  display: none;
-  padding-top: 0.25rem;
-  margin-left: 147px;
-  padding-bottom: 0.3rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-} */
