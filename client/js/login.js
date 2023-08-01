@@ -1,7 +1,4 @@
-// import { addClass, getNode, removeClass } from '../lib/index.js';
-import { getNode } from '../lib/dom/getNode.js';
-import { addClass } from '../lib/dom/css.js';
-import { removeClass } from '../lib/dom/css.js';
+import { addClass, getNode, removeClass } from '../lib/index.js';
 
 const email = getNode('#userEmail');
 const password = getNode('#userPassword');
@@ -34,6 +31,7 @@ export function validateId() {
   if (emailReg(value) === true) {
     this.classList.remove('is--invalid');
     emailPass = true;
+    return value;
   } else {
     this.classList.add('is--invalid');
     emailPass = false;
