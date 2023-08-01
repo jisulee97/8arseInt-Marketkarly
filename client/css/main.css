@@ -681,6 +681,10 @@ html {
   border-width: 0;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -693,16 +697,8 @@ html {
   position: sticky;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .bottom-\[12px\] {
   bottom: 12px;
-}
-
-.left-0 {
-  left: 0px;
 }
 
 .left-\[21\.5625rem\] {
@@ -715,6 +711,10 @@ html {
 
 .right-0 {
   right: 0px;
+}
+
+.right-1\/2 {
+  right: 50%;
 }
 
 .right-2 {
@@ -731,10 +731,6 @@ html {
 
 .right-\[12px\] {
   right: 12px;
-}
-
-.right-\[980px\] {
-  right: 980px;
 }
 
 .top-0 {
@@ -1292,8 +1288,8 @@ html {
   flex: 0 0 225px;
 }
 
-.translate-x-\[55\%\] {
-  --tw-translate-x: 55%;
+.translate-x-\[50\%\] {
+  --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1414,14 +1410,6 @@ html {
   border-radius: 1rem;
 }
 
-.rounded-\[0_0_0_16px\] {
-  border-radius: 0 0 0 16px;
-}
-
-.rounded-\[0_0_16px_0\] {
-  border-radius: 0 0 16px 0;
-}
-
 .rounded-\[12px\] {
   border-radius: 12px;
 }
@@ -1482,7 +1470,7 @@ html {
   border-bottom-width: 1px;
 }
 
-.border-r-\[1px\] {
+.border-r {
   border-right-width: 1px;
 }
 
@@ -1560,11 +1548,6 @@ html {
 .border-b-\[\#e1e1e1\] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(225 225 225 / var(--tw-border-opacity));
-}
-
-.border-r-\[\#e1e1e1\] {
-  --tw-border-opacity: 1;
-  border-right-color: rgb(225 225 225 / var(--tw-border-opacity));
 }
 
 .border-t-black {
@@ -2144,15 +2127,15 @@ html {
   opacity: 0;
 }
 
-.shadow-\[0_0_0_0\.2\] {
-  --tw-shadow: 0 0 0 0.2;
-  --tw-shadow-colored: 0 0 0 0.2 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-\[0_4px_24px_0_rgba\(0\2c 0\2c 0\2c 0\.10\)\] {
   --tw-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
   --tw-shadow-colored: 0 4px 24px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0px_1px_6px_0px_rgba\(0\2c 0\2c 0\2c 0\.3\)\] {
+  --tw-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+  --tw-shadow-colored: 0px 1px 6px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2342,7 +2325,7 @@ html {
   height: 24px;
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 2px;
   background: url(../assets/images/cart/ic-checked-false.svg) no-repeat 0 0/24px;
   vertical-align: baseline;
 }
@@ -2367,6 +2350,78 @@ html {
 
 .unit {
   font-size: 0.9375rem;
+}
+
+/* 선택 상품 리스트 */
+
+.selectGoods {
+  margin-top: 20px;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.checkbox__label {
+  padding-left: 4px;
+}
+
+.selectGoods__checkboxWrapper {
+  padding-left: 5px;
+}
+
+.selectGoods__goodsImg {
+  padding-left: 1.5rem;
+}
+
+.selectGoods__goodsImg figcaption {
+  padding-left: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.selectGoods__buttons {
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+.selectGoods__button {
+  width: 28px;
+  height: 28px;
+}
+
+.selectGoods__totalPriceWrapper {
+  padding-left: 5rem;
+  padding-right: 0.625rem;
+}
+
+.selectGoods__totalPrice {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.selectGoods__discount {
+  text-align: end;
+  text-decoration: line-through;
+  color: #c4c4c4;
+}
+
+.cart__minus {
+  background: url(../assets/images/main/Minus.svg);
+}
+
+.cart__minusBlack {
+  background: url(../assets/images/main/Minus-black.svg);
+}
+
+.cart__plus {
+  background: url(../assets/images/main/Plus.svg);
 }
 
 .placeholder\:text-center::-moz-placeholder {
