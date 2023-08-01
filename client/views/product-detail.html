@@ -15,6 +15,7 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/product-detail.js"></script>
   </head>
 
   <body>
@@ -581,23 +582,23 @@
         alt="와이 칼리" />
     </section>
     <section id="tabpanel-3" class="review__main relative mx-auto mb-[72px] mt-0 w-container">
+      <h3 class="review__title text-[24px] font-bold text-black">상품후기</h3>
       <button
-        class="reviewWrite__btn absolute right-0 h-[45px] w-[155px] rounded border-0 bg-primary text-white"
+        class="reviewWrite__btn absolute right-[10px] top-[10px] flex h-[45px] w-[155px] flex-row flex-nowrap items-center justify-center rounded-[5px] border-none bg-primary text-white"
         aria-label="후기 작성 버튼">
         후기 작성하기
       </button>
-      <h3 class="review__title text-[28px] font-bold text-content">상품후기</h3>
       <div class="review__event mt-[24px] leading-[1.5]">
         <span class="review-event__title mt-[30px] list-none font-bold">
           글후기 50원 적립금 혜택이 있어요.
         </span>
-        <span class="review-event__content block text-[12px] font-bold text-[#424242]">
+        <span class="review-event__content block text-[12px] font-normal leading-[1.5] text-[#424242]">
           &bull; 퍼플, 더퍼플은 2배 적립 (100원) / 주간 베스트 후기로 선정 시 5,000원 추가 적립
         </span>
-        <span class="review-event__content block text-[12px] font-bold text-[#424242]">
+        <span class="review-event__content block text-[12px] font-normal leading-[1.5] text-[#424242]">
           &bull; 후기 작성은 배송완료일로부터 30일 이내 가능합니다.
         </span>
-        <span class="review-event__content block text-[12px] font-bold text-[#424242]">
+        <span class="review-event__content block text-[12px] font-normal leading-[1.5] text-[#424242]">
           &bull; 작성하신 후기는 확인 후 적립금이 지급됩니다. (영업일 기준 평균 1~2일 소요)
         </span>
       </div>
@@ -621,20 +622,18 @@
         <div class="review__main relative mx-auto mb-[72px] mt-0 w-container">
           <ul class="notification__container border-t-[1px] border-t-black">
             <li class="id">
-              <div
-                class="notification__summary border-b-[1px] border-b-[#e1e1e1] px-[20px] py-[17px]">
+              <div class="notification__summary border-b-[1px] peer border-b-[#e1e1e1] px-[20px] py-[17px]" id="notificationBtn">
                 <span
                   class="notification mr-[20px] h-[18px] rounded-[1px] bg-[#e1e1e1] px-[8px] text-[12px] font-semibold leading-[18px]"
                   >공지</span
                 >
                 <button
-                  class="notification__title font-semibold"
+                  class="notification__title font-semibold "
                   aria-label="공지 게시글 열기 버튼">
                   금주의 베스트 후기 안내
                 </button>
               </div>
-              <pre
-                class="notification__content whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
+              <pre class="notification__content hidden peer-[.is--clicked]:block whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
                 ■ 베스트 후기 당첨자 안내
 
                 고객님 안녕하세요, 컬리입니다.
@@ -708,8 +707,7 @@
               </pre>
             </li>
             <li class="id">
-              <div
-                class="notification__summary border-b-[1px] border-b-[#e1e1e1] px-[20px] py-[17px]">
+              <div class="notification__summary border-b-[1px] peer border-b-[#e1e1e1] px-[20px] py-[17px]" id="notificationBtn">
                 <span
                   class="notification mr-[20px] h-[18px] rounded-[1px] bg-[#e1e1e1] px-[8px] text-[12px] font-semibold leading-[18px]"
                   >공지</span
@@ -720,8 +718,7 @@
                   상품 후기 적립금 정책 안내
                 </button>
               </div>
-              <pre
-                class="notification__content whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
+              <pre class="notification__content hidden peer-[.is--clicked]:block whitespace-pre-line border-b-[1px] border-b-[#e1e1e1] bg-[#f9f9f9] p-[20px] text-[12px] leading-[18px]">
                 [ 금주의 Best 후기 및 상품 후기 적립금 정책 변경 안내 ] 
 
                 고객님 안녕하세요. 컬리 입니다. 
@@ -767,14 +764,14 @@
                     class="tag__membership mr-[8px] h-[18px] rounded-[1px] border-[1px] border-primary bg-white pl-[8px] pr-[8px] text-[14px] font-bold leading-[18px] text-primary"
                     >퍼플</span
                   >
-                  <span class="name">이수연</span>
+                  <span class="name">야무쌤</span>
                 </div>
                 <div class="review__textContainer flex-1">
                   <p class="review__productName font-semibold text-[#545454]">
                     [풀무원] 탱탱쫄면 (4개입)
                   </p>
-                  <p class="review__text my-[20px] whitespace-pre-line text-[12px]">뒤지바지네요</p>
-                  <p class="review__date font-semibold text-[#545454]">2023.07.02</p>
+                  <p class="review__text my-[20px] whitespace-pre-line text-[12px]">react 시작전에 다같이 먹어봐야겠네요</p>
+                  <p class="review__date font-semibold text-[#545454]">2023.08.02</p>
                 </div>
               </div>
             </li>
@@ -799,7 +796,7 @@
                   <p class="review__text my-[20px] whitespace-pre-line text-[12px]">
                     인생쫄면입니다 저희 수강생들에게도 추천해야할거같네요!
                   </p>
-                  <p class="review__date font-semibold text-[#545454]">2023.07.02</p>
+                  <p class="review__date font-semibold text-[#545454]">2023.08.02</p>
                 </div>
               </div>
             </li>
@@ -824,7 +821,7 @@
                   <p class="review__text my-[20px] whitespace-pre-line text-[12px]">
                     윗분이 추천하셔서 먹어봤는데 맛있어요! 추천합니다 ^^
                   </p>
-                  <p class="review__date font-semibold text-[#545454]">2023.07.02</p>
+                  <p class="review__date font-semibold text-[#545454]">2023.08.02</p>
                 </div>
               </div>
             </li>
@@ -840,16 +837,16 @@
                     class="tag__membership mr-[8px] h-[18px] rounded-[1px] border-[1px] border-primary bg-white pl-[8px] pr-[8px] text-[14px] font-bold leading-[18px] text-primary"
                     >퍼플</span
                   >
-                  <span class="name">심*범</span>
+                  <span class="name">김*리</span>
                 </div>
                 <div class="review__textContainer flex-1">
                   <p class="review__productName font-semibold text-[#545454]">
                     [풀무원] 탱탱쫄면 (4개입)
                   </p>
                   <p class="review__text my-[20px] whitespace-pre-line text-[12px]">
-                    나는 멈출줄모르는 쫄면흡입기
+                    오늘의 엔딩요정에 버금가는 맛!!
                   </p>
-                  <p class="review__date font-semibold text-[#545454]">2023.07.02</p>
+                  <p class="review__date font-semibold text-[#545454]">2023.08.02</p>
                 </div>
               </div>
             </li>
@@ -865,16 +862,41 @@
                     class="tag__membership mr-[8px] h-[18px] rounded-[1px] border-[1px] border-primary bg-white pl-[8px] pr-[8px] text-[14px] font-bold leading-[18px] text-primary"
                     >퍼플</span
                   >
-                  <span class="name">맛있으면짖어요</span>
+                  <span class="name">심*범🐯</span>
                 </div>
                 <div class="review__textContainer flex-1">
                   <p class="review__productName font-semibold text-[#545454]">
                     [풀무원] 탱탱쫄면 (4개입)
                   </p>
                   <p class="review__text my-[20px] whitespace-pre-line text-[12px]">
-                    컹컹컼엉커컼어컼엌엌컹왈와왕라오아ㅘㅇ와와오라와아아아왈와아알오아왈아오와알
+                    괜찮겠어? 나는 멈출줄모르는 쫄면흡입기인데?
                   </p>
-                  <p class="review__date font-semibold text-[#545454]">2023.07.02</p>
+                  <p class="review__date font-semibold text-[#545454]">2023.08.02</p>
+                </div>
+              </div>
+            </li>
+            <li class="reivew__id">
+              <div
+                class="review__content flex flex-row flex-nowrap items-stretch justify-start border-b-[1px] border-b-[#e1e1e1] p-[20px] text-[12px]">
+                <div class="review__writerInfo flex-[0_0_225px]">
+                  <span
+                    class="tag__best mr-[8px] h-[18px] rounded-[1px] bg-primary pl-[8px] pr-[8px] text-[14px] font-bold text-white"
+                    >베스트</span
+                  >
+                  <span
+                    class="tag__membership mr-[8px] h-[18px] rounded-[1px] border-[1px] border-primary bg-white pl-[8px] pr-[8px] text-[14px] font-bold leading-[18px] text-primary"
+                    >퍼플</span
+                  >
+                  <span class="name">김**사</span>
+                </div>
+                <div class="review__textContainer flex-1">
+                  <p class="review__productName font-semibold text-[#545454]">
+                    [풀무원] 탱탱쫄면 (4개입)
+                  </p>
+                  <p class="review__text my-[20px] whitespace-pre-line text-[12px]">
+                    여러분~♥ 맛있어요~ 꼭 드셔보세요~
+                  </p>
+                  <p class="review__date font-semibold text-[#545454]">2023.08.02</p>
                 </div>
               </div>
             </li>
@@ -942,7 +964,7 @@
               class="inquiry__noticeBox mr-[20px] rounded-[1px] bg-[#e1e1e1] px-[8px] text-[12px]"
               >공지</span
             >
-            <span>판매(일시)중단 제품 안내(23.07.02 업데이트)</span>
+            <span>판매(일시)중단 제품 안내(23.08.02 업데이트)</span>
           </div>
           <span
             class="inquiry__who inline-block w-[80px] text-center text-[16px] font-semibold text-[#545454]"
@@ -969,7 +991,7 @@
             >
             <span
               class="inquiry__day inline-block w-[100px] text-center text-[16px] font-semibold text-[#545454]"
-              >2022.06.26</span
+              >2022.07.31</span
             >
             <span
               class="inquiry__answerState w-[55px] text-center text-[13px] font-semibold text-[#545454]"
@@ -1008,7 +1030,7 @@
                   </p>
                   <span
                     class="list__answerDate text-[12px] font-semibold not-italic leading-[1.5] text-[#545454]"
-                    >2023. 06.26</span
+                    >2023. 08.01</span
                   >
                 </div>
               </div>
@@ -1029,7 +1051,7 @@
               >
               <span
                 class="inquiry__day inline-block w-[100px] text-center text-[16px] font-semibold text-[#545454]"
-                >2023.07.02</span
+                >2023.08.02</span
               >
               <span
                 class="inquiry__answerState w-[55px] text-center text-[13px] font-semibold text-[#545454]"
@@ -1052,7 +1074,7 @@
               >
               <span
                 class="inquiry__day inline-block w-[100px] text-center text-[16px] font-semibold text-[#545454]"
-                >2023.07.02</span
+                >2023.08.02</span
               >
               <span
                 class="inquiry__answerComplete w-[55px] text-center text-[13px] font-semibold text-primary"
@@ -1075,7 +1097,7 @@
               >
               <span
                 class="inquiry__day inline-block w-[100px] text-center text-[16px] font-semibold text-[#545454]"
-                >2023.07.02</span
+                >2023.08.02</span
               >
               <span
                 class="inquiry__answerComplete w-[55px] text-center text-[13px] font-semibold text-primary"
@@ -1098,7 +1120,7 @@
               >
               <span
                 class="inquiry__day inline-block w-[100px] text-center text-[16px] font-semibold text-[#545454]"
-                >2023.07.02</span
+                >2023.08.02</span
               >
               <span
                 class="inquiry__answerComplete w-[55px] text-center text-[13px] font-semibold text-primary"
@@ -1121,7 +1143,7 @@
               >
               <span
                 class="inquiry__day inline-block w-[100px] text-center text-[16px] font-semibold text-[#545454]"
-                >2023.07.02</span
+                >2023.08.02</span
               >
               <span
                 class="inquiry__answerComplete w-[55px] text-center text-[13px] font-semibold text-primary"
@@ -1147,6 +1169,151 @@
         </div>
       </article>
     </section>
+
+    <div class="productDetail-popup-review hidden">
+      <section class="productDetail-popup  bg-white mb-[10px] w-[793px] h-[630px] p-[32px] rounded-[16px] top-1/2 left-1/2 translate-x-[63%] translate-y-1/4">
+        <div class="productDetail-popup__wrapper relative">
+          <div class="productDetail-popup__title text-[1.75rem] font-bold pb-[20px] border-b-[1px] border-b-[white]">후기 작성</div>
+          <div class="productDetail-popup__product p-[16px_0] border-b-[1px] border-b-[white] flex flex-row text-center gap-[24px]">
+            <img src="../assets/images/product/tangtang/tangtang_popup.jpg" alt="탱탱 쫄면 사진" />
+            <span class="productDetail-popup__product-title font-semibold text-[16px]">[풀무원] 탱탱쫄면 (4개입)</span>
+          </div>
+          <div class="productDetail-popup__brief-wrapper productDetail-popup__brief-wrapper--pb pt-[16px] border-b-[1px] border-b-[white] pb-[58px]">
+            <div class="productDetail-popup__brief-title-group flex mb-[12px]">
+              <div class="productDetail-popup__brief-title text-[14px] font-semibold p-[0_64px_0_8px] leading-[44px]">제목</div>
+              <input placeholder="제목을 입력해 주세요" type="text" class="productDetail-popup__brief-title-input text-[16px] font-normal w-[629px] h-[44px] border border-[#a6a6a6] rounded p-[0_20px]" />
+            </div>
+            <div class="productDetail-popup__brief-group flex">
+              <div class="productDetail-popup__brief text-[14px] font-semibold h-[44px] p-[0_64px_0_8px] leading-[44px]">내용</div>
+              <div class="productDetail-popup__brief-textarea-group relative w-[629px] rounded">
+                <div class="productDetail-popup__brief-placeholder-group relative flex flex-col h-[198px] bg-white border border-[#a6a6a6] rounded">
+                  <textarea name="" id="" class="productDetail-popup__brief-input block border-none w-full h-full resize-none p-[16px] bg-transparent outline-none"></textarea>
+                  <div class="productDetail-popup__brief-placeholder absolute top-0 left-0 overflow-y-auto w-full h-[86%] p-[16px_16px_32px]">
+                    <p class="productDetail-review-popup__brief-notice">컬리는 믿을 수 있는 후기문화를 함께 만들어가고자 합니다. 식품 등의 표시광고에 대한 법률을
+                      준수하고자 다음과 같은 부당한 상품평에 대해서는 별도 고지 없이 임시 대처, 비공개
+                      전환,
+                      삭제, 적립금 회수 등의 필요한 조치가 취해 질 수 있습니다.</p>
+                    <strong class="productDetail-review-popup__brief-notice-strong">후기 작성 시 유의사항</strong>
+                    <ul class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--pl16">
+                      <li>개인의 주관적인 의견으로 인해 상품의 기능 및 효과에 대하여 오해의 소지가 있는
+                        내용</li>
+                      <li>식품/건강기능식품과 관련하여 질병의 예방 및 치료, 체중감량(다이어트)에
+                        효능효과가 있다는 내용</li>
+                      <li>일반 화장품을 기능성화장품의 효능효과가 있다는 내용을 통한 오인 표현</li>
+                      <li>의약외품을 의약품으로 오인하게 하는 표현</li>
+                      <li>생활화학제품을 본래 용도와 다르게 사용하는 내용 및 효능효과를 과장하는 내용
+                      </li>
+                      <li>욕설, 폭력성, 음란성, 상업성 등의 게시물 또는 구매 상품과 무관하거나
+                        반복되는 동일 단어나 문장을 사용하여 판매자나 다른 이용자의 후기 이용을 방해한다고 판단되는 경우
+                      </li>
+                      <li>구매한 상품이 아닌 캡쳐 사진, 타인 사진 도용, 포장 박스, 퍼플박스, 구매
+                        상품을 구분할 수 없는 전체 사진 등 상품과 관련 없는 이미지, 동영상을 사용한 경우</li>
+                      <li>본인 또는 타인의 주민등록번호, (휴대)전화번호, 이메일 등 개인정보가 포함된
+                        경우</li>
+                      <li>그 밖에 상품평으로 인해 다른 회원 또는 제3자에게 피해가 가해질 내용</li>
+                      <li>작성된 글과 첨부된 멀티미디어 파일 등으로 이루어진 각 상품평은 개인의 의견을
+                        반영하므로, 게시된 내용에 대한 모든 책임은 작성자에게 있습니다. 또한 비정상적인 방법을 통해
+                        후기를
+                        작성하고 적립금을 취득한 경우 작성자에 법적 책임의 소지가 있음을 알려드립니다.</li>
+                    </ul>
+                    <p class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--red">※
+                      작성된 글과 첨부된 멀티미디어 파일 등으로 이루어진 각 상품평은 개인의 의견을 반영하므로, 게시된 내용에 대한 모든 책임은 작성자에게 있습니다. 또한 비정상적인 방법을 통해
+                      후기를
+                      작성하고 적립금을 취득한 경우 작성자에 법적 책임의 소지가 있음을 알려드립니다.</p>
+                  </div>
+                  <span class="productDetail-popup__characters text-[12px] text-[#a6a6a6] text-right block p-[0_4px_4px]">
+                    <span class="entered-characters">0</span>
+                    <span class="productDetail-popup__total-characters">/ 5,000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="productDetail-popup__button-wrapper pt-[20px] flex justify-center gap-3">
+            <button class="productDetail-popup__cancel border border-[#c4c4c4] rounded w-[186px] h-[54px] text-[16px] text-content font-semibold">취소</button>
+            <button class="productDetail-popup__signup bg-[#e1e1e1] rounded w-[186px] h-[54px] text-[16px] text-white font-semibold border-none">등록</button>
+          </div>
+          <button class="productDetail-popup__close"></button>
+        </div>
+      </section>
+    </div>
+
+    <div class="productDetail-popup-inquiry hidden">
+      <section class="productDetail-popup bg-white mb-[10px] w-[793px] h-[630px] p-[32px] rounded-[16px] top-1/2 left-1/2 translate-x-[63%] translate-y-1/4">
+        <div class="productDetail-popup__wrapper relative">
+          <div class="productDetail-popup__title text-[1.75rem] font-bold pb-[20px] border-b-[1px] border-b-[white]">상품 문의하기</div>
+          <div class="productDetail-popup__product p-[16px_0] border-b-[1px] border-b-[white] flex flex-row text-center gap-[24px]">
+            <img src="/assets/images/product/tangtang/tangtang_popup.jpg" alt="탱탱 쫄면 사진" />
+            <span class="productDetail-popup__product-title font-semibold text-[16px]">[풀무원] 탱탱쫄면 (4개입)</span>
+          </div>
+          <div class="productDetail-popup__brief-wrapper pt-[16px] border-b-[1px] border-b-[white]">
+            <div class="productDetail-popup__brief-title-group flex mb-[12px]">
+              <div class="productDetail-popup__brief-title text-[14px] font-semibold p-[0_64px_0_8px] leading-[44px]">제목</div>
+              <input placeholder="제목을 입력해 주세요" type="text" class="productDetail-popup__brief-title-input text-[16px] font-normal w-[629px] h-[44px] border border-[#a6a6a6] rounded p-[0_20px]" />
+            </div>
+            <div class="productDetail-popup__brief-group flex">
+              <div class="productDetail-popup__brief text-[14px] font-semibold h-[44px] p-[0_64px_0_8px] leading-[44px]">내용</div>
+              <div class="productDetail-popup__brief-textarea-group relative w-[629px] rounded">
+                <div class="productDetail-popup__brief-placeholder-group relative flex flex-col h-[198px] bg-white border border-[#a6a6a6] rounded">
+                  <textarea name="" id="" type="text" class="productDetail-popup__brief-input block border-none w-full h-full resize-none p-[16px] bg-transparent outline-none"></textarea>
+                  <div class="productDetail-popup__brief-placeholder absolute top-0 left-0 overflow-y-auto w-full h-[86%] p-[16px_16px_32px]">
+                    <strong
+                      class="productDetail-review-popup__brief-notice-strong productDetail-review-popup__brief-notice-strong--pt">상품문의
+                      작성 전 확인해 주세요</strong>
+                    <ul class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--pl16">
+                      <li>답변은 영업일 기준 2~3일 소요됩니다.</li>
+                      <li>해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.</li>
+                      <li>배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이칼리 내 1:1 문의에 남겨주세요.</li>
+                    </ul>
+                    <strong class="productDetail-review-popup__brief-notice-strong">제품</strong>
+                    <ul class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--pl16">
+                      <li>입고일 : 품절 상품 입고 일이 확정된 경우, 섬네일에 기재되어 있습니다. (종 모양을 클릭하여, 재입고 알림 설정 가능)</li>
+                      <li>제품 상세정보 : 영양성분 및 함량, 용량, 보관 및 취급 방법 등 제품 정보는 상세이미지 또는 상세정보에서 확인 가능합니다.</li>
+                    </ul>
+                    <strong class="productDetail-review-popup__brief-notice-strong">주문취소</strong>
+                    <ul class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--pl16">
+                      <li>배송 단계별로 주문취소 방법이 상이합니다.</li>
+                      <li>[입금확인] 단계 : [마이칼리 > 주문내역 상세페이지] 에서 직접 취소 가능</li>
+                      <li>[입금확인] 이후 단계 : 고객센터로 문의</li>
+                      <li>생산이 시작된 [상품 준비중] 이후에는 취소가 제한되는 점 고객님의 양해 부탁드립니다.</li>
+                      <li>비회원은 모바일 App 또는 모바일 웹사이트에서 [마이칼리 > 비회원 주문 조회 페이지] 에서 취소가 가능합니다.</li>
+                      <li>일부 예약상품은 배송 3~4일 전에만 취소 가능합니다.</li>
+                    </ul>
+                    <p class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--red">※
+                      주문상품의 부분 취소는 불가능합니다. 전체 주문 취소 후 재구매 해주세요.</p>
+                    <strong class="productDetail-review-popup__brief-notice-strong">배송</strong>
+                    <ul class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--pl16">
+                      <li>주문 완료 후 배송 방법(샛별/택배)은 변경이 불가능합니다.</li>
+                      <li>배송일 배송시간 지정은 불가능합니다. (예약배송 포함)</li>
+                    </ul>
+                    <p class="productDetail-review-popup__brief-notice productDetail-review-popup__brief-notice--red">※
+                      전화번호,
+                      이메일, 주소, 계좌번호 등의 상세 개인정보가 문의 내용에 저장되지 않도록 주의해 주시기 바랍니다.</p>
+                  </div>
+                  <span class="productDetail-popup__characters text-[12px] text-[#a6a6a6] text-right block p-[0_4px_4px]">
+                    <span class="entered-characters">0</span>
+                    <span class="productDetail-popup__total-characters">/ 5,000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="productDetail-inquiry-popup">
+              <input type="checkbox" id="check" class="cartList__select"></input>
+              <label class="cartList__selectLabel flex w-[119px]" for="check">
+                <div class="cartList__totalSelect leading-[24px] text-[10px]">비밀글로 문의하기</div>
+                <span class="cartList__line"></span>
+              </label>
+            </div>
+          </div>
+          <div class="productDetail-popup__button-wrapper pt-[20px] flex justify-center gap-3">
+            <button class="productDetail-popup__cancel border border-[#c4c4c4] rounded w-[186px] h-[54px] text-[16px] text-content font-semibold">취소</button>
+            <button class="productDetail-popup__signup bg-[#e1e1e1] rounded w-[186px] h-[54px] text-[16px] text-white font-semibold border-none">등록</button>
+          </div>
+          <button class="productDetail-popup__close"></button>
+        </div>
+      </section>
+    </div>
+
     <footer class="footer">
       <div class="footer__inner container__width mx-auto mt-[4.1875rem]">
         <div class="footer__innerTop mb-8 mt-[2.392857142857143rem] flex justify-between">
