@@ -1,58 +1,184 @@
-import { attr, clearContents, getNode, getNodes, tiger, typeError } from '../lib/index.js';
-import { renderShoppingList } from './cart/index.js';
+import {
+  attr,
+  clearContents,
+  getNode,
+  getNodes,
+  tiger,
+  insertLast,
+  priceToString,
+  toggleClass,
+} from '../lib/index.js';
 
+const cartListButton = getNodes('.cartListButton');
 
-const foodCategoryList = getNode('.food__categorylist');
-const orderButton = getNode('.cart__orderButton');
-const deleteButtonInCart = getNodes('.selectGoods__deleteButton');
+cartListButton.forEach((item) => {
+  item.addEventListener('click', () => {
+    let target = item.closest('.spread');
+    toggleClass(target, 'is--clicked');
+  });
+});
 
-const URL = 'http://localhost:3000/main';
-
-// function clickEvent(e) {
-//   renderShoppingList(foodCategoryList);
-// }
-
-/* goods data */
-export async function getshallowDataList(e) {
-  const target = e.target.closest('button');
-  console.log(target);
-
-  const response = await tiger.get(URL);
-  const products = response.data.products;
-  if (products.forEach((item) => console.log(item.name)) === target) {
-    console.log();
-  }
+function isSale(item) {
+  return item.saleRatio !== 0 ? true : false;
 }
 
-orderButton.addEventListener('click', getshallowDataList);
-
-/* goods Thumbnail */
-export async function getDeepDataList(e, index) {
-  const response = await tiger.get(URL);
-  const products = response.data.products;
-  console.log(products);
-
-  const entries = Object.entries(products);
-  // return entries[index].forEach((item) => getFoodThumbnail(item));
-  entries.map((item) => console.log(getFoodThumbnail(item)));
+function renderSaleCartList(target, data) {
+  insertLast(target, createSaleCartList(data));
+}
+function renderUnSaleCartList(target, data) {
+  insertLast(target, createUnSaleCartList(data));
 }
 
-const getFoodThumbnail = (item) => {
-  return item.image;
-};
+function createSaleCartList({ name, price, salePrice, image, id }) {
+  return /* html */ `
+  <li class="mt-5 flex items-center justify-between" id=${id}>
+    <div class="flex gap-2">
+      <div class="flex items-center">
+        <input
+          type="checkbox"
+          class="peer absolute opacity-0"
+          name="checkbox__allSelect"
+          id="checkboxCold" />
+        <label
+          for="checkboxCold"
+          class="block h-6 w-6 bg-[url('/assets/images/cart/ic-checked-false.svg')] bg-no-repeat peer-checked:bg-[url('/assets/images/cart/ic-checked-true.svg')]">
+        </label>
+      </div>
+      <figure class="flex items-center gap-[14px]">
+        <img src="${image}" alt="${name}" width="60px" />
+        <figcaption>
+          <h3 class="text-base font-semibold">${name}</h3>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="flex items-center">
+      <div class="flex h-7 items-center rounded border border-[#dbdbdb]">
+        <button class="h-7 w-7 bg-[url('/assets/images/main/Minus.svg')]"></button>
+        <span class="flex h-7 w-7 items-center justify-center text-[14px]">1</span>
+        <button class="h-7 w-7 bg-[url('/assets/images/main/Plus.svg')]"></button>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="text-end">
+          <p class="text-base">${salePrice}<span>원</span></p>
+          <del class="text-[14px] text-[#C4C4C4]">${price}<span>원</span></del>
+        </div>
+        <button class="deleteDataButton">
+          <img src="/assets/images/cart/ic-cancel.svg" alt="삭제" />
+        </button>
+      </div>
+    </div>
+  </li>
+  `;
+}
 
-// getDeepDataList(0);
-// orderButton.addEventListener('click', getDeepDataList);
-// const renderSelectList = () => {};
+function createUnSaleCartList({ name, price, image, id }) {
+  return /* html */ `
+  <li class="mt-5 flex items-center justify-between" id=${id}>
+    <div class="flex gap-2">
+      <div class="flex items-center">
+        <input
+          type="checkbox"
+          class="peer absolute opacity-0"
+          name="checkbox__allSelect"
+          id="checkboxFrozen" />
+        <label
+          for="checkboxFrozen"
+          class="block h-6 w-6 bg-[url('/assets/images/cart/ic-checked-false.svg')] bg-no-repeat peer-checked:bg-[url('/assets/images/cart/ic-checked-true.svg')]">
+        </label>
+      </div>
+      <figure class="flex items-center gap-[14px]">
+        <img src="${image}" alt="${name}" width="60px" />
+        <figcaption>
+          <h3 class="text-base font-semibold">${name}</h3>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="flex items-center justify-between">
+      <div class="flex h-7 items-center rounded border border-[#dbdbdb]">
+        <button class="h-7 w-7 bg-[url('/assets/images/main/Minus.svg')]"></button>
+        <span class="flex h-7 w-7 items-center justify-center text-[14px]">1</span>
+        <button class="h-7 w-7 bg-[url('/assets/images/main/Plus.svg')]"></button>
+      </div>
+      <div class="flex items-center">
+        <div class="text-end">
+          <p class="text-base">${price}<span>원</span></p>
+        </div>
+        <button class="deleteDataButton">
+          <img src="./../assets/images/cart/ic-cancel.svg" alt="삭제" />
+        </button>
+      </div>
+    </div>
+  </li>
+`;
+}
 
-// orderButton.addEventListener('click', clickEvent);
+async function cartList() {
+  const response = await tiger.get('http://localhost:3000/select');
+  const productArray = response.data;
+  const product = productArray.map((item) => {
+    return {
+      id: item.id,
+      name: item.name,
+      price: priceToString(item.price),
+      salePrice: priceToString(item.salePrice),
+      image: item.image,
+      description: item.description,
+      saleRatio: item.saleRatio * 100,
+      stock: item.stock,
+      type: item.type,
+    };
+  });
+  product.forEach((item) => {
+    if (item.type === 'cold') {
+      isSale(item)
+        ? renderSaleCartList('#listCold', item)
+        : renderUnSaleCartList('#listCold', item);
+    }
+    if (item.type === 'frozen') {
+      isSale(item)
+        ? renderSaleCartList('#listFrozen', item)
+        : renderUnSaleCartList('#listFrozen', item);
+    }
+    if (item.type === 'room') {
+      isSale(item)
+        ? renderSaleCartList('#listRoom', item)
+        : renderUnSaleCartList('#listRoom', item);
+    }
+  });
+}
 
-// function handleDelete(e) {
-//   let button = e.target.closest('button');
-//   if (!button) return;
+const addedCartList = getNode('.foodCategory');
+addedCartList.addEventListener('click', handleDelete);
 
-//   tiger.delete(`http://localhost:3000/main/products/${id}`).then(() => {
-//     clearContents(foodCategoryList);
-//     renderSelectList();
-//   });
-// }
+async function handleDelete(e) {
+  const button = e.target.closest('.deleteDataButton');
+  if (!button) return;
+  const id = attr(button.closest('li'), 'id');
+
+  const response = await tiger.get('http://localhost:3000/select/');
+  const productArray = response.data;
+  const product = productArray.map((item) => {
+    return {
+      id: item.id,
+      name: item.name,
+      price: priceToString(item.price),
+      salePrice: priceToString(item.salePrice),
+      image: item.image,
+      description: item.description,
+      saleRatio: item.saleRatio * 100,
+      stock: item.stock,
+      type: item.type,
+    };
+  });
+  product.forEach((item) => {
+    if (id === item.id) {
+      tiger.delete(`http://localhost:3000/select/${id}`);
+    }
+  });
+  clearContents('#listCold');
+  clearContents('#listFrozen');
+  clearContents('#listRoom');
+  cartList();
+}
+
+cartList();

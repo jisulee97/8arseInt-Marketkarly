@@ -284,13 +284,13 @@
   float: left;
   padding-right: 0.625rem;
 }
-.arrow__down {
+/* .arrow__down {
   float: right;
   margin-right: 0.3rem;
 }
 .arrow__down img {
   width: 16px;
-}
+} */
 .checkbox__img {
   width: 24px;
   height: 24px;
@@ -319,9 +319,9 @@
 }
 
 /* 선택 상품 리스트 */
-.selectGoods {
+/* .selectGoods {
   margin-top: 20px;
-  /* border: 1px solid; */
+  border: 1px solid;
   display: flex;
   justify-content: space-between;
   font-weight: 400;
@@ -374,7 +374,7 @@
 }
 .cart__plus {
   background: url(../assets/images/main/Plus.svg);
-}
+} */
 
 .visbleHidden {
   visibility: hidden;
