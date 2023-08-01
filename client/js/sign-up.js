@@ -6,16 +6,11 @@ const checkPassword = $('#checkPassword');
 const userName = $('#username');
 const email = $('#email');
 const phone = $('#phone');
-const birthbirthYear = $('#birthYear');
-const birthbirthMonth = $('#birthMonth');
-const birthbirthday = $('#birthDay');
+const birthdate = $('.signUp__birthday');
+const birthYear = $('#birthYear');
+const birthMonth = $('#birthMonth');
+const birthday = $('#birthDay');
 const errors = getNodes('.signUp__errorMessage');
-
-// console.log(Object.entries(errors));
-// for (const [key, value] of Object.entries(errors)) {
-// }
-
-// console.log(errors[3]);
 
 let idPass = false;
 let pwPass = false;
@@ -110,56 +105,26 @@ export function validatePhone() {
   }
 }
 
-/* 생년 유효성 검사 */
-export function validateYear() {
-  let value = this.value;
-  if (pwReg(value) === true) {
-    errors[6].classList.remove('signUp--invalid');
+/* 생년월일 유효성 검사 */
+function validateDate(e) {
+  const isValidYear = yearReg();
+  const isValidMonth = monthReg();
+  const isValidDay = dayReg();
+
+  if (isValidYear && isValidMonth && isValidDay) {
     yearPass = true;
-    return;
+    monthPass = true;
+    datePass = true;
+    errors[6].classList.remove('signUp--invalid');
   } else {
     errors[6].classList.add('signUp--invalid');
     yearPass = false;
-    return;
-  }
-}
-/* 생월 유효성 검사 */
-export function validateMonth() {
-  let value = this.value;
-  if (pwReg(value) === true) {
-    errors[7].classList.remove('signUp--invalid');
-    monthPass = true;
-    return;
-  } else {
-    errors[7].classList.add('signUp--invalid');
     monthPass = false;
-    return;
-  }
-}
-/* 생일 유효성 검사 */
-export function validateDate() {
-  let value = this.value;
-  if (pwReg(value) === true) {
-    errors[8].classList.remove('signUp--invalid');
-    datePass = true;
-    return;
-  } else {
-    errors[8].classList.add('signUp--invalid');
     datePass = false;
-    return;
   }
 }
 
-userId.addEventListener('input', validateId);
-userPassword.addEventListener('input', validatePw);
-checkPassword.addEventListener('input', validatePwCheck);
-userName.addEventListener('input', validateName);
-email.addEventListener('input', validateEmail);
-phone.addEventListener('input', validatePhone);
-birthbirthYear.addEventListener('input', validateYear);
-birthbirthMonth.addEventListener('input', validateMonth);
-birthbirthday.addEventListener('input', validateDate);
-
+/* 정규표현식 함수 */
 function idReg(text) {
   const re = /^[a-zA-Z0-9]{6,16}$/;
   return re.test(String(text).toLowerCase());
@@ -177,6 +142,7 @@ function nameReg(text) {
   const re = /^[가-힣a-zA-Z]{2,15}$/;
   return re.test(String(text).toLowerCase());
 }
+
 function yearReg(text) {
   const re = /^[1-2]{1}[0-9]{3}$/;
   return re.test(String(text).toLowerCase());
@@ -189,3 +155,11 @@ function dayReg(text) {
   const re = /^[0-9]{1}[0-9]{1}$/;
   return re.test(String(text).toLowerCase());
 }
+
+userId.addEventListener('input', validateId);
+userPassword.addEventListener('input', validatePw);
+checkPassword.addEventListener('input', validatePwCheck);
+userName.addEventListener('input', validateName);
+email.addEventListener('input', validateEmail);
+phone.addEventListener('input', validatePhone);
+birthdate.addEventListener('input', validateDate);
