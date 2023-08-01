@@ -1,4 +1,5 @@
-import { Main, clickButton } from '/lib/index.js';
+import { Main, clickButton, product } from '/lib/index.js';
 
 Main();
 clickButton();
+product();

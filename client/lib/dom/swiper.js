@@ -5,11 +5,11 @@ import { addClass } from './css.js';
 import { insertLast } from './insert.js';
 
 export async function Main() {
-  const { data } = await tiger.get('http://localhost:3000/main');
+  const { data } = await tiger.get('http://localhost:3000/banner');
 
   // 메인 배너 스와이퍼
 
-  data.banner.forEach((item) => {
+  data.forEach((item) => {
     const swipperWrapper = getNode('.banner__slider > .swiper-wrapper');
 
     const swipperItem = document.createElement('div');
@@ -26,9 +26,27 @@ export async function Main() {
     swipperWrapper.append(swipperItem);
   });
 
+  const swiper = new Swiper('.banner__slider', {
+    speed: 400,
+    spaceBetween: 100,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
+
+export async function product() {
+  const { data } = await tiger.get('http://localhost:3000/products');
+
   // 이 상품 어때요 스와이퍼
 
-  data.products.forEach((item) => {
+  data.forEach((item) => {
     const swipperWrapper = getNode('.recommend__slider > .swiper-wrapper');
 
     const swipperItem = document.createElement('div');
@@ -98,20 +116,6 @@ export async function Main() {
   });
 
   // 메인 배너
-
-  const swiper = new Swiper('.banner__slider', {
-    speed: 400,
-    spaceBetween: 100,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
 
   // 이 상품 어때요
 
