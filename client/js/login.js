@@ -31,7 +31,6 @@ export function validateId() {
   if (emailReg(value) === true) {
     this.classList.remove('is--invalid');
     emailPass = true;
-    return value;
   } else {
     this.classList.add('is--invalid');
     emailPass = false;
