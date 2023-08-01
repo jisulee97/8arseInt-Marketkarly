@@ -16,7 +16,6 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="./../css/main.css" />
-    <script type="module" src="./../js/common/common.js"></script>
     <script type="module" src="./../js/sign-up.js"></script>
   </head>
 
@@ -357,30 +356,34 @@
           >필수입력사항</em
         >
       </div>
-      <form action="http://127.0.0.1:3000/user" method="post" id="signUp">
+      <form action="" method="POST">
         <fieldset>
           <legend class="sr-only">회원가입 폼</legend>
           <div class="mx-auto w-[640px] border-t-2 border-content text-content">
-            <div class="flex items-center gap-2 py-5">
-              <label
-                for="userId"
-                class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
-                >아이디</label
-              >
-              <input
-                id="userId"
-                type="text"
-                class="w-[333px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#898989] focus:border-content"
-                placeholder="아이디를 입력해주세요"
-                name="userId"
-                required />
-              <button
-                type="button"
-                class="inline-block w-[143px] rounded border border-primary py-[10px] font-semibold text-primary">
-                중복확인
-              </button>
+            <div class="signUp__item">
+              <div class="flex items-center gap-2 pt-2">
+                <label
+                  for="userId"
+                  class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
+                  >아이디
+                </label>
+                <input
+                  id="userId"
+                  type="text"
+                  class="w-[333px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#898989] focus:border-content"
+                  placeholder="아이디를 입력해주세요"
+                  required />
+                <button
+                  type="button"
+                  class="inline-block w-[143px] rounded border border-primary py-[10px] font-semibold text-primary">
+                  중복확인
+                </button>
+              </div>
+              <p class="signUp__errorMessage text-error">
+                6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합
+              </p>
             </div>
-            <div class="flex items-center gap-2 py-5">
+            <div class="flex items-center gap-2 pt-5">
               <label
                 for="userPassword"
                 class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
@@ -393,7 +396,11 @@
                 placeholder="비밀번호를 입력해주세요"
                 required />
             </div>
-            <div class="flex items-center gap-2 py-5">
+            <!-- <p class="signUp__errorMessage text-error">최소 10자 이상 입력</p> -->
+            <p class="signUp__errorMessage text-error">
+              영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합
+            </p>
+            <div class="flex items-center gap-2 pt-5">
               <label
                 for="checkPassword"
                 class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
@@ -406,7 +413,8 @@
                 placeholder="비밀번호를 한번 더 입력해주세요"
                 required />
             </div>
-            <div class="flex items-center gap-2 py-5">
+            <p class="signUp__errorMessage text-error">동일한 비밀번호를 입력</p>
+            <div class="flex items-center gap-2 pt-5">
               <label
                 for="username"
                 class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
@@ -419,43 +427,50 @@
                 placeholder="이름을 입력해주세요"
                 required />
             </div>
-            <div class="flex items-center gap-2 py-5">
-              <label
-                for="email"
-                class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
-                >이메일</label
-              >
-              <input
-                id="email"
-                type="email"
-                class="w-[333px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#898989] focus:border-content"
-                placeholder="예) marketkarly@karly.com"
-                required />
-              <button
-                type="button"
-                class="inline-block w-[143px] rounded border border-primary py-[10px] font-semibold text-primary">
-                중복확인
-              </button>
+            <p class="signUp__errorMessage text-error">이름을 입력해주세요.</p>
+            <div class="signUp__item">
+              <div class="flex items-center gap-2 pt-5">
+                <label
+                  for="email"
+                  class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
+                  >이메일</label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  class="w-[333px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#898989] focus:border-content"
+                  placeholder="예) marketkarly@karly.com"
+                  required />
+                <button
+                  type="button"
+                  class="inline-block w-[143px] rounded border border-primary py-[10px] font-semibold text-primary">
+                  중복확인
+                </button>
+              </div>
+              <p class="signUp__errorMessage text-error">이메일 형식으로 입력해 주세요.</p>
             </div>
-            <div class="flex items-center gap-2 py-5">
-              <label
-                for="phone"
-                class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
-                >휴대폰</label
-              >
-              <input
-                id="phone"
-                type="tel"
-                class="w-[333px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#898989] focus:border-content"
-                placeholder="숫자만 입력해주세요."
-                required />
-              <button
-                type="button"
-                class="inline-block w-[143px] rounded border border-primary py-[10px] font-semibold text-primary">
-                인증번호 받기
-              </button>
+            <div class="signUp__item">
+              <div class="flex items-center gap-2 pt-5">
+                <label
+                  for="phone"
+                  class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
+                  >휴대폰</label
+                >
+                <input
+                  id="phone"
+                  type="tel"
+                  class="w-[333px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#898989] focus:border-content"
+                  placeholder="숫자만 입력해주세요."
+                  required />
+                <button
+                  type="button"
+                  class="inline-block w-[143px] rounded border border-primary py-[10px] font-semibold text-primary">
+                  인증번호 받기
+                </button>
+              </div>
+              <p class="signUp__errorMessage text-error">휴대폰 번호를 입력해 주세요.</p>
             </div>
-            <div class="flex items-center gap-2 py-5">
+            <div class="flex items-center gap-2 pt-5">
               <label
                 for="address"
                 class="inline-block w-[139px] font-semibold after:font-semibold after:text-error after:content-['*']"
@@ -472,7 +487,7 @@
                 >
               </div>
             </div>
-            <div class="flex items-center gap-2 py-5">
+            <div class="flex items-center gap-2 pt-5">
               <label for="gender" class="inline-block w-[139px] font-semibold">성별</label>
               <div id="gender" class="flex w-[333px] justify-between text-content">
                 <div class="relative">
@@ -513,39 +528,47 @@
                 </div>
               </div>
             </div>
-            <div class="flex items-center gap-2 py-5">
-              <label for="userBirth" class="block w-[139px] font-semibold">생년월일</label>
-              <div class="flex w-[333px] rounded border border-[#A6A6A6] px-7">
-                <div id="userBirth">
-                  <label for="birthYear" class="sr-only">태어난 년도</label>
-                  <input
-                    id="birthYear"
-                    type="text"
-                    class="w-full py-[9px] text-center outline-none placeholder:text-center"
-                    placeholder="YYYY"
-                    maxlength="4" />
-                </div>
-                <span aria-hidden="true" class="py-[9px] text-[#898989]">/</span>
-                <div>
-                  <label for="birthMonth" class="sr-only">태어난 월</label>
-                  <input
-                    id="birthMonth"
-                    type="text"
-                    class="w-full py-[9px] text-center outline-none placeholder:text-center"
-                    placeholder="MM"
-                    maxlength="2" />
-                </div>
-                <span aria-hidden="true" class="py-[9px] text-[#898989]">/</span>
-                <div>
-                  <label for="birthDay" class="sr-only">태어난 일</label>
-                  <input
-                    id="birthDay"
-                    type="text"
-                    class="w-full py-[9px] text-center outline-none placeholder:text-center"
-                    placeholder="DD"
-                    maxlength="2" />
+            <div class=".signUp__item">
+              <div class="signUp__birthday flex gap-2 pt-5">
+                <label for="userBirth" class="block w-[139px] font-semibold">생년월일</label>
+                <div class="flex w-[333px] rounded border border-[#A6A6A6] px-7">
+                  <div id="userBirth">
+                    <label for="birthYear" class="sr-only">태어난 년도</label>
+                    <input
+                      id="birthYear"
+                      type="text"
+                      class="w-full py-[9px] text-center outline-none placeholder:text-center"
+                      placeholder="YYYY"
+                      maxlength="4" />
+                  </div>
+                  <span aria-hidden="true" class="py-[9px] text-[#898989]">/</span>
+                  <div>
+                    <label for="birthMonth" class="sr-only">태어난 월</label>
+                    <input
+                      id="birthMonth"
+                      type="text"
+                      class="w-full py-[9px] text-center outline-none placeholder:text-center"
+                      placeholder="MM"
+                      maxlength="2" />
+                  </div>
+                  <span aria-hidden="true" class="py-[9px] text-[#898989]">/</span>
+                  <div>
+                    <label for="birthDay" class="sr-only">태어난 일</label>
+                    <input
+                      id="birthDay"
+                      type="text"
+                      class="w-full py-[9px] text-center outline-none placeholder:text-center"
+                      placeholder="DD"
+                      maxlength="2" />
+                  </div>
                 </div>
               </div>
+              <p class="signUp__errorMessage text-error">생년월일을 정확하게 입력해주세요.</p>
+              <!-- <p class="signUp__errorMessage text-error">
+                태어난 년도 4자리를 정확하게 입력해주세요.
+              </p>
+              <p class="signUp__errorMessage text-error">태어난 월을 정확하게 입력해주세요.</p>
+              <p class="signUp__errorMessage text-error">태어난 일를 정확하게 입력해주세요.</p> -->
             </div>
             <div class="flex items-center gap-2 py-5">
               <label for="addInfo" class="inline-block w-[139px] font-semibold"
@@ -659,7 +682,7 @@
               </div>
             </div>
             <button
-              type="submit"
+              type="button"
               class="mx-auto my-10 block rounded bg-primary px-[142px] py-[15px] font-semibold text-white">
               가입하기
             </button>

@@ -1,192 +1,189 @@
 {
-  "products": [
-    {
-      "id": "product-tangtang",
-      "name": "[풀무원] 탱탱쫄면 (4개입)",
-      "description": "튀기지 않아 부드럽고 매콤한",
-      "price": 4980,
-      "saleRatio": 0,
-      "salePrice": 0,
-      "type": "room",
-      "image": {
-        "thumbnail": "/assets/images/product/tangtang/thumbnail.svg",
-        "view": "/assets/images/product/tangtang/detail_view.jpg",
-        "banner": "/assets/images/product/tangtang/detail_banner.jpg",
-        "info": "/assets/images/product/tangtang/detail_info.jpg",
-        "alt": "풀무원 탱탱쫄면"
+  "main": {
+    "products": [
+      {
+        "id": "product-tangtang",
+        "name": "[풀무원] 탱탱쫄면 (4개입)",
+        "description": "튀기지 않아 부드럽고 매콤한",
+        "price": 4980,
+        "saleRatio": 0,
+        "salePrice": 0,
+        "image": {
+          "thumbnail": "/assets/images/product/tangtang/thumbnail.svg",
+          "view": "/assets/images/product/tangtang/detail_view.jpg",
+          "banner": "/assets/images/product/tangtang/detail_banner.jpg",
+          "info": "/assets/images/product/tangtang/detail_info.jpg",
+          "alt": "풀무원 탱탱쫄면"
+        },
+        "stock": 10
       },
-      "stock": 10
-    },
-    {
-      "id": "product-suncushion",
-      "name": "[온더바디] 죠르디 시카 자석 선쿠션",
-      "description": "끈적임 없이 보송한 무기자차 선쿠션",
-      "price": 32500,
-      "saleRatio": 0,
-      "salePrice": 0,
-      "type": "room",
-      "image": {
-        "thumbnail": "/assets/images/product/suncushion/thumbnail.svg",
-        "view": "/assets/images/product/ubuho/detail_view.jpg",
-        "banner": "/assets/images/product/ubuho/detail_banner.jpg",
-        "info": "/assets/images/product/ubuho/detail_info.jpg",
-        "alt": "죠르디 선쿠션"
+      {
+        "id": "product-zordi",
+        "name": "[온더바디] 죠르디 시카 자석 선쿠션",
+        "description": "끈적임 없이 보송한 무기자차 선쿠션",
+        "price": 32500,
+        "saleRatio": 0,
+        "salePrice": 0,
+        "image": {
+          "thumbnail": "/assets/images/product/suncushion/thumbnail.svg",
+          "view": "/assets/images/product/ubuho/detail_view.jpg",
+          "banner": "/assets/images/product/ubuho/detail_banner.jpg",
+          "info": "/assets/images/product/ubuho/detail_info.jpg",
+          "alt": "죠르디 선쿠션"
+        },
+        "stock": 5
       },
-      "stock": 5
-    },
-    {
-      "id": "product-detergent",
-      "name": "[프로쉬] 베이비 세탁세제",
-      "description": "성분을 꼼꼼히 따져 골라 더욱 편안한",
-      "price": 24900,
-      "saleRatio": 0.24,
-      "salePrice": 18900,
-      "type": "room",
-      "image": {
-        "thumbnail": "/assets/images/product/detergent/thumbnail.svg",
-        "view": "/assets/images/product/jukkumi/detail_view.jpg",
-        "banner": "/assets/images/product/jukkumi/detail_banner.jpg",
-        "info": "/assets/images/product/jukkumi/detail_info.jpg",
-        "alt": "프로쉬 세탁세제"
+      {
+        "id": "product-akqk",
+        "name": "[프로쉬] 베이비 세탁세제",
+        "description": "성분을 꼼꼼히 따져 골라 더욱 편안한",
+        "price": 24900,
+        "saleRatio": 0.24,
+        "salePrice": 18900,
+        "image": {
+          "thumbnail": "/assets/images/product/detergent/thumbnail.svg",
+          "view": "/assets/images/product/jukkumi/detail_view.jpg",
+          "banner": "/assets/images/product/jukkumi/detail_banner.jpg",
+          "info": "/assets/images/product/jukkumi/detail_info.jpg",
+          "alt": "프로쉬 세탁세제"
+        },
+        "stock": 8
       },
-      "stock": 8
-    },
-    {
-      "id": "product-brownrice",
-      "name": "유기농 밀키퀸 현미 4kg",
-      "description": "유기농으로 더욱 윤기나게",
-      "price": 25000,
-      "saleRatio": 0,
-      "salePrice": 0,
-      "type": "room",
-      "image": {
-        "thumbnail": "/assets/images/product/brownrice/thumbnail.svg",
-        "view": "/assets/images/product/kangnam/detail_view.jpg",
-        "banner": "/assets/images/product/kangnam/detail_banner.jpg",
-        "info": "/assets/images/product/kangnam/detail_info.jpg",
-        "alt": "유기농 현미 4kg"
+      {
+        "id": "product-tkwk",
+        "name": "유기농 밀키퀸 현미 4kg",
+        "description": "유기농으로 더욱 윤기나게",
+        "price": 25000,
+        "saleRatio": 0,
+        "salePrice": 0,
+        "image": {
+          "thumbnail": "/assets/images/product/brownrice/thumbnail.svg",
+          "view": "/assets/images/product/kangnam/detail_view.jpg",
+          "banner": "/assets/images/product/kangnam/detail_banner.jpg",
+          "info": "/assets/images/product/kangnam/detail_info.jpg",
+          "alt": "유기농 현미 4kg"
+        },
+        "stock": 2
       },
-      "stock": 2
-    },
-    {
-      "id": "product-bacon",
-      "name": "[Kalry's] 한돈 삼겹 베이컨",
-      "description": "무항생제 한돈 삼겹살의 고소한 풍미 그대로",
-      "price": 4500,
-      "saleRatio": 0.25,
-      "salePrice": 3375,
-      "type": "cold",
-      "image": {
-        "thumbnail": "/assets/images/product/bacon/thumbnail.jpg",
-        "view": "/assets/images/product/bacon/detail_view.jpg",
-        "banner": "/assets/images/product/bacon/detail_banner.jpg",
-        "info": "/assets/images/product/bacon/detail_info.jpg",
-        "alt": "칼리 한돈 삼겹 베이컨"
+      {
+        "id": "product-ckzk",
+        "name": "[Kalry's] 한돈 삼겹 베이컨",
+        "description": "무항생제 한돈 삼겹살의 고소한 풍미 그대로",
+        "price": 4500,
+        "saleRatio": 0.25,
+        "salePrice": 3375,
+        "type": "COLD",
+        "image": {
+          "thumbnail": "/assets/images/product/bacon/thumbnail.jpg",
+          "view": "/assets/images/product/bacon/detail_view.jpg",
+          "banner": "/assets/images/product/bacon/detail_banner.jpg",
+          "info": "/assets/images/product/bacon/detail_info.jpg",
+          "alt": "칼리 한돈 삼겹 베이컨"
+        },
+        "stock": 13
       },
-      "stock": 13
-    },
-    {
-      "id": "product-jukkumi",
-      "name": "[홍대주꾸미] 주꾸미 볶음 300g (냉동)",
-      "description": "매콤달콤한 마력의 밥도둑",
-      "price": 7900,
-      "saleRatio": 0.13,
-      "salePrice": 6800,
-      "type": "frozen",
-      "image": {
-        "thumbnail": "/assets/images/product/jukkumi/thumbnail.jpg",
-        "view": "/assets/images/product/jukkumi/detail_view.jpg",
-        "banner": "/assets/images/product/jukkumi/detail_banner.jpg",
-        "info": "/assets/images/product/jukkumi/detail_info.jpg",
-        "alt": "홍대 주꾸미"
+      {
+        "id": "product-akqk",
+        "name": "[홍대주꾸미] 주꾸미 볶음 300g (냉동)",
+        "description": "매콤달콤한 마력의 밥도둑",
+        "price": 7900,
+        "saleRatio": 0.13,
+        "salePrice": 6800,
+        "type": "FROZEN",
+        "image": {
+          "thumbnail": "/assets/images/product/jukkumi/thumbnail.jpg",
+          "view": "/assets/images/product/jukkumi/detail_view.jpg",
+          "banner": "/assets/images/product/jukkumi/detail_banner.jpg",
+          "info": "/assets/images/product/jukkumi/detail_info.jpg",
+          "alt": "홍대 주꾸미"
+        },
+        "stock": 8
       },
-      "stock": 8
-    },
-    {
-      "id": "product-kangnam",
-      "name": "[강남면옥] 소갈비찜",
-      "description": "보는 맛과 먹는 맛 모두 푸짐",
-      "price": 29800,
-      "saleRatio": 0,
-      "salePrice": 0,
-      "type": "frozen",
-      "image": {
-        "thumbnail": "/assets/images/product/kangnam/thumbnail.jpg",
-        "view": "/assets/images/product/kangnam/detail_view.jpg",
-        "banner": "/assets/images/product/kangnam/detail_banner.jpg",
-        "info": "/assets/images/product/kangnam/detail_info.jpg",
-        "alt": "강남면옥 소갈비찜"
+      {
+        "id": "product-tkwk",
+        "name": "[강남면옥] 소갈비찜",
+        "description": "보는 맛과 먹는 맛 모두 푸짐",
+        "price": 29800,
+        "saleRatio": 0,
+        "salePrice": 0,
+        "type": "COLD",
+        "image": {
+          "thumbnail": "/assets/images/product/kangnam/thumbnail.jpg",
+          "view": "/assets/images/product/kangnam/detail_view.jpg",
+          "banner": "/assets/images/product/kangnam/detail_banner.jpg",
+          "info": "/assets/images/product/kangnam/detail_info.jpg",
+          "alt": "강남면옥 소갈비찜"
+        },
+        "stock": 2
       },
-      "stock": 2
-    },
-    {
-      "id": "product-ubunho",
-      "name": "[대구 반할만떡] 유부호만두",
-      "description": "유부로 속을 든든히 채운 군만두",
-      "price": 6900,
-      "saleRatio": 0.24,
-      "salePrice": 5244,
-      "type": "frozen",
-      "image": {
-        "thumbnail": "/assets/images/product/ubuho/thumbnail.jpg",
-        "view": "/assets/images/product/ubuho/detail_view.jpg",
-        "banner": "/assets/images/product/ubuho/detail_banner.jpg",
-        "info": "/assets/images/product/ubuho/detail_info.jpg",
-        "alt": "유부호 만두"
-      },
-      "stock": 3
-    }
-  ],
-  "banner": [
-    {
-      "id": "banner-sale",
-      "name": "컬리 장보기의 특권 이 주의 특가 한눈에 보기",
-      "description": "우측 상단 특가, 혜택에서 확인하세요!",
-      "image": {
-        "thumbnail": "/assets/images/main/banner05.svg",
-        "view": "/assets/images/main/banner05.svg",
-        "banner": "/assets/images/main/banner05.svg",
-        "info": "/assets/images/main/banner05.svg",
-        "alt": "컬리 장보기의 특권"
+      {
+        "id": "product-rksk",
+        "name": "[대구 반할만떡] 유부호만두",
+        "description": "유부로 속을 든든히 채운 군만두",
+        "price": 6900,
+        "saleRatio": 0.24,
+        "salePrice": 5244,
+        "type": "FROZEN",
+        "image": {
+          "thumbnail": "/assets/images/product/ubuho/thumbnail.jpg",
+          "view": "/assets/images/product/ubuho/detail_view.jpg",
+          "banner": "/assets/images/product/ubuho/detail_banner.jpg",
+          "info": "/assets/images/product/ubuho/detail_info.jpg",
+          "alt": "유부호 만두"
+        },
+        "stock": 3
       }
-    },
-    {
-      "id": "banner-fruit",
-      "name": "부드러운 달콤함 컬리 과일 가게",
-      "description": "앵콜 특가 : 멜론 9,900원",
-      "image": {
-        "thumbnail": "/assets/images/main/banner03.jpg",
-        "view": "/assets/images/main/banner03.jpg",
-        "banner": "/assets/images/main/banner03.jpg",
-        "info": "/assets/images/main/banner03.jpg",
-        "alt": "컬리 과일 가게"
+    ],
+
+    "banner": [
+      {
+        "id": "banner-sale",
+        "name": "컬리 장보기의 특권 이 주의 특가 한눈에 보기",
+        "description": "우측 상단 특가, 혜택에서 확인하세요!",
+        "image": {
+          "thumbnail": "/assets/images/main/banner05.svg",
+          "view": "/assets/images/main/banner05.svg",
+          "banner": "/assets/images/main/banner05.svg",
+          "info": "/assets/images/main/banner05.svg",
+          "alt": "컬리 장보기의 특권"
+        }
+      },
+      {
+        "id": "banner-fruit",
+        "name": "부드러운 달콤함 컬리 과일 가게",
+        "description": "앵콜 특가 : 멜론 9,900원",
+        "image": {
+          "thumbnail": "/assets/images/main/banner03.jpg",
+          "view": "/assets/images/main/banner03.jpg",
+          "banner": "/assets/images/main/banner03.jpg",
+          "info": "/assets/images/main/banner03.jpg",
+          "alt": "컬리 과일 가게"
+        }
+      },
+      {
+        "id": "banner-card",
+        "name": "한눈에 보는 이달의 카드 혜택",
+        "description": "최대 10% 카드 쿠폰 받기",
+        "image": {
+          "thumbnail": "/assets/images/main/banner02.svg",
+          "view": "/assets/images/main/banner02.svg",
+          "banner": "/assets/images/main/banner02.svg",
+          "info": "/assets/images/main/banner02.svg",
+          "alt": "이달의 카드 혜택"
+        }
+      },
+      {
+        "id": "banner-purpleweek",
+        "name": "KURLY PURPLE WEEK",
+        "description": "적립률 UP + 3종 쿠폰팩, 더 풍성해진 혜택!",
+        "image": {
+          "thumbnail": "/assets/images/main/banner04.jpg",
+          "view": "/assets/images/main/banner04.jpg",
+          "banner": "/assets/images/main/banner04.jpg",
+          "info": "/assets/images/main/banner04.jpg",
+          "alt": "컬리 장보기의 특권"
+        }
       }
-    },
-    {
-      "id": "banner-card",
-      "name": "한눈에 보는 이달의 카드 혜택",
-      "description": "최대 10% 카드 쿠폰 받기",
-      "image": {
-        "thumbnail": "/assets/images/main/banner02.svg",
-        "view": "/assets/images/main/banner02.svg",
-        "banner": "/assets/images/main/banner02.svg",
-        "info": "/assets/images/main/banner02.svg",
-        "alt": "이달의 카드 혜택"
-      }
-    },
-    {
-      "id": "banner-purpleweek",
-      "name": "KURLY PURPLE WEEK",
-      "description": "적립률 UP + 3종 쿠폰팩, 더 풍성해진 혜택!",
-      "image": {
-        "thumbnail": "/assets/images/main/banner04.jpg",
-        "view": "/assets/images/main/banner04.jpg",
-        "banner": "/assets/images/main/banner04.jpg",
-        "info": "/assets/images/main/banner04.jpg",
-        "alt": "컬리 장보기의 특권"
-      }
-    }
-  ],
-  "select": [],
-  "userInfo": []
+    ]
+  }
 }
