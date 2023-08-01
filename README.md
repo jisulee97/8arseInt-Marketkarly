@@ -32,10 +32,10 @@
 ### 💻 담당 기능
 | 이름       | 담당 기능          |
 | ---------- | ----------------------------------------|
-| 고명현 | product-list 페이지, login페이지, sign-up페이지 | 
-| 이규정 | product-detail페이지, 팝업창 | 
+| 고명현 | product-list 페이지, login페이지, sign-up페이지, 장바구니 기능 | 
+| 이규정 | product-detail페이지, 메인 팝업창 | 
 | 이지수 | header, footer, main-page 및 swiper 구현 | 
-| 장다은 | cart페이지, 로그인페이지 유효성  |
+| 장다은 | cart페이지, 로그인페이지 유효성검사, 회원가입페이지 유효성검사  |
 <br>
 
 ### 🌴 File Tree
