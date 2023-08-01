@@ -78,7 +78,6 @@
     display: none;
     margin-top: 1rem;
   }
-
   .is--invalid + .error-message {
     display: block;
   }
@@ -185,10 +184,6 @@
     width: 1050px;
     margin: auto;
   }
-}
-.container__width {
-  width: 1050px;
-  margin: auto;
 }
 
 .category__listTitle {
@@ -379,3 +374,31 @@
 .visbleHidden {
   visibility: hidden;
 }
+
+/* sign-up */
+
+.signUp__item {
+  display: flex;
+  flex-direction: column;
+}
+.signUp__errorMessage {
+  display: none;
+  padding-top: 0.25rem;
+  margin-left: 147px;
+  padding-bottom: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.signUp--invalid {
+  display: block;
+}
+
+/* .signUp__outOfCondition {
+  display: none;
+  padding-top: 0.25rem;
+  margin-left: 147px;
+  padding-bottom: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+} */
