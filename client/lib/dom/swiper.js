@@ -3,7 +3,6 @@ import { tiger } from './../utils/tiger.js';
 import { getNode } from './getNode.js';
 import { addClass } from './css.js';
 import { insertLast } from './insert.js';
-import { priceToString } from './../math/priceToString.js';
 
 export async function Main() {
   const { data } = await tiger.get('http://localhost:3000/main');
@@ -64,7 +63,9 @@ export async function Main() {
 
     // price 엘리먼트 추가
     const productPrice = document.createElement('dd');
-    productPrice.textContent = `${item.saleRatio > 0 ? item.salePrice : item.price}원`;
+    productPrice.textContent = `${
+      item.saleRatio > 0 ? item.salePrice.toLocaleString() : item.price.toLocaleString()
+    }원`;
     productPrice.classList.add('font-semibold', 'text-[20px]', 'pt-2', 'inline-block', 'mb-2');
 
     // 원가 삭제 엘리먼트 추가
