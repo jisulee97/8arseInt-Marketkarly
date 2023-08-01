@@ -1,4 +1,7 @@
-import { addClass, getNode, removeClass } from '../lib/index.js';
+// import { addClass, getNode, removeClass } from '../lib/index.js';
+import { getNode } from '../lib/dom/getNode.js';
+import { addClass } from '../lib/dom/css.js';
+import { removeClass } from '../lib/dom/css.js';
 
 const email = getNode('#userEmail');
 const password = getNode('#userPassword');
