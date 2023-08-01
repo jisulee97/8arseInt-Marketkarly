@@ -7,6 +7,7 @@
       "price": 4980,
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "room",
       "image": {
         "thumbnail": "/assets/images/product/tangtang/thumbnail.svg",
         "view": "/assets/images/product/tangtang/detail_view.jpg",
@@ -17,12 +18,13 @@
       "stock": 10
     },
     {
-      "id": "product-zordi",
+      "id": "product-suncushion",
       "name": "[온더바디] 죠르디 시카 자석 선쿠션",
       "description": "끈적임 없이 보송한 무기자차 선쿠션",
       "price": 32500,
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "room",
       "image": {
         "thumbnail": "/assets/images/product/suncushion/thumbnail.svg",
         "view": "/assets/images/product/ubuho/detail_view.jpg",
@@ -33,12 +35,13 @@
       "stock": 5
     },
     {
-      "id": "product-akqk",
+      "id": "product-detergent",
       "name": "[프로쉬] 베이비 세탁세제",
       "description": "성분을 꼼꼼히 따져 골라 더욱 편안한",
       "price": 24900,
       "saleRatio": 0.24,
       "salePrice": 18900,
+      "type": "room",
       "image": {
         "thumbnail": "/assets/images/product/detergent/thumbnail.svg",
         "view": "/assets/images/product/jukkumi/detail_view.jpg",
@@ -49,12 +52,13 @@
       "stock": 8
     },
     {
-      "id": "product-tkwk",
+      "id": "product-brownrice",
       "name": "유기농 밀키퀸 현미 4kg",
       "description": "유기농으로 더욱 윤기나게",
       "price": 25000,
       "saleRatio": 0,
       "salePrice": 0,
+      "type": "room",
       "image": {
         "thumbnail": "/assets/images/product/brownrice/thumbnail.svg",
         "view": "/assets/images/product/kangnam/detail_view.jpg",
@@ -65,13 +69,13 @@
       "stock": 2
     },
     {
-      "id": "product-ckzk",
+      "id": "product-bacon",
       "name": "[Kalry's] 한돈 삼겹 베이컨",
       "description": "무항생제 한돈 삼겹살의 고소한 풍미 그대로",
       "price": 4500,
       "saleRatio": 0.25,
       "salePrice": 3375,
-      "type": "COLD",
+      "type": "cold",
       "image": {
         "thumbnail": "/assets/images/product/bacon/thumbnail.jpg",
         "view": "/assets/images/product/bacon/detail_view.jpg",
@@ -82,13 +86,13 @@
       "stock": 13
     },
     {
-      "id": "product-akqk",
+      "id": "product-jukkumi",
       "name": "[홍대주꾸미] 주꾸미 볶음 300g (냉동)",
       "description": "매콤달콤한 마력의 밥도둑",
       "price": 7900,
       "saleRatio": 0.13,
       "salePrice": 6800,
-      "type": "FROZEN",
+      "type": "frozen",
       "image": {
         "thumbnail": "/assets/images/product/jukkumi/thumbnail.jpg",
         "view": "/assets/images/product/jukkumi/detail_view.jpg",
@@ -99,13 +103,13 @@
       "stock": 8
     },
     {
-      "id": "product-tkwk",
+      "id": "product-kangnam",
       "name": "[강남면옥] 소갈비찜",
       "description": "보는 맛과 먹는 맛 모두 푸짐",
       "price": 29800,
       "saleRatio": 0,
       "salePrice": 0,
-      "type": "COLD",
+      "type": "frozen",
       "image": {
         "thumbnail": "/assets/images/product/kangnam/thumbnail.jpg",
         "view": "/assets/images/product/kangnam/detail_view.jpg",
@@ -116,13 +120,13 @@
       "stock": 2
     },
     {
-      "id": "product-rksk",
+      "id": "product-ubunho",
       "name": "[대구 반할만떡] 유부호만두",
       "description": "유부로 속을 든든히 채운 군만두",
       "price": 6900,
       "saleRatio": 0.24,
       "salePrice": 5244,
-      "type": "FROZEN",
+      "type": "frozen",
       "image": {
         "thumbnail": "/assets/images/product/ubuho/thumbnail.jpg",
         "view": "/assets/images/product/ubuho/detail_view.jpg",
@@ -133,7 +137,6 @@
       "stock": 3
     }
   ],
-
   "banner": [
     {
       "id": "banner-sale",
@@ -183,5 +186,7 @@
         "alt": "컬리 장보기의 특권"
       }
     }
-  ]
+  ],
+  "select": [],
+  "userInfo": []
 }

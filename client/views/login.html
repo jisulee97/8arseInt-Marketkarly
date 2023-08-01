@@ -14,9 +14,10 @@
       rel="preload"
       as="style"
       crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="./../css/main.css" />
-    <script src="./js/common/common.js" type="module"></script>
+    <script src="./../js/common/common.js" type="module"></script>
+    <script src="./../js/login.js" type="module"></script>
   </head>
 
   <body>
@@ -389,6 +390,32 @@
           </div>
         </fieldset>
       </form>
+      <div
+        class="WarningModal__noValue visbleHidden fixed left-0 top-0 h-screen w-screen bg-black/30">
+        <div class="WarningModal__box absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div
+            class="WarningModal__Text h-[100px] w-[360px] rounded-[16px_16px_0_0] border-b bg-white text-center leading-[100px]">
+            아이디 또는 비밀번호를 입력해 주세요.
+          </div>
+          <button
+            class="WarningModal__button w-[360px] rounded-[0_0_16px_16px] bg-white text-center leading-[56px] text-primary">
+            확인
+          </button>
+        </div>
+      </div>
+      <div
+        class="WarningModal__notExist visbleHidden fixed left-0 top-0 h-screen w-screen bg-black/30">
+        <div class="WarningModal__box absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div
+            class="WarningModal__Text h-[100px] w-[360px] rounded-[16px_16px_0_0] border-b bg-white text-center leading-[100px]">
+            아이디 또는 비밀번호를 확인해주세요.
+          </div>
+          <button
+            class="WarningModal__button w-[360px] rounded-[0_0_16px_16px] bg-white text-center leading-[56px] text-primary">
+            확인
+          </button>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__inner container__width mx-auto mt-[4.1875rem]">

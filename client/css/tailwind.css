@@ -108,117 +108,117 @@
       margin-top: 1rem;
     }
 
-    .is--invalid + .error-message {
-      display: block;
-    }
-    .prod__price span {
-      font-size: 16px;
-      font-weight: 700;
-      color: #333333;
-    }
-    .prod-header__title {
-      font-size: 16px;
-      font-weight: 400;
-      color: #545454;
-      line-height: 1.6;
-    }
-    .itemDescription dl {
-      padding-top: 16px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid #e1e1e1;
-      display: flex;
-    }
-    .itemDescription:last-child {
-      border-bottom: none;
-    }
-    .checkPoint::before {
-      width: 100%;
-      height: 1px;
-      left: 0;
-      top: 37px;
-      content: '';
-      z-index: -1;
-      background: #d9d9d9;
-    }
-    .select__totalPrice::after {
-      content: '원';
-      color: #333333;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-    .sorting__recommend::after {
-      content: '';
-      height: 50%;
-      border-left: 1px solid #595959;
-      margin-left: 8px;
-      margin-right: 8px;
-    }
-    .navTitles li {
-      font-size: 16px;
-      font-weight: 600;
-      color: #333333;
-      width: 263px;
-      height: 54px;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      text-align: center;
-      background: #f9f9f9;
-      border: 1px solid #595959;
-    }
-    .navTitles li:first-child {
-      color: #5f0080;
-      border: 1px solid #e1e1e1;
-      border-bottom: none;
-    }
-    .navTitles li:nth-child(2),
-    .navTitles li:nth-child(3),
-    .navTitles li:last-child {
-      border-right: none;
-      cursor: pointer;
-    }
-    .navTitles li:last-child {
-      border-right: 1px solid black;
-    }
-    .contents__info img {
-      width: 1050px;
-      height: 670px;
-      margin-bottom: 76px;
-    }
-    .contents__info p {
-      font-size: 28px;
-      font-weight: 600;
-      color: black;
-      text-align: center;
-      line-height: 1.5;
-    }
-    .contents__info figcaption {
-      font-size: 50px;
-      font-weight: 700;
-      color: #333333;
-      text-align: center;
-      margin-bottom: 36px;
-      line-height: 1.4;
-    }
-    .prev,
-    .next {
-      width: 56px;
-      height: 56px;
-      border: 1px solid #e1e1e1;
-      border-radius: 4px;
-    }
-    .customer__post li {
-      border-bottom: 1px solid #c4c4c4;
-    }
-    .container__width {
-      width: 1050px;
-      margin: auto;
-    }
+  .is--invalid + .error-message {
+    display: block;
+  }
+  .prod__price span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+  }
+  .prod-header__title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #545454;
+    line-height: 1.6;
+  }
+  .itemDescription dl {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+  }
+  .itemDescription:last-child {
+    border-bottom: none;
+  }
+  .checkPoint::before {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 37px;
+    content: '';
+    z-index: -1;
+    background: #d9d9d9;
+  }
+  .select__totalPrice::after {
+    content: '원';
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .sorting__recommend::after {
+    content: '';
+    height: 50%;
+    border-left: 1px solid #595959;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .navTitles li {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    width: 263px;
+    height: 54px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+    background: #f9f9f9;
+    border: 1px solid #595959;
+  }
+  .navTitles li:first-child {
+    color: #5f0080;
+    border: 1px solid #e1e1e1;
+    border-bottom: none;
+  }
+  .navTitles li:nth-child(2),
+  .navTitles li:nth-child(3),
+  .navTitles li:last-child {
+    border-right: none;
+    cursor: pointer;
+  }
+  .navTitles li:last-child {
+    border-right: 1px solid black;
+  }
+  .contents__info img {
+    width: 1050px;
+    height: 670px;
+    margin-bottom: 76px;
+  }
+  .contents__info p {
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .contents__info figcaption {
+    font-size: 50px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 36px;
+    line-height: 1.4;
+  }
+  .prev,
+  .next {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+  }
+  .customer__post li {
+    border-bottom: 1px solid #c4c4c4;
   }
   .container__width {
     width: 1050px;
     margin: auto;
   }
+}
+.container__width {
+  width: 1050px;
+  margin: auto;
+}
 
   .category__listTitle {
     display: flex;
@@ -301,107 +301,159 @@
     text-align: center;
   }
 
-  .food__categorylist {
-    display: flow-root;
-    padding: 0.9375rem 0.3125rem 0.9375rem 0rem;
-    font-size: 1.125rem;
-  }
-  .food__categorylist:not(:last-child) {
-    border-bottom: 1px solid #333333;
-  }
-  .food__img {
-    float: left;
-    padding-right: 0.625rem;
-  }
-  .arrow__down {
-    float: right;
-    margin-right: 0.3rem;
-  }
-  .arrow__down img {
-    width: 16px;
-  }
-  .checkbox__img {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    position: absolute;
-    left: 2px;
-    background: url(../assets/images/cart/ic-checked-false.svg) no-repeat 0 0/24px;
-    vertical-align: baseline;
-  }
-  .checkbox__allSelect:checked + label .checkbox__img {
-    background: url(../assets/images/cart/ic-checked-true.svg) no-repeat 0 0/24px;
-  }
-  .cart__deliveryLocation {
-    background: url(../assets/images/cart/Location.svg) no-repeat 0 0/24px;
-  }
-  .cart__payment {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
-  }
-  .cart__paymentPrice {
-    font-size: 1.125rem;
-  }
-  .unit {
-    font-size: 0.9375rem;
-  }
-
-  /* 선택 상품 리스트 */
-  .selectGoods {
-    margin-top: 20px;
-    /* border: 1px solid; */
-    display: flex;
-    justify-content: space-between;
-    font-weight: 400;
-    font-size: 14px;
-  }
-  .checkbox__label {
-    padding-left: 4px;
-  }
-  .selectGoods__checkboxWrapper {
-    padding-left: 5px;
-  }
-  .selectGoods__goodsImg {
-    padding-left: 1.5rem;
-  }
-  .selectGoods__goodsImg figcaption {
-    padding-left: 14px;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  .alignCenter {
-    display: flex;
-    align-items: center;
-  }
-  .selectGoods__buttons {
-    border: 1px solid #dbdbdb;
-    border-radius: 4px;
-  }
-  .selectGoods__button {
-    width: 28px;
-    height: 28px;
-  }
-  .selectGoods__totalPriceWrapper {
-    padding-left: 5rem;
-    padding-right: 0.625rem;
-  }
-  .selectGoods__totalPrice {
-    font-size: 16px;
-    font-weight: 600;
-  }
-  .selectGoods__discount {
-    text-align: end;
-    text-decoration: line-through;
-    color: #c4c4c4;
-  }
-  .cart__minus {
-    background: url(../assets/images/main/Minus.svg);
-  }
-  .cart__minusBlack {
-    background: url(../assets/images/main/Minus-black.svg);
-  }
-  .cart__plus {
-    background: url(../assets/images/main/Plus.svg);
-  }
+.food__categorylist {
+  display: flow-root;
+  padding: 0.9375rem 0.3125rem 0.9375rem 0rem;
+  font-size: 1.125rem;
 }
+.food__categorylist:not(:last-child) {
+  border-bottom: 1px solid #333333;
+}
+.food__img {
+  float: left;
+  padding-right: 0.625rem;
+}
+/* .arrow__down {
+  float: right;
+  margin-right: 0.3rem;
+}
+.arrow__down img {
+  width: 16px;
+} */
+.checkbox__img {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  background: url(../assets/images/cart/ic-checked-false.svg) no-repeat 0 0/24px;
+  vertical-align: baseline;
+}
+.checkbox__allSelect:checked + label .checkbox__img {
+  background: url(../assets/images/cart/ic-checked-true.svg) no-repeat 0 0/24px;
+}
+.cart__deliveryLocation {
+  background: url(../assets/images/cart/Location.svg) no-repeat 0 0/24px;
+}
+.cart__payment {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.cart__paymentPrice {
+  font-size: 1.125rem;
+}
+.unit {
+  font-size: 0.9375rem;
+}
+.visbleHidden {
+  visibility: hidden;
+}
+
+/* detail페이지 popup css */
+.productDetail-popup__brief-title-input:focus::-webkit-input-placeholder{
+  color: transparent;
+}
+
+.productDetail-popup__close {
+  background-image: url(../assets/images/cart/ic-cancel.svg);
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  border: none;
+}
+
+.productDetail-review-popup__brief-notice {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #898989;
+}
+
+.productDetail-review-popup__brief-notice--pl16 {
+  list-style: disc;
+  padding-left: 16px;
+}
+
+.productDetail-review-popup__brief-notice--pl16>li::marker {
+  font-size: 1px;
+}
+
+.productDetail-review-popup__brief-notice-strong {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #898989;
+  display: inline-block;
+  padding: 12px 0px 4px;
+}
+
+.productDetail-review-popup__brief-notice-strong--pt {
+  padding-top: 0px;
+}
+
+.productDetail-review-popup__brief-notice--red {
+  color: #F03F40;
+}
+
+.productDetail-inquiry-popup {
+  height: 58px;
+  padding: 12px 0px 0px 101px;
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+}
+
+.cartList__select {
+  display: none;
+}
+
+.cartList__select+label {
+  cursor: pointer;
+  padding-left: 32px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/images/cart/ic-checked-true.svg);
+  height: 24px;
+}
+
+.cartList__select:checked+label {
+  background-image: url(../assets/images/cart/ic-checked-false.svg);
+}
+
+.cartList__select:disabled+label {
+  background-image: url(../assets/images/cart/ic-checked-true.svg);
+}
+
+.productDetail-popup-review , .productDetail-popup-inquiry{
+  position: fixed;
+  z-index: 10000;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* sign-up */
+
+.signUp__item {
+  display: flex;
+  flex-direction: column;
+}
+.signUp__errorMessage {
+  display: none;
+  padding-top: 0.25rem;
+  margin-left: 147px;
+  padding-bottom: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.signUp--invalid {
+  display: block;
+}
+
