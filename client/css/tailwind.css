@@ -375,3 +375,7 @@
 .cart__plus {
   background: url(../assets/images/main/Plus.svg);
 } */
+
+.visbleHidden {
+  visibility: hidden;
+}
