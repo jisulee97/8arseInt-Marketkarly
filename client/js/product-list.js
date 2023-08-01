@@ -1,37 +1,16 @@
-import { getNode, priceToString, toggleClass, tiger, insertLast } from '/lib/index.js';
+import { getNode, getNodes, priceToString, toggleClass, tiger, insertLast } from '/lib/index.js';
 
+// 필터 브랜드 영역 클래스 핸들링
 const brand = getNode('#buttonBrand');
 
 brand.addEventListener('click', () => {
   toggleClass(brand, 'is--clicked');
 });
 
+// 상품 리스트 렌더링
 function isSale(item) {
   return item.saleRatio !== 0 ? true : false;
 }
-
-async function productList() {
-  const response = await tiger.get('http://localhost:3000/main');
-  const productArray = response.data.products;
-  console.log(productArray);
-  const product = productArray.map((item) => {
-    return {
-      name: item.name,
-      price: priceToString(item.price),
-      salePrice: priceToString(item.salePrice),
-      image: item.image['thumbnail'],
-      description: item.description,
-      saleRatio: item.saleRatio * 100,
-      stock: item.stock,
-    };
-  });
-  product.forEach((item) => {
-    isSale(item)
-      ? renderSaleProductList('.product__list', item)
-      : renderUnSaleProductList('.product__list', item);
-  });
-}
-productList();
 
 function renderSaleProductList(target, data) {
   insertLast(target, createSaleProductList(data));
@@ -162,3 +141,42 @@ function createUnSaleProductList({ name, price, image, description, stock }) {
   </li>
 `;
 }
+
+async function productList() {
+  const response = await tiger.get('http://localhost:3000/products');
+  const productArray = response.data;
+  const product = productArray.map((item) => {
+    return {
+      id: item.id,
+      name: item.name,
+      price: priceToString(item.price),
+      salePrice: priceToString(item.salePrice),
+      image: item.image['thumbnail'],
+      description: item.description,
+      saleRatio: item.saleRatio * 100,
+      stock: item.stock,
+      type: item.type,
+    };
+  });
+  product.forEach((item) => {
+    isSale(item)
+      ? renderSaleProductList('.product__list', item)
+      : renderUnSaleProductList('.product__list', item);
+  });
+
+  const addCartButton = getNodes('.accentCart_1');
+  addCartButton.forEach((item) => {
+    item.addEventListener('click', handleAddCart);
+  });
+  function handleAddCart(e) {
+    const target = e.target.closest('.product__item');
+    const targetName = target.querySelector('h3').textContent;
+    product.forEach((item) => {
+      if (item.name === targetName) {
+        tiger.post('http://localhost:3000/select', item);
+      }
+    });
+    alert('상품을 장바구니에 담았습니다');
+  }
+}
+productList();
