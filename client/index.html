@@ -8,16 +8,12 @@
     <meta name="description" content="마켓칼리 메인 페이지입니다." />
     <title>칼리 - 마켓칼리</title>
     <link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
-    <link
-      rel="preload"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
-    <script src="./lib/home.js" type="module"></script>
+    <script src="./js/home.js" type="module"></script>
     <script src="./js/common/common.js" type="module"></script>
     <script src="./lib/dom/swiper.js" type="module"></script>
   </head>
@@ -364,61 +360,66 @@
       </div>
     </div>
 
-    <div class="banner__slider relative -z-0 mx-auto h-[370px] w-[1920px] overflow-hidden">
-      <div class="swiper-wrapper"></div>
-      <div class="swiper-button-prev h-[50px] w-[50px]"></div>
-      <div class="swiper-button-next h-[50px] w-[50px]"></div>
-    </div>
-    <h2 class="productTitle pb-[28px] pt-[40px] text-center text-[26px] font-bold">
-      이 상품 어때요?
-    </h2>
+    <main>
+      <!-- 메인 스와이퍼 -->
+      <div class="banner__slider relative -z-0 mx-auto h-[370px] w-[1920px] overflow-hidden">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-button-prev h-[50px] w-[50px]"></div>
+        <div class="swiper-button-next h-[50px] w-[50px]"></div>
+      </div>
 
-    <div class="recommend__slider relative -z-0 mx-auto h-[530px] w-[1050px] overflow-hidden">
-      <div class="swiper-wrapper relative"></div>
-      <div
-        class="swiper-button-prev recommend__button__prev recommend__buttonhidden h-[55px] w-[55px]"></div>
-      <div class="swiper-button-next recommend__button__next h-[55px] w-[55px]"></div>
-    </div>
+      <!-- 이 상품 어때요 스와이퍼 -->
+      <h2 class="productTitle pb-[28px] pt-[40px] text-center text-[26px] font-bold">
+        이 상품 어때요?
+      </h2>
+      <div class="recommend__slider relative -z-0 mx-auto h-[530px] w-[1050px] overflow-hidden">
+        <div class="swiper-wrapper relative"></div>
+        <div
+          class="swiper-button-prev recommend__button__prev recommend__buttonhidden h-[55px] w-[55px]"></div>
+        <div class="swiper-button-next recommend__button__next h-[55px] w-[55px]"></div>
+      </div>
 
-    <section class="side__banner container__width">
-      <figure>
-        <a href="/">
-          <img
-            src="./assets/images/main/banner04.jpg"
-            alt="더 풍성해진 10월의 퍼플워크"
-            class="side__bannerImg my-10 block" />
-        </a>
-      </figure>
-    </section>
+      <article class="recent__product relative">
+        <div
+          class="recent__productbox absolute bottom-[270px] right-[39px] w-[90px] border-2 border-gray-200">
+          <button class="mx-auto block">
+            <img src="./assets/images/main/recentarrow.svg" alt="위 버튼" />
+          </button>
+          <h4 class="recent__title px-1 py-1 text-center text-sm font-semibold">최근 본 상품</h4>
 
-    <!-- <main>
-      <h2 class="productTitle">이 상품 어때요?</h2>
-      <section class="product">
-        <div class="product__wrapper">
-          <a href="/views/product-detail.html">
-            <figure class="product__item">
-              <img
-                src="/assets/product/tangtang/thumbnail.svg"
-                alt=""
-                aria-labelledby="productTangtang"
-                class="product__img" />
-              <figcaption class="product__caption">
-                <h3 class="a11y">[풀무원] 탱탱쫄면(4개입)</h3>
-                <dl>
-                  <dt class="a11y">상품명</dt>
-                  <dd id="productTangtang" class="product__name">[풀무원] 탱탱쫄면(4개입)</dd>
-                  <dt class="a11y">가격</dt>
-                  <dd class="product__price">4,980원</dd>
-                </dl>
-              </figcaption>
-            </figure>
-          </a>
-          <button type="button" title="장바구니에 담기" class="accentCart"></button>
+          <div class="recent__product__container"></div>
+          <button class="mx-auto block">
+            <img src="./assets/images/main/recentarrowdown.svg" alt="아래 버튼" />
+          </button>
         </div>
-      </section>
-    </main> -->
+      </article>
 
-    <footer class="footer">
+      <section class="side__banner container__width">
+        <figure>
+          <h3 class="sr-only">더 풍성해진 10월의 퍼플워크</h3>
+          <a href="/">
+            <img
+              src="./assets/images/main/banner04.jpg"
+              alt="더 풍성해진 10월의 퍼플워크"
+              class="side__bannerImg mb-10 block" />
+          </a>
+        </figure>
+      </section>
+
+      <!-- 놓치면 후회할 가격 스와이퍼 -->
+      <h2 class="productTitle pb-[28px] pt-[40px] text-center text-[26px] font-bold">
+        놓치면 후회할 가격
+      </h2>
+
+      <div class="price__slider relative -z-0 mx-auto h-[530px] w-[1050px] overflow-hidden">
+        <div class="swiper-wrapper relative"></div>
+        <div
+          class="swiper-button-prev price__button__prev price__buttonhidden h-[55px] w-[55px]"></div>
+        <div class="swiper-button-next price__button__next h-[55px] w-[55px]"></div>
+      </div>
+    </main>
+
+    <footer class="footer border border-t-2 border-gray-100">
       <div class="footer__inner container__width mx-auto mt-[4.1875rem]">
         <div class="footer__innerTop mb-8 mt-[2.392857142857143rem] flex justify-between">
           <div class="footer__service flex-1">
