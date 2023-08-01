@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="아쉬워 벌써 12시" />
+    <meta name="author" content="8arseInt" />
     <meta name="keywords" content="칼리,베스트,탱탱쫄면,선쿠션,세탁세제" />
-    <meta name="description" content="칼리 베스트 상품입니다." />
-    <title>칼리 - 베스트</title>
+    <meta name="description" content="칼리 장바구니 입니다." />
+    <title>칼리 - 장바구니</title>
     <link rel="shortcut icon" href="https://res.kurly.com/favicon.ico" type="res/ico" />
     <link
       rel="preload"
@@ -14,8 +14,8 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <!-- <script type="module" src="./../js/main.js"></script> -->
     <script type="module" src="./../js/cart.js"></script>
+    <script type="module" src="./../js/common/common.js"></script>
   </head>
 
   <body>
@@ -346,12 +346,10 @@
         </header>
       </div>
     </div>
-    <main class="cart">
+    <main class="cart mx-auto w-container">
       <h2 class="cart__title title">장바구니</h2>
-      <section class="cart__container relative m-auto h-[1000px] w-container font-medium">
-        <section
-          class="cart__shoppingCartList absolute w-[742px] pr-5"
-          aria-label="구매할 상품 선택">
+      <section class="cart__container relative m-auto flex w-container justify-between font-medium">
+        <section class="cart__shoppingCartList w-[742px]" aria-label="구매할 상품 선택">
           <div class="checkbox relative border-b border-black py-4 pl-7">
             <input
               type="checkbox"
@@ -367,67 +365,150 @@
           </div>
           <ul class="foodCategory">
             <li class="food__categorylist">
-              <img src="/assets/images/cart/ic-cold.svg" alt="냉장 상품 아이콘" class="food__img" />
-
-              <span id="food__cold" class="food__text leading-[30px]">냉장 상품</span>
-              <button type="button" class="arrow__down float-right mt-3">
-                <img src="/assets/images/common/ic-vector-bottom.svg" alt="아래로 펼치기" />
-              </button>
+              <div class="spread group peer flex items-center justify-between">
+                <span
+                  id="food__temperature"
+                  class="food__text items-center bg-[url('/assets/images/cart/ic-cold.svg')] bg-left bg-no-repeat pl-10"
+                  >냉장 상품</span
+                >
+                <button
+                  type="button"
+                  class="cartListButton arrow__down h-4 w-4 bg-[url('/assets/images/common/ic-vector-bottom.svg')] bg-center bg-no-repeat group-[.is--clicked]:bg-[url('/assets/images/common/ic-vector-top.svg')]"></button>
+              </div>
               <!-- 선택 상품 리스트 -->
-              <ul class="selectGoods">
-                <li class="selectGoods__leftLi alignCenter">
-                  <div class="selectGoods__checkboxWrapper">
-                    <input
-                      type="checkbox"
-                      class="checkbox__allSelect hidden"
-                      name="checkbox__allSelect"
-                      id=" checkbox_food1" />
-                    <label for=" checkbox_food1" class="checkbox__label selectGoods__label">
-                      <span class="checkbox__img"></span>
-                    </label>
+              <ul class="peer-[.is--clicked]:hidden" id="listCold">
+                <!-- <li class="mt-5 flex items-center justify-between">
+                  <div class="flex gap-2">
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        class="peer absolute hidden"
+                        name="checkbox__allSelect"
+                        id="checkboxCold" />
+                      <label
+                        for="checkboxCold"
+                        class="block h-6 w-6 bg-[url('/assets/images/cart/ic-checked-false.svg')] bg-no-repeat peer-checked:bg-[url('/assets/images/cart/ic-checked-true.svg')]">
+                      </label>
+                    </div>
+                    <figure class="flex items-center gap-[14px]">
+                      <img src="./../assets/jukkumi/thumbnail.jpg" alt="" width="60px" />
+                      <figcaption>
+                        <h3 class="text-base font-semibold">[비비고] 쭈꾸미</h3>
+                      </figcaption>
+                    </figure>
                   </div>
-                  <figure class="selectGoods__goodsImg alignCenter">
-                    <img src="./../assets/jukkumi/thumbnail.jpg" alt="" width="60px" />
-                    <figcaption>
-                      <h3>[비비고] 쭈꾸미</h3>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="selectGoods__rightLi alignCenter">
-                  <div class="selectGoods__buttons alignCenter">
-                    <button class="selectGoods__button cart__minus"></button>
-                    <button class="selectGoods__button cart__num">1</button>
-                    <button class="selectGoods__button cart__plus"></button>
+                  <div class="flex">
+                    <div class="flex h-7 items-center rounded border border-[#dbdbdb]">
+                      <button class="h-7 w-7 bg-[url('/assets/images/main/Minus.svg')]"></button>
+                      <span class="flex h-7 w-7 items-center justify-center text-[14px]">1</span>
+                      <button class="h-7 w-7 bg-[url('/assets/images/main/Plus.svg')]"></button>
+                    </div>
+                    <div class="ml-20 mr-[10px] text-end">
+                      <p class="text-base">${salePrice}<span>원</span></p>
+                      <del class="text-[14px] text-[#C4C4C4]">${price}<span>원</span></del>
+                    </div>
+                    <button class="">
+                      <img src="/assets/images/cart/ic-cancel.svg" alt="삭제" />
+                    </button>
                   </div>
-                  <div class="selectGoods__totalPriceWrapper">
-                    <p class="selectGoods__totalPrice">3,000<span>원</span></p>
-                    <p class="selectGoods__discount">4,000<span>원</span></p>
-                  </div>
-                  <button class="selectGoods__deleteButton">
-                    <img src="./../assets/images/cart/ic-cancel.svg" alt="삭제" />
-                  </button>
-                </li>
+                </li> -->
               </ul>
             </li>
             <li class="food__categorylist">
-              <img
-                src="/assets/images/cart/ic-frozen.svg"
-                alt="냉동 상품 아이콘"
-                class="food__img" />
-              <span id="food__frozen" class="food__text leading-[30px]">냉동 상품</span>
-              <button type="button" class="arrow__down float-right mt-3">
-                <img src="/assets/images/common/ic-vector-bottom.svg" alt="아래로 펼치기" />
-              </button>
+              <div class="spread group peer flex items-center justify-between">
+                <span
+                  id="food__temperature"
+                  class="food__text items-center bg-[url('/assets/images/cart/ic-frozen.svg')] bg-left bg-no-repeat pl-10"
+                  >냉동 상품</span
+                >
+                <button
+                  type="button"
+                  class="cartListButton arrow__down h-4 w-4 bg-[url('/assets/images/common/ic-vector-bottom.svg')] bg-center bg-no-repeat group-[.is--clicked]:bg-[url('/assets/images/common/ic-vector-top.svg')]"></button>
+              </div>
+              <ul class="peer-[.is--clicked]:hidden" id="listFrozen">
+                <!-- <li class="mt-5 flex items-center justify-between">
+                  <div class="flex gap-2">
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        class="peer absolute hidden"
+                        name="checkbox__allSelect"
+                        id="checkboxFrozen" />
+                      <label
+                        for="checkboxFrozen"
+                        class="block h-6 w-6 bg-[url('/assets/images/cart/ic-checked-false.svg')] bg-no-repeat peer-checked:bg-[url('/assets/images/cart/ic-checked-true.svg')]">
+                      </label>
+                    </div>
+                    <figure class="flex items-center gap-[14px]">
+                      <img src="./../assets/jukkumi/thumbnail.jpg" alt="" width="60px" />
+                      <figcaption>
+                        <h3 class="text-base font-semibold">[비비고] 쭈꾸미</h3>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="flex">
+                    <div class="flex h-7 items-center rounded border border-[#dbdbdb]">
+                      <button class="h-7 w-7 bg-[url('/assets/images/main/Minus.svg')]"></button>
+                      <span class="flex h-7 w-7 items-center justify-center text-[14px]">1</span>
+                      <button class="h-7 w-7 bg-[url('/assets/images/main/Plus.svg')]"></button>
+                    </div>
+                    <div class="ml-20 mr-[10px] text-end">
+                      <p class="text-base">3,000<span>원</span></p>
+                    </div>
+                    <button class="">
+                      <img src="./../assets/images/cart/ic-cancel.svg" alt="삭제" />
+                    </button>
+                  </div>
+                </li> -->
+              </ul>
             </li>
             <li class="food__categorylist">
-              <img
-                src="/assets/images/cart/ic-temperature.svg"
-                alt="상온 상품 아이콘"
-                class="food__img" />
-              <span id="food__temperature" class="food__text leading-[30px]">상온 상품</span>
-              <button type="button" class="arrow__down float-right mt-3">
-                <img src="/assets/images/common/ic-vector-bottom.svg" alt="아래로 펼치기" />
-              </button>
+              <div class="spread group peer flex items-center justify-between">
+                <span
+                  id="food__temperature"
+                  class="food__text items-center bg-[url('/assets/images/cart/ic-temperature.svg')] bg-left bg-no-repeat pl-10"
+                  >상온 상품</span
+                >
+                <button
+                  type="button"
+                  class="cartListButton arrow__down h-4 w-4 bg-[url('/assets/images/common/ic-vector-bottom.svg')] bg-center bg-no-repeat group-[.is--clicked]:bg-[url('/assets/images/common/ic-vector-top.svg')]"></button>
+              </div>
+              <ul class="peer-[.is--clicked]:hidden" id="listRoom">
+                <!-- <li class="mt-5 flex items-center justify-between">
+                  <div class="flex gap-2">
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        class="peer absolute hidden"
+                        name="checkbox__allSelect"
+                        id="checkboxRoom" />
+                      <label
+                        for="checkboxRoom"
+                        class="block h-6 w-6 bg-[url('/assets/images/cart/ic-checked-false.svg')] bg-no-repeat peer-checked:bg-[url('/assets/images/cart/ic-checked-true.svg')]">
+                      </label>
+                    </div>
+                    <figure class="flex items-center gap-[14px]">
+                      <img src="./../assets/jukkumi/thumbnail.jpg" alt="" width="60px" />
+                      <figcaption>
+                        <h3 class="text-base font-semibold">[비비고] 쭈꾸미</h3>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="flex">
+                    <div class="flex h-7 items-center rounded border border-[#dbdbdb]">
+                      <button class="h-7 w-7 bg-[url('/assets/images/main/Minus.svg')]"></button>
+                      <span class="flex h-7 w-7 items-center justify-center text-[14px]">1</span>
+                      <button class="h-7 w-7 bg-[url('/assets/images/main/Plus.svg')]"></button>
+                    </div>
+                    <div class="ml-20 mr-[10px] text-end">
+                      <p class="text-base">3,000<span>원</span></p>
+                    </div>
+                    <button class="">
+                      <img src="./../assets/images/cart/ic-cancel.svg" alt="삭제" />
+                    </button>
+                  </div>
+                </li> -->
+              </ul>
             </li>
           </ul>
           <div class="checkbox relative border-t border-gray-200 py-4 pl-7">
@@ -444,64 +525,68 @@
             <span class="checkbox__selectDelete cursor-default">선택삭제</span>
           </div>
         </section>
-        <section class="cart__paymentSection sticky left-full top-6 w-[282px] bg-white">
-          <div class="cart__orderWrapper break-words border border-gray-100">
-            <div class="cart__deliveryInfo border-b border-gray-100 p-[20px]">
-              <h3 class="cart__deliveryLocation w-[70px] pb-2 text-end">배송지</h3>
-              <p class="cart__deliveryAddress pb-2">서울 중랑구 면목로 42길 11 (행운빌딩) 603호</p>
-              <p class="cart__deliveryType pb-2 text-[14px] text-primary">샛별배송</p>
-              <button
-                type="button"
-                class="cart__deliveryChange h-[36px] w-full rounded-[4px] border border-primary bg-white text-sm font-semibold text-primary">
-                배송지 변경
-              </button>
-            </div>
-            <div class="cart__paymentInfo border-b border-gray-100 bg-gray-50 p-[20px]">
-              <dl class="cart__payment">
-                <dt class="cart__paymentList">상품금액</dt>
-                <dd class="cart__paymentPrice">40,680 <span class="unit">원</span></dd>
-              </dl>
-              <dl class="cart__payment">
-                <dt class="cart__paymentList">상품할인금액</dt>
-                <dd class="cart__paymentPrice">-4,651 <span class="unit">원</span></dd>
-              </dl>
-              <dl class="cart__payment">
-                <dt class="cart__paymentList">배송비</dt>
-                <dd class="cart__paymentPrice">+3,000 <span class="unit">원</span></dd>
-              </dl>
-              <div class="cart__paymentTotal border-t border-gray-100 bg-gray-50 pt-[20px]">
-                <div class="cart__payment">
-                  <p class="cart__estimatedAmount">결제예정금액</p>
-                  <p class="cart__paymentTotalPrice text-[20px] font-bold">
-                    40,680 <span class="unit">원</span>
+        <section class="cart__paymentSection w-[284px] bg-white">
+          <div class="sticky right-0 top-16 py-14">
+            <div class="cart__orderWrapper break-words border border-gray-100">
+              <div class="cart__deliveryInfo border-b border-gray-100 p-[20px]">
+                <h3 class="cart__deliveryLocation w-[70px] pb-2 text-end">배송지</h3>
+                <p class="cart__deliveryAddress pb-2">
+                  서울 중랑구 면목로 42길 11 (행운빌딩) 603호
+                </p>
+                <p class="cart__deliveryType pb-2 text-[14px] text-primary">샛별배송</p>
+                <button
+                  type="button"
+                  class="cart__deliveryChange h-[36px] w-full rounded-[4px] border border-primary bg-white text-sm font-semibold text-primary">
+                  배송지 변경
+                </button>
+              </div>
+              <div class="cart__paymentInfo border-b border-gray-100 bg-gray-50 p-[20px]">
+                <dl class="cart__payment">
+                  <dt class="cart__paymentList">상품금액</dt>
+                  <dd class="cart__paymentPrice">40,680 <span class="unit">원</span></dd>
+                </dl>
+                <dl class="cart__payment">
+                  <dt class="cart__paymentList">상품할인금액</dt>
+                  <dd class="cart__paymentPrice">-4,651 <span class="unit">원</span></dd>
+                </dl>
+                <dl class="cart__payment">
+                  <dt class="cart__paymentList">배송비</dt>
+                  <dd class="cart__paymentPrice">+3,000 <span class="unit">원</span></dd>
+                </dl>
+                <div class="cart__paymentTotal border-t border-gray-100 bg-gray-50 pt-[20px]">
+                  <div class="cart__payment">
+                    <p class="cart__estimatedAmount">결제예정금액</p>
+                    <p class="cart__paymentTotalPrice text-[20px] font-bold">
+                      40,680 <span class="unit">원</span>
+                    </p>
+                  </div>
+                  <p class="cart__accumulate text-end text-sm">
+                    <span
+                      class="mr-2 rounded-[9px] bg-[#FA622F] px-[0.375rem] py-[0.125rem] text-xs text-white"
+                      >적립</span
+                    >최대 36원 적립 일반 0.1%
                   </p>
                 </div>
-                <p class="cart__accumulate text-end text-sm">
-                  <span
-                    class="mr-2 rounded-[9px] bg-[#FA622F] px-[0.375rem] py-[0.125rem] text-xs text-white"
-                    >적립</span
-                  >최대 36원 적립 일반 0.1%
-                </p>
               </div>
             </div>
-          </div>
-          <button
-            type="button"
-            class="cart__orderButton my-4 h-[56px] w-full rounded-[4px] bg-primary text-base font-semibold text-white">
-            주문하기
-          </button>
-          <div class="cart__couponInfo text-xs text-gray-500">
-            <p class="cart__couponInfoList">쿠폰/적립금은 주문서에서 사용 가능합니다</p>
-            <p class="cart__couponInfoList">[주문완료] 상태일 경우에만 주문 취소 가능합니다.</p>
-            <p class="cart__couponInfoList">
-              [마이컬리 > 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
-            </p>
-            <p class="cart__couponInfoList">
-              쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종 산정됩니다.
-            </p>
-            <p class="cart__couponInfoList">
-              상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서 확인 가능합니다)
-            </p>
+            <button
+              type="button"
+              class="cart__orderButton my-4 h-[56px] w-full rounded-[4px] bg-primary text-base font-semibold text-white">
+              주문하기
+            </button>
+            <div class="cart__couponInfo text-xs text-gray-500">
+              <p class="cart__couponInfoList">쿠폰/적립금은 주문서에서 사용 가능합니다</p>
+              <p class="cart__couponInfoList">[주문완료] 상태일 경우에만 주문 취소 가능합니다.</p>
+              <p class="cart__couponInfoList">
+                [마이컬리 > 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
+              </p>
+              <p class="cart__couponInfoList">
+                쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종 산정됩니다.
+              </p>
+              <p class="cart__couponInfoList">
+                상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세 페이지에서 확인 가능합니다)
+              </p>
+            </div>
           </div>
         </section>
       </section>
