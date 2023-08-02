@@ -1,4 +1,4 @@
-import { getNode as $, getNodes } from '../lib/dom/getNode.js';
+import { getNode as $, getNodes as $$ } from '../lib/dom/getNode.js';
 import { addClass, removeClass } from './../lib/dom/css.js';
 
 const userId = $('#userId');
@@ -8,7 +8,7 @@ const userName = $('#username');
 const email = $('#email');
 const phone = $('#phone');
 const birthdate = $('.signUp__birthday');
-const errors = $('.signUp__errorMessage');
+const errors = $$('.signUp__errorMessage');
 const addInfoWrapper = $('.addInfoWrapper');
 const InvitationIdWrapper = $('.InvitationIdWrapper');
 const eventNameWrapper = $('.eventNameWrapper');
