@@ -1,4 +1,5 @@
 import { getNode as $, getNodes } from '../lib/dom/getNode.js';
+import { addClass, removeClass } from './../lib/dom/css.js';
 
 const userId = $('#userId');
 const userPassword = $('#userPassword');
@@ -7,10 +8,10 @@ const userName = $('#username');
 const email = $('#email');
 const phone = $('#phone');
 const birthdate = $('.signUp__birthday');
-const birthYear = $('#birthYear');
-const birthMonth = $('#birthMonth');
-const birthday = $('#birthDay');
-const errors = getNodes('.signUp__errorMessage');
+const errors = $('.signUp__errorMessage');
+const addInfoWrapper = $('.addInfoWrapper');
+const InvitationIdWrapper = $('.InvitationIdWrapper');
+const eventNameWrapper = $('.eventNameWrapper');
 
 let idPass = false;
 let pwPass = false;
@@ -156,6 +157,23 @@ function dayReg(text) {
   return re.test(String(text).toLowerCase());
 }
 
+/* 추가입력 사항 */
+
+function getInvitationId(e) {
+  let input = e.target.closest('input');
+  if (!input) return;
+  let inputValue = input.value;
+  console.log(inputValue);
+
+  if (inputValue === 'invite') {
+    removeClass(InvitationIdWrapper, 'displayNone');
+    addClass(eventNameWrapper, 'displayNone');
+  } else if (inputValue === 'event') {
+    addClass(InvitationIdWrapper, 'displayNone');
+    removeClass(eventNameWrapper, 'displayNone');
+  }
+}
+
 userId.addEventListener('input', validateId);
 userPassword.addEventListener('input', validatePw);
 checkPassword.addEventListener('input', validatePwCheck);
@@ -163,3 +181,4 @@ userName.addEventListener('input', validateName);
 email.addEventListener('input', validateEmail);
 phone.addEventListener('input', validatePhone);
 birthdate.addEventListener('input', validateDate);
+addInfoWrapper.addEventListener('click', getInvitationId);

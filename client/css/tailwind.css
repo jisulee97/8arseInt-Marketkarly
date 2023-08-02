@@ -429,3 +429,7 @@
 .signUp--invalid {
   display: block;
 }
+
+.displayNone {
+  display: none;
+}

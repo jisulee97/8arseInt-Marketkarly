@@ -520,7 +520,8 @@
                     type="radio"
                     name="gender"
                     id="genderNone"
-                    class="peer absolute opacity-0" />
+                    class="peer absolute opacity-0"
+                    checked />
                   <label
                     for="genderNone"
                     class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]"
@@ -565,27 +566,32 @@
                 </div>
               </div>
               <p class="signUp__errorMessage text-error">생년월일을 정확하게 입력해주세요.</p>
-              <!-- <p class="signUp__errorMessage text-error">
-                태어난 년도 4자리를 정확하게 입력해주세요.
-              </p>
-              <p class="signUp__errorMessage text-error">태어난 월을 정확하게 입력해주세요.</p>
-              <p class="signUp__errorMessage text-error">태어난 일를 정확하게 입력해주세요.</p> -->
             </div>
             <div class="flex items-center gap-2 py-5">
               <label for="addInfo" class="inline-block w-[139px] font-semibold"
                 >추가입력 사항</label
               >
-              <div id="addInfo" class="flex w-[333px] justify-between text-content">
+              <div id="addInfo" class="addInfoWrapper flex w-[333px] justify-between text-content">
                 <div class="relative">
-                  <input type="radio" name="special" id="invite" class="peer absolute opacity-0" />
+                  <input
+                    type="radio"
+                    name="special"
+                    id="invite"
+                    class="peer absolute opacity-0"
+                    value="invite" />
                   <label
                     for="invite"
                     class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]">
                     친구초대 추천인 아이디</label
                   >
                 </div>
-                <div class="relative">
-                  <input type="radio" name="special" id="event" class="peer absolute opacity-0" />
+                <div class="eventWrapper relative">
+                  <input
+                    type="radio"
+                    name="special"
+                    id="event"
+                    class="peer absolute opacity-0"
+                    value="event" />
                   <label
                     for="event"
                     class="flex items-center bg-[url('/assets/images/sign-up/ic-unchecked-radio.svg')] bg-no-repeat pl-8 font-semibold peer-checked:bg-[url('/assets/images/sign-up/ic-checked-radio.svg')]">
@@ -593,6 +599,41 @@
                   >
                 </div>
               </div>
+            </div>
+            <div class="result"></div>
+            <div class="InvitationIdWrapper displayNone mb-4 mt-3 flex flex-col gap-2">
+              <div class="flex items-center gap-2">
+                <label for="InvitationId" class="sr-only">친구 초대 추천인 아이디</label>
+                <input
+                  type="text"
+                  name="InvitationId"
+                  id="InvitationId"
+                  class="h-[46px] w-[480px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#666666] focus:border-content"
+                  placeholder="추천인 아이디를 입력해 주세요." />
+                <button
+                  class="inline-block w-[143px] rounded border border-primary py-[10px] font-semibold text-primary">
+                  아이디 확인
+                </button>
+              </div>
+              <p class="mt-1 block text-sm not-italic text-black">
+                가입 후 7일 내 첫 주문 배송완료 시, 친구초대 이벤트 적립금이 지급됩니다.
+              </p>
+            </div>
+            <div class="eventNameWrapper displayNone mb-4 mt-3 flex flex-col gap-2">
+              <div class="flex items-center gap-2">
+                <label for="eventname" class="sr-only">참여 이벤트명</label>
+                <input
+                  type="text"
+                  name="eventname"
+                  id="eventname"
+                  class="h-[46px] w-[480px] rounded border border-[#A6A6A6] py-[10px] pl-5 outline-none placeholder:text-[#666666] focus:border-content"
+                  placeholder="참여 이벤트명을 입력해 주세요." />
+              </div>
+              <p class="mt-1 flex flex-col text-sm not-italic text-black">
+                <span>추천인 아이디와 참여 이벤트명 중 하나만 선택 가능합니다.</span>
+                <span>가입 이후는 수정이 불가능 합니다.</span>
+                대소문자 및 띄어쓰기에 유의해주세요.
+              </p>
             </div>
             <div class="flex gap-2 border-b border-t border-b-[#C4C4C4] border-t-content py-5">
               <label
