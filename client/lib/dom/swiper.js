@@ -3,6 +3,8 @@ import { tiger } from './../utils/tiger.js';
 import { getNode } from './getNode.js';
 import { addClass } from './css.js';
 import { insertLast } from './insert.js';
+import { setStorage, getStorage } from '../utils/storage.js';
+import { storageKeys } from '../../js/storageKey/index.js';
 
 export async function Main() {
   const { data } = await tiger.get('http://localhost:3000/banner');
@@ -44,12 +46,31 @@ export async function Main() {
 export async function product() {
   const { data } = await tiger.get('http://localhost:3000/products');
 
+  // 로컬스토리지에서 최근 상품들 값을 가져온다.
+  const recentProducts = await getStorage(storageKeys.recentProductsKey);
+
   // 이 상품 어때요 스와이퍼
 
   data.forEach((item) => {
     const swipperWrapper = getNode('.recommend__slider > .swiper-wrapper');
 
-    const swipperItem = document.createElement('div');
+    const swipperItem = document.createElement('a');
+    swipperItem.href = '/views/product-list.html';
+    swipperItem.onclick = () => {
+      let tmp = [];
+
+      // 클릭한 상품이 로컬스토리지에 있을경우, tmp에 넣기
+      if (recentProducts) tmp = recentProducts;
+
+      // 배열 앞에 {src, alt} 속성 객체를 추가
+      tmp.unshift({
+        src: item.image.thumbnail,
+        alt: item.image.alt,
+      });
+
+      // 로컬스토리지에 최근상품들 저장
+      setStorage(storageKeys.recentProductsKey, tmp);
+    };
     addClass(swipperItem, 'swiper-slide');
 
     const productImage = document.createElement('img');
@@ -120,7 +141,23 @@ export async function product() {
   data.reverse().forEach((item) => {
     const priceWrapper = getNode('.price__slider > .swiper-wrapper');
 
-    const swipperItem = document.createElement('div');
+    const swipperItem = document.createElement('a');
+    swipperItem.href = '/views/product-list.html';
+    swipperItem.onclick = () => {
+      let tmp = [];
+
+      // 클릭한 상품이 로컬스토리지에 있을경우, tmp에 넣기
+      if (recentProducts) tmp = recentProducts;
+
+      // 배열 앞에 {src, alt} 속성 객체를 추가
+      tmp.unshift({
+        src: item.image.thumbnail,
+        alt: item.image.alt,
+      });
+
+      // 로컬스토리지에 최근상품들 저장
+      setStorage(storageKeys.recentProductsKey, tmp);
+    };
     addClass(swipperItem, 'swiper-slide');
 
     const productImage = document.createElement('img');
@@ -189,11 +226,8 @@ export async function product() {
   const recommendSwiper = new Swiper('.recommend__slider', {
     speed: 400,
     spaceBetween: 10,
-    // loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
-    // slideoffsetBefore: 100,
-    // siideoffsetAfter: 100,
     navigation: {
       prevEl: '.swiper-button-prev.recommend__button__prev',
       nextEl: '.swiper-button-next.recommend__button__next',
@@ -203,11 +237,8 @@ export async function product() {
   const priceSwiper = new Swiper('.price__slider', {
     speed: 400,
     spaceBetween: 10,
-    // loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
-    // slideoffsetBefore: 100,
-    // siideoffsetAfter: 100,
     navigation: {
       prevEl: '.swiper-button-prev.price__button__prev',
       nextEl: '.swiper-button-next.price__button__next',
