@@ -3,7 +3,7 @@ import { addClass, getNode, removeClass } from '../lib/index.js';
 const email = getNode('#userEmail');
 const password = getNode('#userPassword');
 const logInbutton = getNode('.btn-login');
-// const warninNoValue = getNode('.WarningModal__noValue');
+const warninNoValue = getNode('.WarningModal__noValue');
 const warningNotExist = getNode('.WarningModal__notExist');
 
 const user = {
@@ -31,7 +31,6 @@ export function validateId() {
   if (emailReg(value) === true) {
     this.classList.remove('is--invalid');
     emailPass = true;
-    return value;
   } else {
     this.classList.add('is--invalid');
     emailPass = false;
@@ -53,31 +52,32 @@ export function validatePw() {
 // /* 로그인 버튼 */
 export function handlelogInButton(e) {
   e.preventDefault();
-  if (emailPass && pwPass) {
+  if (!emailPass || !pwPass) {
+    setModalVisibleNoValue();
+  } else if (emailPass === true && pwPass === true) {
     const id = email.value;
     const pw = password.value;
     const getUserId = user.id;
     const getUserPw = user.pw;
-
     if (id === getUserId && pw === getUserPw) {
       location.href = 'http://localhost:5500/';
     } else {
-      setModalVisible2();
+      setModalVisibleNotExist();
     }
   }
 }
 
 /* 팝업창 제거 함수 */
-// const setModalVisible = () => {
-//   let boolean = false;
-//   if (!boolean) {
-//     removeClass(warninNoValue, 'visbleHidden');
-//   } else {
-//     addClass(warninNoValue, 'visbleHidden');
-//   }
-// };
+const setModalVisibleNoValue = () => {
+  let boolean = false;
+  if (!boolean) {
+    removeClass(warninNoValue, 'visbleHidden');
+  } else {
+    addClass(warninNoValue, 'visbleHidden');
+  }
+};
 
-const setModalVisible2 = () => {
+const setModalVisibleNotExist = () => {
   let boolean = false;
   if (!boolean) {
     removeClass(warningNotExist, 'visbleHidden');
@@ -89,11 +89,12 @@ const setModalVisible2 = () => {
 function handleModalButton(e) {
   const target = e.target.closest('button');
   addClass(warningNotExist, 'visbleHidden');
+  addClass(warninNoValue, 'visbleHidden');
 }
 
 email.addEventListener('input', validateId);
 password.addEventListener('input', validatePw);
 logInbutton.addEventListener('click', handlelogInButton);
 
-// warninNoValue.addEventListener('click', handleModalButton);
+warninNoValue.addEventListener('click', handleModalButton);
 warningNotExist.addEventListener('click', handleModalButton);
