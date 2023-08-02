@@ -187,6 +187,18 @@
       }
     }
   ],
-  "select": [],
+  "select": [
+    {
+      "id": "product-ubunho",
+      "name": "[대구 반할만떡] 유부호만두",
+      "price": "6,900",
+      "salePrice": "5,244",
+      "image": "/assets/images/product/ubuho/thumbnail.jpg",
+      "description": "유부로 속을 든든히 채운 군만두",
+      "saleRatio": 24,
+      "stock": 3,
+      "type": "frozen"
+    }
+  ],
   "userInfo": []
 }
