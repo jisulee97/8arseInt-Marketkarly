@@ -61,7 +61,7 @@
 | ---------- | ----------------------------------------|
 | 고명현 | product-list 페이지, login페이지, sign-up페이지, 장바구니 기능구현 | 
 | 이규정 | product-detail페이지, main-page 팝업창 구현 | 
-| 이지수 | header, footer, main-page와 main-page swiper 구현 | 
+| 이지수 | header, footer, main-page와 main-page swiper 구현, 최근 본 항목 | 
 | 장다은 | cart페이지, 로그인페이지 유효성검사, 회원가입페이지 유효성검사  |
 <br>
 
