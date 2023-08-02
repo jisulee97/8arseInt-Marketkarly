@@ -14,7 +14,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <script type="module" src="../js/main.js"></script>
+    <script src="../js/common/common.js" type="module"></script>
     <script type="module" src="../js/product-detail.js"></script>
   </head>
 
@@ -36,316 +36,310 @@
           </button>
         </div>
       </div>
-      <div class="headerWrapper container__width relative">
-        <header class="header">
-          <h1 class="a11y sr-only">칼리</h1>
-          <div class="logo gap-[6.75rem] pb-5 pt-[4.375rem] align-middle text-lg">
-            <img src="/assets/images/header/logo-kurly.svg" alt="" class="logo__img inline-block" />
-            <a href="/" class="logo__link__market primary-color font-bold text-primary">
-              마켓칼리
-            </a>
-            <span class="divider text-gray-200" aria-hidden="true">ㅣ</span>
-            <a href="/" class="logo__link__beauty font-semibold text-gray-400 hover:text-primary">
-              뷰티칼리
-            </a>
-            <img
-              src="/assets/images/header/new.svg"
-              alt=""
-              class="logo__img__new absolute top-[3.9375rem] inline-block" />
-          </div>
 
-          <div class="memberOnly container__width text-sm">
-            <ul class="memberOnly__wrapper absolute right-0 top-[0.75rem] flex justify-end">
-              <li>
-                <a href="./sign-up.html" class="text-primary">회원가입</a>
-              </li>
-              <li>
-                <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
-                <a href="./login.html">로그인</a>
-              </li>
-              <li>
-                <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
-                <a href="/">
-                  고객센터
-                  <img
-                    src="/assets/images/header/down.svg"
-                    alt=""
-                    class="memberOnly__down inline-block w-2" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <form action="/" method="get" class="searchForm">
-            <fieldset>
-              <legend class="sr-only">검색</legend>
-              <div class="searchForm__group absolute left-[21.5625rem] top-8">
-                <div class="formInput pt-6">
-                  <label for="search" class="formInput__label sr-only"> 검색어 </label>
-                  <input
-                    id="search"
-                    class="formInput__input focus: relative w-[25rem] rounded border-[0.0625rem] border-primary pb-3 pl-5 pr-5 pt-3 text-lg text-content outline-none"
-                    type="search"
-                    required
-                    placeholder="검색어를 입력해주세요."
-                    name="search" />
-                  <button type="submit" class="searchButton absolute right-2 top-9">
-                    <img src="/assets/images/header/Search.svg" alt="검색" />
-                  </button>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-          <ul class="buttons absolute right-0 top-[4.375rem] flex gap-5">
-            <li class="buttons__list">
-              <a href="/" class="buttons__address" title="배송지" aria-label="배송지 등록">
+    <div class="headerWrapper container__width relative ">
+      <header class="header">
+        <h1 class="a11y sr-only">칼리</h1>
+        <div class="logo gap-[6.75rem] pb-5 pt-[4.375rem] align-middle text-lg">
+          <img src="/assets/images/header/logo-kurly.svg" alt="" class="logo__img inline-block" />
+          <a href="/" class="logo__link__market primary-color font-bold text-primary">
+            마켓칼리
+          </a>
+          <span class="divider text-gray-200" aria-hidden="true">ㅣ</span>
+          <a href="/" class="logo__link__beauty font-semibold text-gray-400 hover:text-primary">
+            뷰티칼리
+          </a>
+          <img
+            src="/assets/images/header/new.svg"
+            alt=""
+            class="logo__img__new absolute top-[3.9375rem] inline-block" />
+        </div>
+
+        <div class="memberOnly container__width text-sm">
+          <ul class="memberOnly__wrapper absolute right-0 top-[0.75rem] flex justify-end">
+            <li>
+              <a href="./sign-up.html" class="text-primary">회원가입</a>
+            </li>
+            <li>
+              <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
+              <a href="./login.html">로그인</a>
+            </li>
+            <li>
+              <span class="divider text-gray-400" aria-hidden="true">ㅣ</span>
+              <a href="/">
+                고객센터
                 <img
-                  src="/assets/images/header/Location.svg"
+                  src="/assets/images/header/down.svg"
                   alt=""
-                  class="buttons__address__img" />
-              </a>
-            </li>
-            <li class="buttons__list">
-              <a href="/" class="buttons__heart" aria-label="찜하기">
-                <img src="/assets/images/header/Heart.svg" alt="" class="buttons__heart__img" />
-              </a>
-            </li>
-            <li class="buttons__list">
-              <a href="/views/cart.html" class="buttons__cart" aria-label="장바구니">
-                <img src="/assets/images/header/Cart.svg" alt="" class="buttons__cart__img" />
+                  class="memberOnly__down inline-block w-2" />
               </a>
             </li>
           </ul>
-
-          <nav class="navi pb-4 pt-4">
-            <div class="menu flex__between">
-              <div class="menu__button pt-2">
-                <h2>
-                  <button
-                    class="menu__button__category menu__listStyle hover:underline-offset-2hover:text-primary hover:text-primary hover:underline hover:underline-offset-2">
-                    <img
-                      src="/assets/images/header/Hamburger.svg"
-                      alt=""
-                      class="menu__button__img mr-2 inline-block pb-1 pl-2" />
-                    카테고리
-                  </button>
-                </h2>
-                <ul class="category category__hidden absolute top-48 hidden">
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navGift.png" alt="선물" />
-                    </div>
-                    <span class="sprite sprite__gift"></span>
-                    <a href="#" class="category__link text-base">선물하기</a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navVegetable.png" alt="채소" />
-                    </div>
-                    <span class="sprite sprite__vegetable"></span>
-                    <a href="#" class="category__link text-base">채소</a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navFruit.png" alt="과일, 견과, 쌀" />
-                    </div>
-
-                    <span class="sprite sprite__friut"></span>
-                    <a href="#" class="category__link text-base"> 과일&bull;견과&bull;쌀 </a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navFish.png" alt="수산, 해산, 건어물" />
-                    </div>
-                    <span class="sprite sprite__fish"></span>
-                    <a href="#" class="category__link text-base"> 수산&bull;해산&bull;건어물 </a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navMeat.png" alt="정육, 계란" />
-                    </div>
-                    <span class="sprite sprite__meat"></span>
-                    <a href="#" class="category__link text-base">정육&bull;계란</a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navMaindish.png" alt="국, 반찬, 메인요리" />
-                    </div>
-                    <span class="sprite sprite__soup"></span>
-                    <a href="#" class="category__link text-base"> 국&bull;반찬&bull;메인요리 </a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navSalad.png" alt="샐러드, 간편식" />
-                    </div>
-                    <span class="sprite sprite__salad"></span>
-                    <a href="#" class="category__link text-base">샐러드&bull;간편식</a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navSpice.png" alt="면, 양념, 오일" />
-                    </div>
-                    <span class="sprite sprite__noodles"></span>
-                    <a href="./../views/product-detail.html" class="category__link text-base">
-                      면&bull;양념&bull;오일
-                    </a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navDrink.png" alt="생수, 음료, 우유, 커피" />
-                    </div>
-                    <span class="sprite sprite__water"></span>
-                    <a href="#" class="category__link text-base">
-                      생수&bull;음료&bull;우유&bull;커피
-                    </a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navDessert.png" alt="간식, 과자, 떡" />
-                    </div>
-                    <span class="sprite sprite__snack"></span>
-                    <a href="#" class="category__link text-base"> 간식&bull;과자&bull;떡 </a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navBread.png" alt="베이커리, 치즈, 델리" />
-                    </div>
-                    <span class="sprite sprite__bakery"></span>
-                    <a href="#" class="category__link text-base"> 베이커리&bull;치즈&bull;델리 </a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navHealth.png" alt="건강 식품" />
-                    </div>
-                    <span class="sprite sprite__health"></span>
-                    <a href="#" class="category__link text-base">건강식품</a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navWine.png" alt="와인" />
-                    </div>
-                    <span class="sprite sprite__wine"></span>
-                    <a href="#" class="category__link text-base">와인</a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navTraditionalDrink.png" alt="전통주" />
-                    </div>
-                    <span class="sprite sprite__tradition"></span>
-                    <a href="#" class="category__link text-base">전통주</a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navLiving.png" alt="생활용품, 리빙, 캠핑" />
-                    </div>
-                    <span class="sprite sprite__living"></span>
-                    <a href="#" class="category__link text-base"> 생활용품&bull;리빙&bull;캠핑 </a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navBeauty.png" alt="스킨케어, 메이크업" />
-                    </div>
-                    <span class="sprite sprite__skin"></span>
-                    <a href="#" class="category__link text-base"> 스킨케어&bull;메이크업 </a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navBody.png" alt="헤어, 바디, 구강" />
-                    </div>
-                    <span class="sprite sprite__hair"></span>
-                    <a href="#" class="category__link text-base"> 헤어&bull;바디&bull;구강 </a>
-                  </li>
-
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navKitchen.png" alt="주방용품" />
-                    </div>
-                    <span class="sprite sprite__kitchen"></span>
-                    <a href="#" class="category__link text-base">주방용품</a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navHomeAppliances.png" alt="가전제품" />
-                    </div>
-                    <span class="sprite sprite__appliances"></span>
-                    <a href="#" class="category__link text-base">가전제품</a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navPet.png" alt="반려동물" />
-                    </div>
-                    <span class="sprite sprite__pet"></span>
-                    <a href="#" class="category__link text-base">반려동물</a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navBaby.png" alt="베이비, 키즈, 완구" />
-                    </div>
-                    <span class="sprite sprite__baby"></span>
-                    <a href="#" class="category__link text-base"> 베이비&bull;키즈&bull;완구 </a>
-                  </li>
-                  <li class="category__list category__listTitle">
-                    <div class="category__img category__imgStyle">
-                      <img src="/assets/images/header/navTrip.png" alt="여행, 티켓" />
-                    </div>
-                    <span class="sprite sprite__travel"></span>
-                    <a href="#" class="category__link text-base">여행&bull;티켓</a>
-                  </li>
-                </ul>
-              </div>
-              <h2 class="a11y sr-only">메뉴</h2>
-              <ul class="menu__list flex gap-[6.75rem] pt-2">
-                <li class="menu__item">
-                  <a
-                    href="/"
-                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
-                    신상품
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a
-                    href="/views/product-list.html"
-                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
-                    베스트
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a
-                    href="/"
-                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
-                    알뜰쇼핑
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a
-                    href="/"
-                    class="menu__link menu__listStyle hover:text-primary hover:underline hover:underline-offset-2">
-                    특가/혜택
-                  </a>
-                </li>
-              </ul>
-              <div
-                class="menu__delivery rounded-2xl border-[0.125rem] border-gray-300 pb-1 pl-2 pr-2 pt-1">
-                <a href="/">
-                  <span class="primary-color text-sm text-primary"> 샛별&nbsp;&bull;&nbsp;낮 </span>
-                  <span class="gray-500 text-sm">배송안내</span>
-                </a>
+        </div>
+        <form action="/" method="get" class="searchForm">
+          <fieldset>
+            <legend class="sr-only">검색</legend>
+            <div class="searchForm__group absolute left-[21.5625rem] top-8">
+              <div class="formInput pt-6">
+                <label for="search" class="formInput__label sr-only"> 검색어 </label>
+                <input
+                  id="search"
+                  class="formInput__input focus: relative w-[25rem] rounded border-[0.0625rem] border-primary pb-3 pl-5 pr-5 pt-3 text-lg text-content outline-none"
+                  type="search"
+                  required
+                  placeholder="검색어를 입력해주세요."
+                  name="search" />
+                <button type="submit" class="searchButton absolute right-2 top-9">
+                  <img src="/assets/images/header/Search.svg" alt="검색" />
+                </button>
               </div>
             </div>
-          </nav>
-        </header>
-      </div>
+          </fieldset>
+        </form>
+        <ul class="buttons absolute right-0 top-[4.375rem] flex gap-5">
+          <li class="buttons__list">
+            <a href="/" class="buttons__address" title="배송지" aria-label="배송지 등록">
+              <img
+                src="/assets/images/header/Location.svg"
+                alt=""
+                class="buttons__address__img" />
+            </a>
+          </li>
+          <li class="buttons__list">
+            <a href="/" class="buttons__heart" aria-label="찜하기">
+              <img src="/assets/images/header/Heart.svg" alt="" class="buttons__heart__img" />
+            </a>
+          </li>
+          <li class="buttons__list">
+            <a href="/views/cart.html" class="buttons__cart" aria-label="장바구니">
+              <img src="/assets/images/header/Cart.svg" alt="" class="buttons__cart__img" />
+            </a>
+          </li>
+        </ul>
+
+        <nav class="navi pb-4 pt-4">
+          <div class="menu flex__between">
+            <div class="menu__button pt-2">
+              <h2>
+                <button class="menu__button__category menu__listStyle hover:category__titleStyle">
+                  <img
+                    src="/assets/images/header/Hamburger.svg"
+                    alt=""
+                    class="menu__button__img mr-2 inline-block pb-1 pl-2" />
+                  카테고리
+                </button>
+              </h2>
+              <ul class="category category__hidden absolute top-[199px] hidden">
+                <li class="category__list category__listTitle hover: hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navGift.png" alt="선물" />
+                  </div>
+                  <span class="sprite sprite__gift"></span>
+                  <a href="#" class="category__link text-base">선물하기</a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navVegetable.png" alt="채소" />
+                  </div>
+                  <span class="sprite sprite__vegetable"></span>
+                  <a href="#" class="category__link text-base">채소</a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navFruit.png" alt="과일, 견과, 쌀" />
+                  </div>
+
+                  <span class="sprite sprite__friut"></span>
+                  <a href="#" class="category__link text-base"> 과일&bull;견과&bull;쌀 </a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navFish.png" alt="수산, 해산, 건어물" />
+                  </div>
+                  <span class="sprite sprite__fish"></span>
+                  <a href="#" class="category__link text-base"> 수산&bull;해산&bull;건어물 </a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navMeat.png" alt="정육, 계란" />
+                  </div>
+                  <span class="sprite sprite__meat"></span>
+                  <a href="#" class="category__link text-base">정육&bull;계란</a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navMaindish.png" alt="국, 반찬, 메인요리" />
+                  </div>
+                  <span class="sprite sprite__soup"></span>
+                  <a href="#" class="category__link text-base"> 국&bull;반찬&bull;메인요리 </a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navSalad.png" alt="샐러드, 간편식" />
+                  </div>
+                  <span class="sprite sprite__salad"></span>
+                  <a href="#" class="category__link text-base">샐러드&bull;간편식</a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navSpice.png" alt="면, 양념, 오일" />
+                  </div>
+                  <span class="sprite sprite__noodles"></span>
+                  <a href="./../views/product-detail.html" class="category__link text-base">
+                    면&bull;양념&bull;오일
+                  </a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navDrink.png" alt="생수, 음료, 우유, 커피" />
+                  </div>
+                  <span class="sprite sprite__water"></span>
+                  <a href="#" class="category__link text-base">
+                    생수&bull;음료&bull;우유&bull;커피
+                  </a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navDessert.png" alt="간식, 과자, 떡" />
+                  </div>
+                  <span class="sprite sprite__snack"></span>
+                  <a href="#" class="category__link text-base"> 간식&bull;과자&bull;떡 </a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navBread.png" alt="베이커리, 치즈, 델리" />
+                  </div>
+                  <span class="sprite sprite__bakery"></span>
+                  <a href="#" class="category__link text-base"> 베이커리&bull;치즈&bull;델리 </a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navHealth.png" alt="건강 식품" />
+                  </div>
+                  <span class="sprite sprite__health"></span>
+                  <a href="#" class="category__link text-base">건강식품</a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navWine.png" alt="와인" />
+                  </div>
+                  <span class="sprite sprite__wine"></span>
+                  <a href="#" class="category__link text-base">와인</a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navTraditionalDrink.png" alt="전통주" />
+                  </div>
+                  <span class="sprite sprite__tradition"></span>
+                  <a href="#" class="category__link text-base">전통주</a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navLiving.png" alt="생활용품, 리빙, 캠핑" />
+                  </div>
+                  <span class="sprite sprite__living"></span>
+                  <a href="#" class="category__link text-base"> 생활용품&bull;리빙&bull;캠핑 </a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navBeauty.png" alt="스킨케어, 메이크업" />
+                  </div>
+                  <span class="sprite sprite__skin"></span>
+                  <a href="#" class="category__link text-base"> 스킨케어&bull;메이크업 </a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navBody.png" alt="헤어, 바디, 구강" />
+                  </div>
+                  <span class="sprite sprite__hair"></span>
+                  <a href="#" class="category__link text-base"> 헤어&bull;바디&bull;구강 </a>
+                </li>
+
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navKitchen.png" alt="주방용품" />
+                  </div>
+                  <span class="sprite sprite__kitchen"></span>
+                  <a href="#" class="category__link text-base">주방용품</a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navHomeAppliances.png" alt="가전제품" />
+                  </div>
+                  <span class="sprite sprite__appliances"></span>
+                  <a href="#" class="category__link text-base">가전제품</a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navPet.png" alt="반려동물" />
+                  </div>
+                  <span class="sprite sprite__pet"></span>
+                  <a href="#" class="category__link text-base">반려동물</a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navBaby.png" alt="베이비, 키즈, 완구" />
+                  </div>
+                  <span class="sprite sprite__baby"></span>
+                  <a href="#" class="category__link text-base"> 베이비&bull;키즈&bull;완구 </a>
+                </li>
+                <li class="category__list category__listTitle hover:category__hover">
+                  <div class="category__img category__imgStyle">
+                    <img src="/assets/images/header/navTrip.png" alt="여행, 티켓" />
+                  </div>
+                  <span class="sprite sprite__travel"></span>
+                  <a href="#" class="category__link text-base">여행&bull;티켓</a>
+                </li>
+              </ul>
+            </div>
+            <h2 class="a11y sr-only">메뉴</h2>
+            <ul class="menu__list flex gap-[6.75rem] pt-2">
+              <li class="menu__item">
+                <a href="/" class="menu__link menu__listStyle hover:category__titleStyle">
+                  신상품
+                </a>
+              </li>
+              <li class="menu__item">
+                <a
+                  href="/views/product-list.html"
+                  class="menu__link menu__listStyle hover:category__titleStyle">
+                  베스트
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__link menu__listStyle hover:category__titleStyle">
+                  알뜰쇼핑
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__link menu__listStyle hover:category__titleStyle">
+                  특가/혜택
+                </a>
+              </li>
+            </ul>
+            <div
+              class="menu__delivery rounded-2xl border-[0.125rem] border-gray-300 pb-1 pl-2 pr-2 pt-1">
+              <a href="/">
+                <span class="primary-color text-sm text-primary"> 샛별&nbsp;&bull;&nbsp;낮 </span>
+                <span class="gray-500 text-sm">배송안내</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
     </div>
+  </div>
     <div
       class="product-wrapper mx-auto flex w-container flex-row flex-nowrap items-stretch justify-center py-40">
       <div class="productArea relative">
@@ -1314,7 +1308,7 @@
       </section>
     </div>
 
-    <footer class="footer">
+    <footer class="footer border border-t-2 border-gray-100">
       <div class="footer__inner container__width mx-auto mt-[4.1875rem]">
         <div class="footer__innerTop mb-8 mt-[2.392857142857143rem] flex justify-between">
           <div class="footer__service flex-1">
