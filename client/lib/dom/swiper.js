@@ -3,6 +3,7 @@ import { tiger } from './../utils/tiger.js';
 import { getNode } from './getNode.js';
 import { addClass } from './css.js';
 import { insertLast } from './insert.js';
+import { getNodes, priceToString } from '/lib/index.js';
 
 export async function Main() {
   const { data } = await tiger.get('http://localhost:3000/banner');
@@ -33,6 +34,9 @@ export async function Main() {
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
+    },
+    keyboard: {
+      enabled: true,
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -186,12 +190,46 @@ export async function product() {
     insertLast(productImageWrapper, template);
   });
 
+  /* ------------------------------- 스와이퍼 장바구니버튼 ------------------------------ */
+  const product = data.map((item) => {
+    return {
+      id: item.id,
+      name: item.name,
+      price: priceToString(item.price),
+      salePrice: priceToString(item.salePrice),
+      image: item.image['thumbnail'],
+      description: item.description,
+      saleRatio: item.saleRatio * 100,
+      stock: item.stock,
+      type: item.type,
+    };
+  });
+  const addCartButton = getNodes('.accentCart_1');
+  addCartButton.forEach((item) => {
+    item.addEventListener('click', handleAddCart);
+  });
+  function handleAddCart(e) {
+    const target = e.target.closest('.swiper-slide');
+    console.log(target);
+    const targetName = target.querySelector('dd').textContent;
+    console.log(targetName);
+    product.forEach((item) => {
+      if (item.name === targetName) {
+        tiger.post('http://localhost:3000/select', item);
+      }
+    });
+    alert('상품을 장바구니에 담았습니다');
+  }
+
   const recommendSwiper = new Swiper('.recommend__slider', {
     speed: 400,
     spaceBetween: 10,
     // loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
+    keyboard: {
+      enabled: true,
+    },
     // slideoffsetBefore: 100,
     // siideoffsetAfter: 100,
     navigation: {
@@ -206,6 +244,9 @@ export async function product() {
     // loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
+    keyboard: {
+      enabled: true,
+    },
     // slideoffsetBefore: 100,
     // siideoffsetAfter: 100,
     navigation: {
