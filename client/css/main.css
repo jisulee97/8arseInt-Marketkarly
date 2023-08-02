@@ -787,6 +787,14 @@ html {
   top: 4rem;
 }
 
+.top-48 {
+  top: 12rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
 .top-64 {
   top: 16rem;
 }
@@ -1174,6 +1182,10 @@ html {
   height: 45px;
 }
 
+.h-\[46px\] {
+  height: 46px;
+}
+
 .h-\[50px\] {
   height: 50px;
 }
@@ -1342,6 +1354,10 @@ html {
   width: 45px;
 }
 
+.w-\[480px\] {
+  width: 480px;
+}
+
 .w-\[481px\] {
   width: 481px;
 }
@@ -1416,20 +1432,6 @@ html {
 
 .flex-\[0_0_225px\] {
   flex: 0 0 225px;
-}
-
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
-    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
-    scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
-    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
-    scaleY(var(--tw-scale-y));
 }
 
 .translate-x-\[50\%\] {
@@ -1978,16 +1980,6 @@ html {
   padding-bottom: 0px;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2157,6 +2149,10 @@ html {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .pt-6 {
@@ -2660,15 +2656,19 @@ html {
   border-bottom: 1px solid #333333;
 }
 
-/* .arrow__down {
+.food__img {
+  float: left;
+  padding-right: 0.625rem;
+}
+
+.arrow__down {
   float: right;
   margin-right: 0.3rem;
 }
 .arrow__down img {
   width: 16px;
-} */
-
-.checkbox__img {
+}
+*/ .checkbox__img {
   width: 24px;
   height: 24px;
   display: inline-block;
@@ -2794,14 +2794,22 @@ html {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* sign-up */
-
 .placeholder\:text-center::-moz-placeholder {
   text-align: center;
 }
 
 .placeholder\:text-center::placeholder {
   text-align: center;
+}
+
+.placeholder\:text-\[\#666666\]::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-\[\#666666\]::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
 .placeholder\:text-\[\#898989\]::-moz-placeholder {
@@ -2919,6 +2927,11 @@ html {
 .focus\:border-content:focus {
   --tw-border-opacity: 1;
   border-color: rgb(51 51 51 / var(--tw-border-opacity));
+}
+
+.group.is--clicked
+  .group-\[\.is--clicked\]\:bg-\[url\(\'\/assets\/images\/common\/ic-vector-top\.svg\'\)\] {
+  background-image: url('/assets/images/common/ic-vector-top.svg');
 }
 
 .group.is--clicked
