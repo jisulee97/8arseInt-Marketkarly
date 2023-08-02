@@ -35,6 +35,9 @@ export async function Main() {
       delay: 2500,
       disableOnInteraction: false,
     },
+    keyboard: {
+      enabled: true,
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -224,6 +227,9 @@ export async function product() {
     // loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
+    keyboard: {
+      enabled: true,
+    },
     // slideoffsetBefore: 100,
     // siideoffsetAfter: 100,
     navigation: {
@@ -238,6 +244,9 @@ export async function product() {
     // loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
+    keyboard: {
+      enabled: true,
+    },
     // slideoffsetBefore: 100,
     // siideoffsetAfter: 100,
     navigation: {
