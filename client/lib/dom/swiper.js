@@ -5,6 +5,7 @@ import { addClass } from './css.js';
 import { insertLast } from './insert.js';
 import { setStorage, getStorage } from '../utils/storage.js';
 import { storageKeys } from '../../js/storageKey/index.js';
+import { getNodes, priceToString } from '/lib/index.js';
 
 export async function Main() {
   const { data } = await tiger.get('http://localhost:3000/banner');
@@ -58,7 +59,7 @@ export async function product() {
     const swipperWrapper = getNode('.recommend__slider > .swiper-wrapper');
 
     const swipperItem = document.createElement('a');
-    swipperItem.href = '/views/product-list.html';
+    swipperItem.href = '/views/product-detail.html';
     swipperItem.onclick = () => {
       let tmp = [];
 
@@ -145,7 +146,7 @@ export async function product() {
     const priceWrapper = getNode('.price__slider > .swiper-wrapper');
 
     const swipperItem = document.createElement('a');
-    swipperItem.href = '/views/product-list.html';
+    swipperItem.href = '/views/product-detail.html';
     swipperItem.onclick = () => {
       let tmp = [];
 
