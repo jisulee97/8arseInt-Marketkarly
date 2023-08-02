@@ -1,13 +1,20 @@
-import { getNodes, toggleClass, addClass, getNode, removeClass } from '/lib/index.js';
+import {
+  getNodes,
+  toggleClass,
+  addClass,
+  getNode,
+  removeClass,
+  tiger,
+  priceToString,
+} from '/lib/index.js';
 
 const information = getNodes('#notificationBtn');
 
-information.forEach(item => {
+information.forEach((item) => {
   item.addEventListener('click', () => {
-    toggleClass(item, 'is--clicked')
-  }) 
-})
-
+    toggleClass(item, 'is--clicked');
+  });
+});
 
 const review_show = getNode('.review__main');
 const inquiry_show = getNode('.qna__main');
@@ -23,7 +30,6 @@ export function review_popup_show(e) {
   addClass(document.body, 'stop-scrolling');
   removeClass(review_popup, 'hidden');
 }
-
 
 export function review_popup_close(e) {
   let reviewWrapper = e.target.closest('.productDetail-popup__button-wrapper');
@@ -45,7 +51,6 @@ export function inquiry_popup_show(e) {
   removeClass(inquiry_popup, 'hidden');
 }
 
-
 export function inquiry_popup_close(e) {
   let inquiryWrapper = e.target.closest('.productDetail-popup__button-wrapper');
   let closeButton = e.target.closest('.productDetail-popup__cancel');
@@ -56,9 +61,39 @@ export function inquiry_popup_close(e) {
   addClass(inquiry_popup, 'hidden');
 }
 
+async function productList() {
+  const response = await tiger.get('http://localhost:3000/products');
+  const productArray = response.data;
+  const product = productArray.map((item) => {
+    return {
+      id: item.id,
+      name: item.name,
+      price: priceToString(item.price),
+      salePrice: priceToString(item.salePrice),
+      image: item.image['thumbnail'],
+      description: item.description,
+      saleRatio: item.saleRatio * 100,
+      stock: item.stock,
+      type: item.type,
+    };
+  });
+  const addCartButton = getNode('.prod__cart');
+  addCartButton.addEventListener('click', handleAddCart);
+  function handleAddCart(e) {
+    const target = getNode('.prod-header__title h2');
+    const targetName = target.textContent.trim();
+    product.forEach((item) => {
+      if (item.name === targetName) {
+        tiger.post('http://localhost:3000/select', item);
+      }
+    });
+    alert('상품을 장바구니에 담았습니다');
+  }
+}
+productList();
+
 review_show.addEventListener('click', review_popup_show);
-review_popup.addEventListener('click', review_popup_close)
+review_popup.addEventListener('click', review_popup_close);
 
 inquiry_show.addEventListener('click', inquiry_popup_show);
 inquiry_popup.addEventListener('click', inquiry_popup_close);
-
